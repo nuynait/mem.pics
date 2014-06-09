@@ -11,6 +11,7 @@ import UIKit
 class MainVC: UIViewController {
     
     var cameraViewButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
+    var cameraInterfaceVC: CamInterfaceVC = CamInterfaceVC(nibName: nil, bundle: nil);
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,14 +33,19 @@ class MainVC: UIViewController {
 
         // cameraViewButton Property
         
-        println("What is width? Answer: \(self.view.frame.width/2)");
         cameraViewButton.setTitle("Launch Camera", forState: UIControlState.Normal);
         cameraViewButton.sizeToFit();
-        println("What is cameraViewButton.frame.width? \(cameraViewButton.frame.width)");
-        cameraViewButton.frame = CGRectMake(100,
-            (self.view.frame.width - cameraViewButton.frame.width) / 2,
+        cameraViewButton.frame = CGRectMake((self.view.frame.width - cameraViewButton.frame.width) / 2,
+            100,
             cameraViewButton.frame.width,
             cameraViewButton.frame.height);
+        cameraViewButton.addTarget(self, action: "launchCameraView:", forControlEvents: UIControlEvents.TouchUpInside);
+    }
+    
+    
+    func launchCameraView(sender:UIButton) {
+        println("Button Pressed");
+        self.presentViewController(cameraInterfaceVC, animated: true, completion: nil);
     }
 
     override func didReceiveMemoryWarning() {

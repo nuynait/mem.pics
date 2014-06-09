@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D95423719450F8700136729 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95423619450F8700136729 /* MainVC.swift */; };
+		9DC1370F194603B300F9A337 /* CamInterfaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1370E194603B300F9A337 /* CamInterfaceVC.swift */; };
 		9DCDA3081945081400346303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDA3071945081400346303 /* AppDelegate.swift */; };
 		9DCDA30A1945081400346303 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCDA3091945081400346303 /* Images.xcassets */; };
 		9DCDA3161945081400346303 /* MemPicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDA3151945081400346303 /* MemPicsTests.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		9D95423619450F8700136729 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		9DC1370E194603B300F9A337 /* CamInterfaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamInterfaceVC.swift; sourceTree = "<group>"; };
 		9DCDA3021945081400346303 /* MemPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCDA3061945081400346303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DCDA3071945081400346303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				9DCDA3071945081400346303 /* AppDelegate.swift */,
 				9D95423619450F8700136729 /* MainVC.swift */,
+				9DC1370E194603B300F9A337 /* CamInterfaceVC.swift */,
 				9DCDA3091945081400346303 /* Images.xcassets */,
 				9DCDA3051945081400346303 /* Supporting Files */,
 			);
@@ -206,6 +209,7 @@
 			files = (
 				9DCDA3081945081400346303 /* AppDelegate.swift in Sources */,
 				9D95423719450F8700136729 /* MainVC.swift in Sources */,
+				9DC1370F194603B300F9A337 /* CamInterfaceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
