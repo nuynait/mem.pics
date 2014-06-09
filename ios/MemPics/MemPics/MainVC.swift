@@ -9,20 +9,41 @@
 import UIKit
 
 class MainVC: UIViewController {
+    
+    var cameraViewButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
+    
+    override func loadView() {
+        // Create a Main View
+        var viewRect:CGRect = UIScreen.mainScreen().bounds;
+        var mainView:UIView = UIView(frame:viewRect);
+        self.view = mainView;
+        
+        // Add cameraViewButton Button
+        self.view.addSubview(self.cameraViewButton);
+    }
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
 
-        // Do any additional setup after loading the view.
+        // cameraViewButton Property
+        
+        println("What is width? Answer: \(self.view.frame.width/2)");
+        cameraViewButton.setTitle("Launch Camera", forState: UIControlState.Normal);
+        cameraViewButton.sizeToFit();
+        println("What is cameraViewButton.frame.width? \(cameraViewButton.frame.width)");
+        cameraViewButton.frame = CGRectMake(100,
+            (self.view.frame.width - cameraViewButton.frame.width) / 2,
+            cameraViewButton.frame.width,
+            cameraViewButton.frame.height);
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        super.didReceiveMemoryWarning();
         // Dispose of any resources that can be recreated.
     }
     
