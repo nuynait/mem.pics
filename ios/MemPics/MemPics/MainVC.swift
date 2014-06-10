@@ -10,8 +10,10 @@ import UIKit
 
 class MainVC: UIViewController {
     
-    var cameraViewButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
-    var imagePicker:UIImagePickerController = UIImagePickerController();
+    
+    // Test View Button
+    var nextViewButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
+    var cameraVC: CameraVC = CameraVC(nibName: nil, bundle: nil);
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,32 +27,29 @@ class MainVC: UIViewController {
         self.view = mainView;
         
         // Add cameraViewButton Button
-        self.view.addSubview(self.cameraViewButton);
+        self.view.addSubview(self.nextViewButton);
     }
 
     override func viewDidLoad() {
         super.viewDidLoad();
-
-        // cameraViewButton Property
         
-        cameraViewButton.setTitle("Launch Camera", forState: UIControlState.Normal);
-        cameraViewButton.sizeToFit();
-        cameraViewButton.frame = CGRectMake((self.view.frame.width - cameraViewButton.frame.width) / 2,
+        // New Test Button For A New View Controller
+        
+        self.nextViewButton.setTitle("Next View", forState: UIControlState.Normal);
+        self.nextViewButton.sizeToFit();
+        self.nextViewButton.frame = CGRectMake((self.view.frame.width - self.nextViewButton.frame.width) / 2,
             100,
-            cameraViewButton.frame.width,
-            cameraViewButton.frame.height);
-        cameraViewButton.addTarget(self, action: "launchCameraView:", forControlEvents: UIControlEvents.TouchUpInside);
+            self.nextViewButton.frame.width,
+            self.nextViewButton.frame.height);
+        self.nextViewButton.addTarget(self, action: "launchView:", forControlEvents: UIControlEvents.TouchUpInside);
+        
     }
     
-    
-    func launchCameraView(sender:UIButton) {
-        //  Launch Camera View
-        println("Launch Camera");
-        self.imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-        //self.imagePicker.mediaTypes = [kUTTypeImage];
-        self.imagePicker.allowsEditing = true;
-        self.presentViewController(self.imagePicker, animated: true, completion: nil);
+    func launchView(sender:UIButton) {
+        println("Launch View");
+        self.presentViewController(cameraVC, animated: true, completion: nil);
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
