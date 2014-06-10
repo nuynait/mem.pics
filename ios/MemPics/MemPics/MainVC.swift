@@ -11,7 +11,7 @@ import UIKit
 class MainVC: UIViewController {
     
     var cameraViewButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
-    var cameraInterfaceVC: CamInterfaceVC = CamInterfaceVC(nibName: nil, bundle: nil);
+    var imagePicker:UIImagePickerController = UIImagePickerController();
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -44,14 +44,19 @@ class MainVC: UIViewController {
     
     
     func launchCameraView(sender:UIButton) {
-        println("Button Pressed");
-        self.presentViewController(cameraInterfaceVC, animated: true, completion: nil);
+        //  Launch Camera View
+        println("Launch Camera");
+        self.imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+        //self.imagePicker.mediaTypes = [kUTTypeImage];
+        self.imagePicker.allowsEditing = true;
+        self.presentViewController(self.imagePicker, animated: true, completion: nil);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
