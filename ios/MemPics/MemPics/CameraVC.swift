@@ -113,7 +113,11 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             }
             
             // Save image to the Camera Roll
-            UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil);
+            // UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil);
+            // Save image to Disk in png format
+            var imageData:NSData = UIImagePNGRepresentation(imageToSave);
+            var imagePath:NSString = NSHomeDirectory().stringByAppendingPathComponent("Documents/myImage.png");
+            imageData.writeToFile(imagePath, atomically: true);
         }
         else {
             println("ERROR: If Case Passed, test FAILED, mediaType = \(mediaType)");
