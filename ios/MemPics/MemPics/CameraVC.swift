@@ -112,12 +112,39 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 imageToSave = originalImage;
             }
             
-            // Save image to the Camera Roll
-            // UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil);
-            // Save image to Disk in png format
-            var imageData:NSData = UIImagePNGRepresentation(imageToSave);
-            var imagePath:NSString = NSHomeDirectory().stringByAppendingPathComponent("Documents/myImage.png");
-            imageData.writeToFile(imagePath, atomically: true);
+            // Here, Upload Image to Server Using Http Post
+            var imageData:NSData? = UIImagePNGRepresentation(imageToSave);
+            var urlString:NSString = "http://107.170.171.175:49156/tasks";
+            
+            var request:NSMutableURLRequest = NSMutableURLRequest();
+            request.HTTPMethod = "Post";
+            request.URL = NSURL.URLWithString(urlString);
+            var boundary:NSString = NSString.stringWithString("----WebKitFormBoundaryqFAZHDjmNaoRiQYZ");
+            request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type");
+            request.setValue("no-cache", forHTTPHeaderField: "Cache-Control");
+            
+            var body:NSMutableData = NSMutableData();
+            body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+            body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"task\"; filename=\"upload.png\"\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+            //body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"task\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+            //body.appendData(NSString.stringWithString("TEST\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+            body.appendData(NSString.stringWithString("Content-Type: image/png\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+            body.appendData(NSData.dataWithData(imageData));
+            body.appendData(NSString.stringWithString("\r\n--\(boundary)--\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+            var postLength:NSString = "\(body.length)";
+            request.setValue(postLength, forHTTPHeaderField: "Content-Length");
+            
+            
+            request.HTTPBody = body;
+            
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:
+                { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                    var httpResponse:NSHTTPURLResponse = response as NSHTTPURLResponse;
+                    println("response: \(response)");
+                    println("Status Code = \(httpResponse.statusCode)");
+                });
+            
+            println("Finish Camera Function, Waiting for Uploading Response");
         }
         else {
             println("ERROR: If Case Passed, test FAILED, mediaType = \(mediaType)");

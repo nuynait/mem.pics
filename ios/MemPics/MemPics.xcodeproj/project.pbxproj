@@ -12,6 +12,7 @@
 		9DCDA3081945081400346303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDA3071945081400346303 /* AppDelegate.swift */; };
 		9DCDA30A1945081400346303 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCDA3091945081400346303 /* Images.xcassets */; };
 		9DCDA3161945081400346303 /* MemPicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCDA3151945081400346303 /* MemPicsTests.swift */; };
+		A7B397F44C2C41B68B8778ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CBE51DB5E04E8DBA0A412C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EEEDF17DD8A4878B716949C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		30CBE51DB5E04E8DBA0A412C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D06E889194ABE38001F10B2 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = ../bridge.h; sourceTree = "<group>"; };
 		9D1FF5A0194792F00027ACD6 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		9D95423619450F8700136729 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		9DCDA3021945081400346303 /* MemPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B397F44C2C41B68B8778ED /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71D9A5BB7718456FA77AC8A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30CBE51DB5E04E8DBA0A412C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9DCDA2F91945081400346303 = {
 			isa = PBXGroup;
 			children = (
 				9DCDA3041945081400346303 /* MemPics */,
 				9DCDA3121945081400346303 /* MemPicsTests */,
 				9DCDA3031945081400346303 /* Products */,
+				1EEEDF17DD8A4878B716949C /* Pods.xcconfig */,
+				71D9A5BB7718456FA77AC8A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +90,8 @@
 		9DCDA3041945081400346303 /* MemPics */ = {
 			isa = PBXGroup;
 			children = (
+				9D06E889194ABE38001F10B2 /* bridge.h */,
+				9DE29F23194AA9AD00E4B996 /* Images */,
 				9D1FF5A0194792F00027ACD6 /* CameraVC.swift */,
 				9DCDA3071945081400346303 /* AppDelegate.swift */,
 				9D95423619450F8700136729 /* MainVC.swift */,
@@ -109,6 +126,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9DE29F23194AA9AD00E4B996 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DCDA3191945081400346303 /* Build configuration list for PBXNativeTarget "MemPics" */;
 			buildPhases = (
+				E1CD8389B00B41B1BC519BCB /* Check Pods Manifest.lock */,
 				9DCDA2FE1945081400346303 /* Sources */,
 				9DCDA2FF1945081400346303 /* Frameworks */,
 				9DCDA3001945081400346303 /* Resources */,
+				42F9FC9CB47D4C9585FFC485 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +227,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42F9FC9CB47D4C9585FFC485 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1CD8389B00B41B1BC519BCB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DCDA2FE1945081400346303 /* Sources */ = {
@@ -311,27 +370,33 @@
 		};
 		9DCDA31A1945081400346303 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEEDF17DD8A4878B716949C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = MemPics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Debug;
 		};
 		9DCDA31B1945081400346303 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEEDF17DD8A4878B716949C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = MemPics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Release;
 		};

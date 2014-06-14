@@ -29,7 +29,7 @@ class MainVC: UIViewController {
         // Add cameraViewButton Button
         self.view.addSubview(self.nextViewButton);
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -50,22 +50,22 @@ class MainVC: UIViewController {
         self.presentViewController(cameraVC, animated: true, completion: nil);
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
         // Dispose of any resources that can be recreated.
     }
     
     
-
+    
     /*
     // #pragma mark - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
