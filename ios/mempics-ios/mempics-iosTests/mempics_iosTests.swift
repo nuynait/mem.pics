@@ -1,14 +1,14 @@
 //
-//  MemPicsTests.swift
-//  MemPicsTests
+//  mempics_iosTests.swift
+//  mempics-iosTests
 //
-//  Created by Jerry Shan on 2014-06-08.
+//  Created by Jerry Shan on 2014-06-16.
 //  Copyright (c) 2014 Jerry Shan. All rights reserved.
 //
 
 import XCTest
 
-class MemPicsTests: XCTestCase {
+class mempics_iosTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

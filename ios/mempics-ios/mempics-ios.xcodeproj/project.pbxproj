@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D048EF3194F597500950494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048EF2194F597500950494 /* AppDelegate.swift */; };
+		9D048F01194F597500950494 /* mempics_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F00194F597500950494 /* mempics_iosTests.swift */; };
+		9D048F18194F5A0B00950494 /* BTCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F13194F5A0B00950494 /* BTCentral.swift */; };
+		9D048F19194F5A0B00950494 /* BTPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F14194F5A0B00950494 /* BTPeripheral.swift */; };
+		9D048F1A194F5A0B00950494 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F15194F5A0B00950494 /* CameraVC.swift */; };
+		9D048F1B194F5A0B00950494 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F16194F5A0B00950494 /* MainVC.swift */; };
+		9D048F1D194F5A1E00950494 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D048F1C194F5A1E00950494 /* Images.xcassets */; };
+		9D048F1F194F5A5700950494 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D048F1E194F5A5700950494 /* CoreBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D048EFB194F597500950494 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D048EE5194F597400950494 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D048EEC194F597400950494;
+			remoteInfo = "mempics-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D048EED194F597400950494 /* mempics-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mempics-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D048EF1194F597400950494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D048EF2194F597500950494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D048EFA194F597500950494 /* mempics-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mempics-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D048EFF194F597500950494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D048F00194F597500950494 /* mempics_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mempics_iosTests.swift; sourceTree = "<group>"; };
+		9D048F13194F5A0B00950494 /* BTCentral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCentral.swift; sourceTree = "<group>"; };
+		9D048F14194F5A0B00950494 /* BTPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTPeripheral.swift; sourceTree = "<group>"; };
+		9D048F15194F5A0B00950494 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		9D048F16194F5A0B00950494 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		9D048F1C194F5A1E00950494 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9D048F1E194F5A5700950494 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D048EEA194F597400950494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D048F1F194F5A5700950494 /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D048EF7194F597500950494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D048EE4194F597400950494 = {
+			isa = PBXGroup;
+			children = (
+				9D048F1E194F5A5700950494 /* CoreBluetooth.framework */,
+				9D048EEF194F597400950494 /* mempics-ios */,
+				9D048EFD194F597500950494 /* mempics-iosTests */,
+				9D048EEE194F597400950494 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D048EEE194F597400950494 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D048EED194F597400950494 /* mempics-ios.app */,
+				9D048EFA194F597500950494 /* mempics-iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D048EEF194F597400950494 /* mempics-ios */ = {
+			isa = PBXGroup;
+			children = (
+				9D048EF2194F597500950494 /* AppDelegate.swift */,
+				9D048F13194F5A0B00950494 /* BTCentral.swift */,
+				9D048F14194F5A0B00950494 /* BTPeripheral.swift */,
+				9D048F15194F5A0B00950494 /* CameraVC.swift */,
+				9D048F16194F5A0B00950494 /* MainVC.swift */,
+				9D048F1C194F5A1E00950494 /* Images.xcassets */,
+				9D048EF0194F597400950494 /* Supporting Files */,
+			);
+			path = "mempics-ios";
+			sourceTree = "<group>";
+		};
+		9D048EF0194F597400950494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D048EF1194F597400950494 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D048EFD194F597500950494 /* mempics-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D048F00194F597500950494 /* mempics_iosTests.swift */,
+				9D048EFE194F597500950494 /* Supporting Files */,
+			);
+			path = "mempics-iosTests";
+			sourceTree = "<group>";
+		};
+		9D048EFE194F597500950494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D048EFF194F597500950494 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D048EEC194F597400950494 /* mempics-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D048F04194F597500950494 /* Build configuration list for PBXNativeTarget "mempics-ios" */;
+			buildPhases = (
+				9D048EE9194F597400950494 /* Sources */,
+				9D048EEA194F597400950494 /* Frameworks */,
+				9D048EEB194F597400950494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mempics-ios";
+			productName = "mempics-ios";
+			productReference = 9D048EED194F597400950494 /* mempics-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D048EF9194F597500950494 /* mempics-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D048F07194F597500950494 /* Build configuration list for PBXNativeTarget "mempics-iosTests" */;
+			buildPhases = (
+				9D048EF6194F597500950494 /* Sources */,
+				9D048EF7194F597500950494 /* Frameworks */,
+				9D048EF8194F597500950494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D048EFC194F597500950494 /* PBXTargetDependency */,
+			);
+			name = "mempics-iosTests";
+			productName = "mempics-iosTests";
+			productReference = 9D048EFA194F597500950494 /* mempics-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D048EE5194F597400950494 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Jerry Shan";
+				TargetAttributes = {
+					9D048EEC194F597400950494 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 2VZ58SSC7W;
+					};
+					9D048EF9194F597500950494 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9D048EEC194F597400950494;
+					};
+				};
+			};
+			buildConfigurationList = 9D048EE8194F597400950494 /* Build configuration list for PBXProject "mempics-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9D048EE4194F597400950494;
+			productRefGroup = 9D048EEE194F597400950494 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D048EEC194F597400950494 /* mempics-ios */,
+				9D048EF9194F597500950494 /* mempics-iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D048EEB194F597400950494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D048F1D194F5A1E00950494 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D048EF8194F597500950494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D048EE9194F597400950494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D048F19194F5A0B00950494 /* BTPeripheral.swift in Sources */,
+				9D048F1B194F5A0B00950494 /* MainVC.swift in Sources */,
+				9D048EF3194F597500950494 /* AppDelegate.swift in Sources */,
+				9D048F18194F5A0B00950494 /* BTCentral.swift in Sources */,
+				9D048F1A194F5A0B00950494 /* CameraVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D048EF6194F597500950494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D048F01194F597500950494 /* mempics_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D048EFC194F597500950494 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D048EEC194F597400950494 /* mempics-ios */;
+			targetProxy = 9D048EFB194F597500950494 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9D048F02194F597500950494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D048F03194F597500950494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D048F05194F597500950494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "mempics-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9D048F06194F597500950494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "mempics-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9D048F08194F597500950494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mempics-ios.app/mempics-ios";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "mempics-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9D048F09194F597500950494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mempics-ios.app/mempics-ios";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "mempics-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D048EE8194F597400950494 /* Build configuration list for PBXProject "mempics-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D048F02194F597500950494 /* Debug */,
+				9D048F03194F597500950494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D048F04194F597500950494 /* Build configuration list for PBXNativeTarget "mempics-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D048F05194F597500950494 /* Debug */,
+				9D048F06194F597500950494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9D048F07194F597500950494 /* Build configuration list for PBXNativeTarget "mempics-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D048F08194F597500950494 /* Debug */,
+				9D048F09194F597500950494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D048EE5194F597400950494 /* Project object */;
+}

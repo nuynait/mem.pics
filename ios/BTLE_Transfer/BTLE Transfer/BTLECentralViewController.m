@@ -140,14 +140,16 @@
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     // Reject any where the value is above reasonable range
-    if (RSSI.integerValue > -15) {
-        return;
-    }
+    // if (RSSI.integerValue > -15) {
+    //     NSLog(@"Rejected, Not in Range! Discovered %@ at %@", peripheral.name, RSSI);
+    //     return;
+    // }
         
     // Reject if the signal strength is too low to be close enough (Close is around -22dB)
-    if (RSSI.integerValue < -35) {
-        return;
-    }
+    // if (RSSI.integerValue < -35) {
+    //     NSLog(@"Rejected, Not in Range! Discovered %@ at %@", peripheral.name, RSSI);
+    //     return;
+    // }
     
     NSLog(@"Discovered %@ at %@", peripheral.name, RSSI);
     
