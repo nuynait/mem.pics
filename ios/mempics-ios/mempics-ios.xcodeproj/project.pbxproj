@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9D00ECD31951D5AB0037C55C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D00ECD21951D5AB0037C55C /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9D00ECD51952181E0037C55C /* BTCentralCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D00ECD41952181E0037C55C /* BTCentralCamViewController.swift */; };
+		9D00ECD719521CE70037C55C /* BTPeripheralCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D00ECD619521CE70037C55C /* BTPeripheralCamViewController.swift */; };
 		9D048EF3194F597500950494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048EF2194F597500950494 /* AppDelegate.swift */; };
 		9D048F01194F597500950494 /* mempics_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F00194F597500950494 /* mempics_iosTests.swift */; };
 		9D048F18194F5A0B00950494 /* BTCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F13194F5A0B00950494 /* BTCentral.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		9D00ECD21951D5AB0037C55C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9D00ECD41952181E0037C55C /* BTCentralCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCentralCamViewController.swift; sourceTree = "<group>"; };
+		9D00ECD619521CE70037C55C /* BTPeripheralCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTPeripheralCamViewController.swift; sourceTree = "<group>"; };
 		9D048EED194F597400950494 /* mempics-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mempics-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D048EF1194F597400950494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D048EF2194F597500950494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				9D048EF2194F597500950494 /* AppDelegate.swift */,
 				9D048F16194F5A0B00950494 /* MainVC.swift */,
 				9D85FB101951C9E7002A5C4D /* CamViewController.swift */,
+				9D00ECD41952181E0037C55C /* BTCentralCamViewController.swift */,
+				9D00ECD619521CE70037C55C /* BTPeripheralCamViewController.swift */,
 				9D048F15194F5A0B00950494 /* CameraVC.swift */,
 				9D048F13194F5A0B00950494 /* BTCentral.swift */,
 				9D048F14194F5A0B00950494 /* BTPeripheral.swift */,
@@ -224,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D00ECD719521CE70037C55C /* BTPeripheralCamViewController.swift in Sources */,
 				9D85FB111951C9E7002A5C4D /* CamViewController.swift in Sources */,
+				9D00ECD51952181E0037C55C /* BTCentralCamViewController.swift in Sources */,
 				9D048F19194F5A0B00950494 /* BTPeripheral.swift in Sources */,
 				9D048F1B194F5A0B00950494 /* MainVC.swift in Sources */,
 				9D048EF3194F597500950494 /* AppDelegate.swift in Sources */,
