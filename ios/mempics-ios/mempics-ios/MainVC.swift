@@ -13,7 +13,7 @@ class MainVC: UIViewController {
     
     // Test View Button
     var nextViewButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
-    var cameraVC: CameraVC = CameraVC(nibName: nil, bundle: nil);
+    var cameraVC: CamViewController = CamViewController(nibName: nil, bundle: nil);
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

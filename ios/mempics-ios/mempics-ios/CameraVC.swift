@@ -1,6 +1,7 @@
 //
 //  CameraVC.swift
 //  MemPics
+//  Out Dated! May Not Use This Version Of Camera Picker
 //
 //  Created by Tianyun Shan on 6/10/14.
 //  Copyright (c) 2014 Jerry Shan. All rights reserved.
