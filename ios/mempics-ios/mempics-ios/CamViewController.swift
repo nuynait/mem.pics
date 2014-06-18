@@ -14,6 +14,11 @@ class CamViewController: UIViewController {
     var session:AVCaptureSession = AVCaptureSession();
     var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
     var focusDotLabel:UILabel = UILabel();
+    var countDownLabel:UILabel = UILabel();
+    
+    
+    // Flags
+    
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -84,24 +89,59 @@ class CamViewController: UIViewController {
     }
     
     func takePictureAction(sender:UIButton) {
-        println("Take Picture Button Pressed");
-        
+        self.view.addSubview(self.countDownLabel);
         // Count Down 5 Seconds
+        // Count Down Runs In A Seperate Thread
         println("Start Count Down");
         countDown(5);
+        
     }
     
     // A count down function
+    // Countdown runs in a seperate thread, so anything after the countdown in
+    // main function gets exec() before countdown.
     func countDown(time:NSInteger) {
         var second:NSInteger = time;
         println("CountDowning: \(second)");
+        self.countDownLabelRedraw("\(second)");
         if second == 0 {
+            // Here, Countdown Complete.
+            // Run the Complete Function
+            println("CountDown Finished");
+            self.countDownLabel.removeFromSuperview();
+            self.flashScreen();
             return;
         }
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
             self.countDown(second - 1);
             });
+    }
+    
+    
+    // Screen Flash, this is for simulate a "picture taken" animation
+    func flashScreen() {
+        var flashView:UIView = UIView(frame:self.view.frame);
+        flashView.backgroundColor = UIColor.whiteColor();
+        self.view.window.addSubview(flashView);
+        
+        UIView.animateWithDuration(1, animations: {
+            flashView.alpha = 0;
+            });
+    }
+    
+    
+    // Rerender CountDown Label
+    func countDownLabelRedraw(labelText:NSString) {
+        self.countDownLabel.text = labelText;
+        self.countDownLabel.textColor = UIColor.redColor();
+        self.countDownLabel.sizeToFit();
+        self.countDownLabel.frame = CGRectMake(
+            (self.view.frame.width - self.countDownLabel.frame.width) / 2,
+            100,
+            self.countDownLabel.frame.width,
+            self.countDownLabel.frame.height);
+        self.view.bringSubviewToFront(countDownLabel);
     }
     
 
