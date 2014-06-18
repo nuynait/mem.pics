@@ -67,6 +67,9 @@ class CamViewController: UIViewController {
             400,
             takePictureButton.frame.width,
             takePictureButton.frame.height);
+        self.takePictureButton.addTarget(self,
+            action: "takePictureAction:",
+            forControlEvents: UIControlEvents.TouchUpInside);
         self.view.bringSubviewToFront(takePictureButton);
         
         self.focusDotLabel.text = ".";
@@ -79,6 +82,28 @@ class CamViewController: UIViewController {
             self.focusDotLabel.frame.height);
         self.view.bringSubviewToFront(focusDotLabel);
     }
+    
+    func takePictureAction(sender:UIButton) {
+        println("Take Picture Button Pressed");
+        
+        // Count Down 5 Seconds
+        println("Start Count Down");
+        countDown(5);
+    }
+    
+    // A count down function
+    func countDown(time:NSInteger) {
+        var second:NSInteger = time;
+        println("CountDowning: \(second)");
+        if second == 0 {
+            return;
+        }
+        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue(), {
+            self.countDown(second - 1);
+            });
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
