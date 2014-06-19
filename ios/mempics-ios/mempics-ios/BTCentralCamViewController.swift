@@ -34,6 +34,10 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CB
     var temp2UUID:NSString = "08590F7E-DB05-467E-8757-72F6FAEB13D4";
     
     
+    // ImageOutput
+    var stillImageOutput:AVCaptureStillImageOutput?;
+    
+    
     
     // Flags
     
@@ -53,7 +57,8 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CB
         var mainView:UIView = UIView(frame:UIScreen.mainScreen().bounds);
         self.view = mainView;
         
-        self.view.addSubview(self.takePictureButton);
+        // self.view.addSubview(self.takePictureButton);
+        self.view.addSubview(self.countDownLabel);
         self.view.addSubview(self.focusDotLabel);
     }
     
@@ -113,7 +118,19 @@ extension BTCentralCamViewController {
         if session.canAddInput(videoDeviceInput) {
             session.addInput(videoDeviceInput);
         }
+        
+        
+        // Setup the output
+        self.stillImageOutput = AVCaptureStillImageOutput();
+        if session.canAddOutput(self.stillImageOutput) {
+            // Add stillimage output to session
+            session.addOutput(self.stillImageOutput);
+        }
+        
         session.startRunning();
+        
+        
+
     }
     
     class func deviceWithMediaType(mediaType:NSString, position:AVCaptureDevicePosition) -> AVCaptureDevice {
@@ -176,7 +193,6 @@ extension BTCentralCamViewController {
     }
     
     func takePictureAction(sender:UIButton) {
-        self.view.addSubview(self.countDownLabel);
         // Count Down 5 Seconds
         // Count Down Runs In A Seperate Thread
         println("Start Count Down");
@@ -207,11 +223,21 @@ extension BTCentralCamViewController {
     // This function get called after the count down
     func countDownComplete() {
         println("CountDown Finished");
-        self.countDownLabel.removeFromSuperview();
+        self.countDownLabel.text = "";
         self.flashScreen();
         
-        // Bluetooth Pairing
-        self.pairing();
+        println("Start Capture Image");
+        // Capture Image:
+        self.stillImageOutput!.captureStillImageAsynchronouslyFromConnection(self.stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo), completionHandler:
+            { (buffer, error:NSError!) in
+                
+                if buffer {
+                    var imageData:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer);
+                    var image:UIImage = UIImage(data: imageData);
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+                    println("Save to Album finished");
+                }
+            });
     }
     
     
@@ -322,6 +348,7 @@ extension BTCentralCamViewController {
                 return;
             }
             
+            
             // Subscribe to All the char
             for item: AnyObject in service.characteristics {
                 var characteristic:CBCharacteristic = item as CBCharacteristic;
@@ -357,6 +384,10 @@ extension BTCentralCamViewController {
                 
                 // Disconnect from peripheral
                 self.centralManager!.cancelPeripheralConnection(peripheral);
+                
+                
+                // All the data has been received. Start Camera Shooting Action
+                self.countDown(5);
                 
             }
             else {
