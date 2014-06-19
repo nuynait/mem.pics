@@ -18,6 +18,11 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
     var countDownLabel:UILabel = UILabel();
     
     
+    
+    
+    // UUIDS
+    var transferServiceUUID:NSString = "1699DD88-A314-4E04-84DE-6CB7863EA2C0";
+    
     // Flags
     
     
@@ -168,15 +173,21 @@ extension BTPeripheralCamViewController {
         if second == 0 {
             // Here, Countdown Complete.
             // Run the Complete Function
-            println("CountDown Finished");
-            self.countDownLabel.removeFromSuperview();
-            self.flashScreen();
+            self.countDownComplete();
             return;
         }
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
             self.countDown(second - 1);
             });
+    }
+    
+    
+    // This function get called after the count down 
+    func countDownComplete() {
+        println("CountDown Finished");
+        self.countDownLabel.removeFromSuperview();
+        self.flashScreen();
     }
     
     

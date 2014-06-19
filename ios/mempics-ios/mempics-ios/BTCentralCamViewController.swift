@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CoreBluetooth
 
-class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate {
+class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
 
     var session:AVCaptureSession = AVCaptureSession();
     var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
@@ -18,7 +18,29 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate {
     var countDownLabel:UILabel = UILabel();
     
     
+    // All Bluetooth Use Property
+    var data:NSMutableData = NSMutableData();
+    var centralManager:CBCentralManager?;
+    
+    // Remember State for Bluetooth
+    var discoveredPeriperal:CBPeripheral?;
+    
+    
+    // UUIDS
+    var transferServiceUUID:NSString = "1699DD88-A314-4E04-84DE-6CB7863EA2C0";
+    var transferCharacteristicUUID:NSString = "512EA3F8-1209-4095-90E6-302216ED120D";
+    
+    var tempUUID:NSString = "E20A39F4-73F5-4BC4-A12F-17D1AD07A961";
+    var temp2UUID:NSString = "08590F7E-DB05-467E-8757-72F6FAEB13D4";
+    
+    
+    
     // Flags
+    
+    
+    
+    
+    
     
     
     
@@ -38,11 +60,15 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup All the Sessions
+        // Setup AV Sessions
         avSessionSetup();
         
-        // Setup All subviews
+        // Setup All Subviews
         subViewSetup();
+        
+        
+        // Debug Use
+        self.pairing();
     }
     
     
@@ -168,15 +194,32 @@ extension BTCentralCamViewController {
         if second == 0 {
             // Here, Countdown Complete.
             // Run the Complete Function
-            println("CountDown Finished");
-            self.countDownLabel.removeFromSuperview();
-            self.flashScreen();
+            self.countDownComplete();
             return;
         }
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
             self.countDown(second - 1);
             });
+    }
+    
+    
+    // This function get called after the count down
+    func countDownComplete() {
+        println("CountDown Finished");
+        self.countDownLabel.removeFromSuperview();
+        self.flashScreen();
+        
+        // Bluetooth Pairing
+        self.pairing();
+    }
+    
+    
+    func pairing() {
+        
+        // Run Bluetooth Central Manager
+        self.centralManager = CBCentralManager(delegate: self, queue: nil);
+        
     }
     
     
@@ -197,8 +240,200 @@ extension BTCentralCamViewController {
 // Add Core Bluetooth Functions and Protocols
 extension BTCentralCamViewController {
     
+    
     func centralManagerDidUpdateState(central: CBCentralManager!)  {
+        if (central.state != CBCentralManagerState.PoweredOn) {
+            println("Bluetooth Not Ready To Use");
+            return;
+        }
         
+        println("Bluetooth is Ready To Use");
+        scan();
+    }
+    
+    func scan() {
+        self.centralManager!.scanForPeripheralsWithServices([CBUUID.UUIDWithString(self.tempUUID)], options: [CBCentralManagerScanOptionAllowDuplicatesKey: true]);
+        println("Scan Started");
+    }
+    
+    func centralManager(central: CBCentralManager!,
+        didDiscoverPeripheral peripheral: CBPeripheral!,
+        advertisementData: NSDictionary!,
+        RSSI: NSNumber!) {
+            println("Discoverd \(peripheral.name) at \(RSSI)");
+            // Check to See if this peripheral is the one we already connected
+            if (self.discoveredPeriperal != peripheral) {
+                // Mark it discovered
+                self.discoveredPeriperal = peripheral;
+                // Connect to that peripheral
+                println("Connect to peripheral");
+                self.centralManager!.connectPeripheral(peripheral, options: nil);
+            }
+    }
+    
+    func centralManager(central: CBCentralManager!,
+        didFailToConnectPeripheral peripheral: CBPeripheral!,
+        error: NSError!) {
+            println("Failed to connect to \(peripheral), Errror: \(error.localizedDescription)");
+            
+    }
+    
+    func centralManager(central: CBCentralManager!,
+        didConnectPeripheral peripheral: CBPeripheral!) {
+            println("Peripheral Connected");
+            
+            // Stop Scan
+            self.centralManager!.stopScan();
+            println("Scan Stopped");
+            
+            // Clear the Data
+            self.data.length = 0;
+            
+            peripheral.delegate = self;
+            peripheral.discoverServices([CBUUID.UUIDWithString(self.tempUUID)]);
+            
+    }
+    
+    // Discover Service, loopthough and get all the characteristic
+    func peripheral(peripheral: CBPeripheral!,
+        didDiscoverServices error: NSError!) {
+            if error {
+                println("Error, Discovering Service: \(error.localizedDescription)");
+                self.cleanUp();
+                return;
+            }
+            
+            // Discover all the characteristics
+            // Loop though the service
+            
+            for service : AnyObject in peripheral.services {
+                peripheral.discoverCharacteristics([CBUUID.UUIDWithString(self.temp2UUID)], forService: service as CBService);
+            }
+            
+    }
+    
+    // 
+    func peripheral(peripheral: CBPeripheral!,
+        didDiscoverCharacteristicsForService service: CBService!,
+        error: NSError!) {
+            if error {
+                println("Error, Discovering Characteristics: \(error.localizedDescription)");
+                self.cleanUp();
+                return;
+            }
+            
+            // Subscribe to All the char
+            for item: AnyObject in service.characteristics {
+                var characteristic:CBCharacteristic = item as CBCharacteristic;
+                if (characteristic.UUID.isEqual(CBUUID.UUIDWithString(temp2UUID))) {
+                    // Has Found the characteristic, need to subsribe to it
+                    peripheral.setNotifyValue(true, forCharacteristic: characteristic);
+                }
+
+            }
+            
+            // Complete! Need to wait for the data to come in
+    }
+    
+    func peripheral(peripheral: CBPeripheral!,
+        didUpdateValueForCharacteristic characteristic: CBCharacteristic!,
+        error: NSError!) {
+            if error {
+                println("Error Updating Value of Characteristic: \(error.localizedDescription)");
+            }
+            
+            var stringFromData:NSString = NSString(data: characteristic.value, encoding: NSUTF8StringEncoding);
+            println("Received: \(stringFromData)");
+            
+            // if this if case reached, we have finish receive all the data from the peripheral
+            if stringFromData.isEqualToString("EOM") {
+                
+                // Do everything you want!
+                var finalString:NSString = NSString(data: self.data, encoding: NSUTF8StringEncoding);
+                println("!!!!!!ALL DATA RECEIVED!!!!!!!!: \(finalString)");
+                
+                // Cancel Subscribtion
+                peripheral.setNotifyValue(false, forCharacteristic: characteristic);
+                
+                // Disconnect from peripheral
+                self.centralManager!.cancelPeripheralConnection(peripheral);
+                
+            }
+            else {
+                // Not EOM, append data to what we already received
+                self.data.appendData(characteristic.value);
+            }
+    }
+    
+    
+    // whether our subscribe/unsubscribe happened or not
+    func peripheral(peripheral: CBPeripheral!,
+        didUpdateNotificationStateForCharacteristic characteristic: CBCharacteristic!,
+        error: NSError!) {
+            if error {
+                println("Error changing notification state: \(error.localizedDescription)");
+            }
+            
+            
+            // Check to see if it's our characteristic
+            if (!characteristic.UUID.isEqual(CBUUID.UUIDWithString(temp2UUID))) {
+                // Not the characteristic we want, exit
+                return;
+            }
+            
+            // The notification has started
+            if characteristic.isNotifying {
+                println("Notification began on \(characteristic)");
+            }
+            else {
+                // The notification has stopped
+                println("Notification stopped on \(characteristic). Disconnecting");
+                self.centralManager!.cancelPeripheralConnection(peripheral);
+            }
+    }
+    
+    // Central disconnect Peripheral happened
+    func centralManager(central: CBCentralManager!,
+        didDisconnectPeripheral peripheral: CBPeripheral!,
+        error: NSError!) {
+            println("Peripheral Disconnected");
+            self.discoveredPeriperal = nil;
+            
+            // We have been disconnected, start scanning again
+            self.scan();
+    }
+    
+    
+    
+    func cleanUp() {
+        println("ready to clean up");
+        // Do nothing if we are not connected
+        if !self.discoveredPeriperal!.isConnected {
+            return;
+        }
+        
+        if self.discoveredPeriperal!.services != nil {
+            for item:AnyObject in self.discoveredPeriperal!.services {
+                var service:CBService = item as CBService;
+                if service.characteristics != nil {
+                    for itemChar:AnyObject in service.characteristics {
+                        var characteristic:CBCharacteristic = itemChar as CBCharacteristic;
+                        
+                        // Finding the characteristic we may notified
+                        if characteristic.UUID.isEqual(CBUUID.UUIDWithString(temp2UUID)) {
+                            if characteristic.isNotifying {
+                                // it is notifying, cancel notify here
+                                self.discoveredPeriperal!.setNotifyValue(false, forCharacteristic: characteristic);
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        // We are connected, but not notified, just unconnect the link
+        self.centralManager!.cancelPeripheralConnection(self.discoveredPeriperal);
     }
     
 }
