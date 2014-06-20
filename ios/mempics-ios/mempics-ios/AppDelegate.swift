@@ -12,7 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
-    var mainVC: MainVC?
+    var mainVC: BTCentralCamViewController?
+    
+    var debugVC: MainVC?;
     
 
     
@@ -24,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible();
         
         // Setup the Main View Controller
-        self.mainVC = MainVC(nibName: nil, bundle: nil);
+        self.mainVC = BTCentralCamViewController(nibName: nil, bundle: nil);
+        self.debugVC = MainVC(nibName: nil, bundle: nil);
+        self.mainVC!.window = self.window;
         self.window!.rootViewController = mainVC;
         
         return true;
