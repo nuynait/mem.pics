@@ -16,14 +16,6 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
     var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
     var focusDotLabel:UILabel = UILabel();
     var countDownLabel:UILabel = UILabel();
-    var camSwitch:UISwitch = UISwitch();
-    var bluetoothStatus:UILabel = UILabel();
-    
-    
-    // Present BTCentralViewContoller
-    var window:UIWindow?;
-    var camCentralViewController:BTCentralCamViewController?
-    
     
     
     
@@ -66,8 +58,6 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
         self.view.addSubview(self.countDownLabel);
         self.view.addSubview(self.takePictureButton);
         self.view.addSubview(self.focusDotLabel);
-        self.view.addSubview(self.camSwitch);
-        self.view.addSubview(self.bluetoothStatus);
     }
     
     override func viewDidLoad() {
@@ -127,8 +117,6 @@ extension BTPeripheralCamViewController {
             session.addInput(videoDeviceInput);
         }
         
-        
-        
         // Setup the output
         self.stillImageOutput = AVCaptureStillImageOutput();
         if session.canAddOutput(self.stillImageOutput) {
@@ -182,12 +170,6 @@ extension BTPeripheralCamViewController {
             self.focusDotLabel.frame.height);
         self.view.bringSubviewToFront(focusDotLabel);
         
-        self.camSwitch.frame = CGRectMake(10,self.view.frame.height - 30, 79, 27);
-        self.camSwitch.on = true;
-        self.camSwitch.addTarget(self,
-            action: "flipView:",
-            forControlEvents: UIControlEvents.ValueChanged);
-        self.view.bringSubviewToFront(camSwitch);
     }
     
     
@@ -204,19 +186,6 @@ extension BTPeripheralCamViewController {
         self.view.bringSubviewToFront(countDownLabel);
     }
     
-    // Rerender Bluetooth Status Label
-    func bluetoothStatusLabelRedraw(labelText:NSString) {
-        self.bluetoothStatus.text = labelText;
-        self.bluetoothStatus.textColor = UIColor.redColor();
-        self.bluetoothStatus.sizeToFit();
-        self.bluetoothStatus.frame = CGRectMake(
-            self.view.frame.width - self.bluetoothStatus.frame.width + 5,
-            10,
-            self.bluetoothStatus.frame.width,
-            self.bluetoothStatus.frame.height);
-        self.view.bringSubviewToFront(bluetoothStatus);
-    }
-    
     func takePictureAction(sender:UIButton) {
         /*
         // Count Down 5 Seconds
@@ -224,8 +193,6 @@ extension BTPeripheralCamViewController {
         println("Start Count Down");
         countDown(5);
         */
-
-        
         
         self.advertisingSwitch = true;
         println("Start Advertising");
@@ -233,41 +200,6 @@ extension BTPeripheralCamViewController {
         
         // Button Disable
         self.takePictureButton.enabled = false;
-        
-    }
-    
-    
-    func flipView (sender:UISwitch) {
-        if camSwitch.on {
-            
-            // Stay Here
-        }
-        else {
-            // Present BTCentralViewController
-            /*
-            self.dismissViewControllerAnimated(false, completion: {
-                self.camCentralViewController!.avSessionSetup();
-                self.camCentralViewController!.subViewSetup();
-                self.camCentralViewController!.camSwitch.on = false;
-                })
-            */
-            
-            // Setup the Main View Controller
-            var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
-            
-            
-            
-            
-            previewLayer.backgroundColor = UIColor.blackColor().CGColor;
-            previewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-            previewLayer.frame = UIScreen.mainScreen().bounds;
-            self.camCentralViewController!.view.layer.masksToBounds = true;
-            self.camCentralViewController!.view.layer.addSublayer(previewLayer);
-            
-            self.camCentralViewController!.subViewSetup();
-            self.camCentralViewController!.camSwitch.on = false;
-            self.window!.rootViewController = self.camCentralViewController;
-        }
         
     }
     
@@ -307,11 +239,11 @@ extension BTPeripheralCamViewController {
                     var image:UIImage = UIImage(data: imageData);
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
                     println("Save to Album finished");
-                    
-                    // Reenable Button
-                    self.takePictureButton.enabled = true;
                 }
             });
+        
+        // Reenable Button
+        self.takePictureButton.enabled = true;
     }
     
     

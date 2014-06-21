@@ -16,6 +16,14 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CB
     var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
     var focusDotLabel:UILabel = UILabel();
     var countDownLabel:UILabel = UILabel();
+    var camSwitch:UISwitch = UISwitch();
+    var bluetoothStatus:UILabel = UILabel();
+    
+    
+    // Peripheral View Controller
+    var window:UIWindow?;
+    var peripheralViewController:BTPeripheralCamViewController = BTPeripheralCamViewController(nibName: nil, bundle: nil);
+    var firstLaunchView:Bool = true;
     
     
     // All Bluetooth Use Property
@@ -60,6 +68,8 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CB
         // self.view.addSubview(self.takePictureButton);
         self.view.addSubview(self.countDownLabel);
         self.view.addSubview(self.focusDotLabel);
+        self.view.addSubview(self.camSwitch);
+        self.view.addSubview(self.bluetoothStatus);
     }
     
     override func viewDidLoad() {
@@ -176,8 +186,65 @@ extension BTCentralCamViewController {
             self.focusDotLabel.frame.height);
         self.view.bringSubviewToFront(focusDotLabel);
         
+        self.camSwitch.frame = CGRectMake(10,self.view.frame.height - 30, 79, 27);
+        self.camSwitch.addTarget(self,
+            action: "flipView:",
+            forControlEvents: UIControlEvents.ValueChanged);
+        self.view.bringSubviewToFront(camSwitch);
+        
+        
     }
     
+    func flipView (sender:UISwitch) {
+        if camSwitch.on {
+            // Should go to BTPeripheral
+            
+            /*
+            self.peripheralViewController.camCentralViewController = self;
+            self.presentViewController(self.peripheralViewController, animated: false, completion: {
+                self.peripheralViewController.loadView();
+                self.peripheralViewController.viewDidLoad();
+                self.peripheralViewController.camSwitch.on = true;
+                });
+            */
+            
+            
+            // if first launch view, do not setup the previewLayer.
+            if self.firstLaunchView {
+                self.peripheralViewController.camCentralViewController = self;
+                self.peripheralViewController.window = self.window;
+                self.peripheralViewController.camSwitch.on = true;
+                
+                self.firstLaunchView = false;
+                self.window!.rootViewController = self.peripheralViewController;
+            }
+            else {
+                // if not first time launch the view, resetup the previewLayer
+                self.peripheralViewController.camCentralViewController = self;
+                self.peripheralViewController.window = self.window;
+                self.peripheralViewController.camSwitch.on = true;
+                
+                
+                var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
+                
+                previewLayer.backgroundColor = UIColor.blackColor().CGColor;
+                previewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+                previewLayer.frame = UIScreen.mainScreen().bounds;
+                self.peripheralViewController.view.layer.masksToBounds = true;
+                self.peripheralViewController.view.layer.addSublayer(previewLayer);
+                
+                self.peripheralViewController.subViewSetup();
+                
+                self.window!.rootViewController = self.peripheralViewController;
+            }
+        }
+        else {
+            // Should go to BTCentralCamViewController
+            
+            // Stay Here
+        }
+        
+    }
     
     // Rerender CountDown Label
     func countDownLabelRedraw(labelText:NSString) {
@@ -190,6 +257,21 @@ extension BTCentralCamViewController {
             self.countDownLabel.frame.width,
             self.countDownLabel.frame.height);
         self.view.bringSubviewToFront(countDownLabel);
+    }
+    
+    
+    
+    // Rerender Bluetooth Status Label
+    func bluetoothStatusLabelRedraw(labelText:NSString) {
+        self.bluetoothStatus.text = labelText;
+        self.bluetoothStatus.textColor = UIColor.redColor();
+        self.bluetoothStatus.sizeToFit();
+        self.bluetoothStatus.frame = CGRectMake(
+            self.view.frame.width - self.bluetoothStatus.frame.width + 5,
+            10,
+            self.bluetoothStatus.frame.width,
+            self.bluetoothStatus.frame.height);
+        self.view.bringSubviewToFront(bluetoothStatus);
     }
     
     func takePictureAction(sender:UIButton) {
@@ -280,6 +362,7 @@ extension BTCentralCamViewController {
     func scan() {
         self.centralManager!.scanForPeripheralsWithServices([CBUUID.UUIDWithString(self.tempUUID)], options: [CBCentralManagerScanOptionAllowDuplicatesKey: true]);
         println("Scan Started");
+        
     }
     
     func centralManager(central: CBCentralManager!,
