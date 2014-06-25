@@ -17,8 +17,17 @@
 		9D048F1A194F5A0B00950494 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F15194F5A0B00950494 /* CameraVC.swift */; };
 		9D048F1B194F5A0B00950494 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F16194F5A0B00950494 /* MainVC.swift */; };
 		9D048F1F194F5A5700950494 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D048F1E194F5A5700950494 /* CoreBluetooth.framework */; };
+		9D59A43C195A68FC00D51025 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D59A439195A68FC00D51025 /* UIImage+OpenCV.mm */; };
+		9D59A43D195A68FC00D51025 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D59A43B195A68FC00D51025 /* CVWrapper.mm */; };
+		9D59A440195A691100D51025 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D59A43E195A691100D51025 /* stitching.cpp */; };
 		9D85FB111951C9E7002A5C4D /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D85FB101951C9E7002A5C4D /* CamViewController.swift */; };
+		9DA6412C195A7A400052B49F /* a1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9DA64128195A7A400052B49F /* a1.JPG */; };
+		9DA6412D195A7A400052B49F /* a2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9DA64129195A7A400052B49F /* a2.JPG */; };
+		9DA6412E195A7A400052B49F /* a3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6412A195A7A400052B49F /* a3.JPG */; };
+		9DA6412F195A7A400052B49F /* a4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6412B195A7A400052B49F /* a4.JPG */; };
+		9DA6413B195B40EE0052B49F /* a5.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6413A195B40EE0052B49F /* a5.JPG */; };
 		9DF388B519538D2D008CF30E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF388B419538D2D008CF30E /* Images.xcassets */; };
+		F93DBEE802D7408CB8C1CFE3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 071AABDE00644FD8AE2E9885 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071AABDE00644FD8AE2E9885 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D00ECD21951D5AB0037C55C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9D00ECD41952181E0037C55C /* BTCentralCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCentralCamViewController.swift; sourceTree = "<group>"; };
 		9D00ECD619521CE70037C55C /* BTPeripheralCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTPeripheralCamViewController.swift; sourceTree = "<group>"; };
@@ -46,8 +56,21 @@
 		9D048F15194F5A0B00950494 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		9D048F16194F5A0B00950494 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		9D048F1E194F5A5700950494 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9D59A42C195A646100D51025 /* mempics-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mempics-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		9D59A438195A68FC00D51025 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		9D59A439195A68FC00D51025 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		9D59A43A195A68FC00D51025 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
+		9D59A43B195A68FC00D51025 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
+		9D59A43E195A691100D51025 /* stitching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stitching.cpp; sourceTree = "<group>"; };
+		9D59A43F195A691100D51025 /* stitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stitching.h; sourceTree = "<group>"; };
 		9D85FB101951C9E7002A5C4D /* CamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
+		9DA64128195A7A400052B49F /* a1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.JPG; sourceTree = "<group>"; };
+		9DA64129195A7A400052B49F /* a2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a2.JPG; sourceTree = "<group>"; };
+		9DA6412A195A7A400052B49F /* a3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a3.JPG; sourceTree = "<group>"; };
+		9DA6412B195A7A400052B49F /* a4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a4.JPG; sourceTree = "<group>"; };
+		9DA6413A195B40EE0052B49F /* a5.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a5.JPG; sourceTree = "<group>"; };
 		9DF388B419538D2D008CF30E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EB51D377F5DB4AECBBEF4359 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +80,7 @@
 			files = (
 				9D00ECD31951D5AB0037C55C /* CFNetwork.framework in Frameworks */,
 				9D048F1F194F5A5700950494 /* CoreBluetooth.framework in Frameworks */,
+				F93DBEE802D7408CB8C1CFE3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,11 +97,11 @@
 		9D048EE4194F597400950494 = {
 			isa = PBXGroup;
 			children = (
-				9D00ECD21951D5AB0037C55C /* CFNetwork.framework */,
-				9D048F1E194F5A5700950494 /* CoreBluetooth.framework */,
 				9D048EEF194F597400950494 /* mempics-ios */,
 				9D048EFD194F597500950494 /* mempics-iosTests */,
 				9D048EEE194F597400950494 /* Products */,
+				EB51D377F5DB4AECBBEF4359 /* Pods.xcconfig */,
+				D63B7050F6544725B3EEEE90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +117,7 @@
 		9D048EEF194F597400950494 /* mempics-ios */ = {
 			isa = PBXGroup;
 			children = (
+				9D59A42F195A680900D51025 /* Images */,
 				9D048EF2194F597500950494 /* AppDelegate.swift */,
 				9D048F16194F5A0B00950494 /* MainVC.swift */,
 				9D85FB101951C9E7002A5C4D /* CamViewController.swift */,
@@ -100,9 +125,16 @@
 				9D00ECD619521CE70037C55C /* BTPeripheralCamViewController.swift */,
 				9D048F15194F5A0B00950494 /* CameraVC.swift */,
 				9D048F13194F5A0B00950494 /* BTCentral.swift */,
+				9D59A438195A68FC00D51025 /* UIImage+OpenCV.h */,
+				9D59A439195A68FC00D51025 /* UIImage+OpenCV.mm */,
+				9D59A43E195A691100D51025 /* stitching.cpp */,
+				9D59A43F195A691100D51025 /* stitching.h */,
+				9D59A43A195A68FC00D51025 /* CVWrapper.h */,
+				9D59A43B195A68FC00D51025 /* CVWrapper.mm */,
 				9D048F14194F5A0B00950494 /* BTPeripheral.swift */,
 				9DF388B419538D2D008CF30E /* Images.xcassets */,
 				9D048EF0194F597400950494 /* Supporting Files */,
+				9D59A42C195A646100D51025 /* mempics-ios-Bridging-Header.h */,
 			);
 			path = "mempics-ios";
 			sourceTree = "<group>";
@@ -132,6 +164,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9D59A42F195A680900D51025 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9DA64128195A7A400052B49F /* a1.JPG */,
+				9DA64129195A7A400052B49F /* a2.JPG */,
+				9DA6412A195A7A400052B49F /* a3.JPG */,
+				9DA6412B195A7A400052B49F /* a4.JPG */,
+				9DA6413A195B40EE0052B49F /* a5.JPG */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D63B7050F6544725B3EEEE90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D00ECD21951D5AB0037C55C /* CFNetwork.framework */,
+				9D048F1E194F5A5700950494 /* CoreBluetooth.framework */,
+				071AABDE00644FD8AE2E9885 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D048F04194F597500950494 /* Build configuration list for PBXNativeTarget "mempics-ios" */;
 			buildPhases = (
+				EC121CAF19D64579BF16B301 /* Check Pods Manifest.lock */,
 				9D048EE9194F597400950494 /* Sources */,
 				9D048EEA194F597400950494 /* Frameworks */,
 				9D048EEB194F597400950494 /* Resources */,
+				28480B86050247588DCDA98F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +268,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA6412F195A7A400052B49F /* a4.JPG in Resources */,
+				9DA6413B195B40EE0052B49F /* a5.JPG in Resources */,
 				9DF388B519538D2D008CF30E /* Images.xcassets in Resources */,
+				9DA6412E195A7A400052B49F /* a3.JPG in Resources */,
+				9DA6412D195A7A400052B49F /* a2.JPG in Resources */,
+				9DA6412C195A7A400052B49F /* a1.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,16 +286,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28480B86050247588DCDA98F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC121CAF19D64579BF16B301 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D048EE9194F597400950494 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9D00ECD719521CE70037C55C /* BTPeripheralCamViewController.swift in Sources */,
+				9D59A43C195A68FC00D51025 /* UIImage+OpenCV.mm in Sources */,
 				9D85FB111951C9E7002A5C4D /* CamViewController.swift in Sources */,
 				9D00ECD51952181E0037C55C /* BTCentralCamViewController.swift in Sources */,
 				9D048F19194F5A0B00950494 /* BTPeripheral.swift in Sources */,
 				9D048F1B194F5A0B00950494 /* MainVC.swift in Sources */,
+				9D59A43D195A68FC00D51025 /* CVWrapper.mm in Sources */,
+				9D59A440195A691100D51025 /* stitching.cpp in Sources */,
 				9D048EF3194F597500950494 /* AppDelegate.swift in Sources */,
 				9D048F18194F5A0B00950494 /* BTCentral.swift in Sources */,
 				9D048F1A194F5A0B00950494 /* CameraVC.swift in Sources */,
@@ -339,9 +436,11 @@
 		};
 		9D048F05194F597500950494 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB51D377F5DB4AECBBEF4359 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "mempics-ios/Info.plist";
@@ -349,14 +448,18 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "mempics-ios/mempics-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9D048F06194F597500950494 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB51D377F5DB4AECBBEF4359 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "mempics-ios/Info.plist";
@@ -364,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "mempics-ios/mempics-ios-Bridging-Header.h";
 			};
 			name = Release;
 		};

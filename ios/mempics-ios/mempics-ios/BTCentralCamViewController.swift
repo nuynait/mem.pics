@@ -214,15 +214,18 @@ extension BTCentralCamViewController {
                 self.peripheralViewController.camCentralViewController = self;
                 self.peripheralViewController.window = self.window;
                 self.peripheralViewController.camSwitch.on = true;
+                self.peripheralViewController.panoramaSwitch.on = false;
                 
                 self.firstLaunchView = false;
                 self.window!.rootViewController = self.peripheralViewController;
             }
             else {
                 // if not first time launch the view, resetup the previewLayer
+                self.peripheralViewController.session.sessionPreset = AVCaptureSessionPresetPhoto;
                 self.peripheralViewController.camCentralViewController = self;
                 self.peripheralViewController.window = self.window;
                 self.peripheralViewController.camSwitch.on = true;
+                self.peripheralViewController.panoramaSwitch.on = false;
                 
                 
                 var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;

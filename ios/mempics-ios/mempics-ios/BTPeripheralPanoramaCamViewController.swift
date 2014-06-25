@@ -1,5 +1,5 @@
 //
-//  BTPeripheralCamViewController.swift
+//  BTPeripheralPanoramaCamViewController.swift
 //  mempics-ios
 //
 //  Created by Tianyun Shan on 2014-06-18.
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CoreBluetooth
 
-class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelegate {
+class BTPeripheralPanoramaCamViewController: UIViewController, CBPeripheralManagerDelegate {
     
     var session:AVCaptureSession = AVCaptureSession();
     var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
@@ -85,7 +85,7 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
 
 
 // All the AV Foundation Setups
-extension BTPeripheralCamViewController {
+extension BTPeripheralPanoramaCamViewController {
     
     // Setup the AVSession and AVCaptureDevice
     // Setup the previewLayer
@@ -104,7 +104,7 @@ extension BTPeripheralCamViewController {
         // cause ui to freeze, should put them into a dispatch_queue and run on the
         // other thread. Determain what device to use.
         var error:NSError?;
-        var videoDevice:AVCaptureDevice = BTPeripheralCamViewController.deviceWithMediaType(AVMediaTypeVideo, position: AVCaptureDevicePosition.Back);
+        var videoDevice:AVCaptureDevice = BTPeripheralPanoramaCamViewController.deviceWithMediaType(AVMediaTypeVideo, position: AVCaptureDevicePosition.Back);
         var videoDeviceInput:AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(videoDevice, error: &error) as AVCaptureDeviceInput;
         
         if error {
@@ -144,7 +144,7 @@ extension BTPeripheralCamViewController {
 }
 
 // All the Camera Functionality
-extension BTPeripheralCamViewController {
+extension BTPeripheralPanoramaCamViewController {
     
     // Render all the subviews above the preview layer
     func subViewSetup() {
@@ -262,7 +262,7 @@ extension BTPeripheralCamViewController {
 
 
 // Add all core bluetooth functions
-extension BTPeripheralCamViewController {
+extension BTPeripheralPanoramaCamViewController {
     
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
         

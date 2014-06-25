@@ -17,14 +17,16 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
     var focusDotLabel:UILabel = UILabel();
     var countDownLabel:UILabel = UILabel();
     var camSwitch:UISwitch = UISwitch();
+    var panoramaSwitch:UISwitch = UISwitch();
     var bluetoothStatus:UILabel = UILabel();
+    
+    // spinner
+    var spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
     
     
     // Present BTCentralViewContoller
     var window:UIWindow?;
     var camCentralViewController:BTCentralCamViewController?
-    
-    
     
     
     // Bluetooth
@@ -50,6 +52,29 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
     var stillImageOutput:AVCaptureStillImageOutput?;
     
     
+    // Photoponorama
+    var storeImage:Array<UIImage> = [];
+    
+    
+    // ImageViewer
+    var imagePreview1:UIImageView = UIImageView();
+    var imagePreview2:UIImageView = UIImageView();
+    var imagePreview3:UIImageView = UIImageView();
+    var imagePreview4:UIImageView = UIImageView();
+    var imagePreview5:UIImageView = UIImageView();
+    var imagePreviewArray:Array<UIImageView>?;
+    
+    
+    var imageLargePreview1:UIImageView = UIImageView();
+    var imageLargePreview2:UIImageView = UIImageView();
+    var imageLargePreview3:UIImageView = UIImageView();
+    var imageLargePreview4:UIImageView = UIImageView();
+    var imageLargePreview5:UIImageView = UIImageView();
+    var imageLargePreviewArray:Array<UIImageView>?;
+    
+    
+    
+    
     // Flags
     
     
@@ -67,7 +92,9 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
         self.view.addSubview(self.takePictureButton);
         self.view.addSubview(self.focusDotLabel);
         self.view.addSubview(self.camSwitch);
+        self.view.addSubview(self.panoramaSwitch);
         self.view.addSubview(self.bluetoothStatus);
+        self.view.addSubview(self.spinner);
     }
     
     override func viewDidLoad() {
@@ -82,6 +109,12 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
         // Start up the CBPeripheralManger
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil);
         self.stringToSend = "This is a test!!!!! This is really a test!!!!! Please Trust me, this is absolutly a test!!!!";
+        
+        self.spinner.frame = CGRectMake(
+            (self.view.frame.width - 25) / 2,
+            (self.view.frame.height - 25) / 2,
+            25,
+            25);
     }
     
     
@@ -103,6 +136,7 @@ extension BTPeripheralCamViewController {
     func avSessionSetup() {
         // Set up a Camera Preview Layer
         self.session.sessionPreset = AVCaptureSessionPresetPhoto;
+        // self.session.sessionPreset = AVCaptureSessionPreset640x480;
         var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
         previewLayer.backgroundColor = UIColor.blackColor().CGColor;
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
@@ -188,6 +222,89 @@ extension BTPeripheralCamViewController {
             action: "flipView:",
             forControlEvents: UIControlEvents.ValueChanged);
         self.view.bringSubviewToFront(camSwitch);
+        
+        self.panoramaSwitch.sizeToFit();
+        self.panoramaSwitch.frame = CGRectMake(
+            self.view.frame.width - self.panoramaSwitch.frame.width - 10,
+            self.view.frame.height - 30,
+            79,
+            27);
+        self.panoramaSwitch.on = false;
+        self.panoramaSwitch.addTarget(self,
+            action: "panoramaSwitchFlip:",
+            forControlEvents: UIControlEvents.ValueChanged);
+        self.view.bringSubviewToFront(panoramaSwitch);
+        
+        // Size 20*20
+        self.imagePreview1.frame.size = CGSizeMake(20, 20);
+        self.imagePreview1.frame = CGRectMake(2, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview1);
+        self.view.addSubview(imagePreview1);
+        
+        self.imagePreview2.frame.size = CGSizeMake(20, 20);
+        self.imagePreview2.sizeToFit();
+        self.imagePreview2.frame = CGRectMake(self.imagePreview1.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview2);
+        self.view.addSubview(imagePreview2);
+        
+        self.imagePreview3.frame.size = CGSizeMake(20, 20);
+        self.imagePreview3.sizeToFit();
+        self.imagePreview3.frame = CGRectMake(self.imagePreview2.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview3);
+        self.view.addSubview(imagePreview3);
+        
+        self.imagePreview4.frame.size = CGSizeMake(20, 20);
+        self.imagePreview4.sizeToFit();
+        self.imagePreview4.frame = CGRectMake(self.imagePreview3.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview4);
+        self.view.addSubview(imagePreview4);
+        
+        self.imagePreview5.frame.size = CGSizeMake(20, 20);
+        self.imagePreview5.sizeToFit();
+        self.imagePreview5.frame = CGRectMake(self.imagePreview4.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview5);
+        self.view.addSubview(imagePreview5);
+        
+        self.imagePreviewArray = [self.imagePreview1, self.imagePreview2, self.imagePreview3, self.imagePreview4, self.imagePreview5];
+        
+        
+        // Size 64*64
+        self.imageLargePreview1.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview1.frame = CGRectMake(0,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview1.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview1);
+        self.view.addSubview(imageLargePreview1);
+        
+        self.imageLargePreview2.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview2.frame = CGRectMake(self.imageLargePreview1.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview2.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview2);
+        self.view.addSubview(imageLargePreview2);
+        
+        self.imageLargePreview3.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview3.frame = CGRectMake(self.imageLargePreview2.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview3.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview3);
+        self.view.addSubview(imageLargePreview3);
+        
+        self.imageLargePreview4.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview4.frame = CGRectMake(self.imageLargePreview3.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview4.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview4);
+        self.view.addSubview(imageLargePreview4);
+        
+        self.imageLargePreview5.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview5.frame = CGRectMake(self.imageLargePreview4.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview5.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview5);
+        self.view.addSubview(imageLargePreview5);
+        
+        self.imageLargePreviewArray = [self.imageLargePreview1, self.imageLargePreview2, self.imageLargePreview3, self.imageLargePreview4, self.imageLargePreview5];
     }
     
     
@@ -218,24 +335,47 @@ extension BTPeripheralCamViewController {
     }
     
     func takePictureAction(sender:UIButton) {
-        /*
+        
         // Count Down 5 Seconds
         // Count Down Runs In A Seperate Thread
-        println("Start Count Down");
-        countDown(5);
-        */
+        // println("Start Count Down");
+        // countDown(5);
+        
+        
+        // self.stitch();
+        // println("Stitch Finished");
 
         
+        if self.panoramaSwitch.on == false {
+            /* Debuging
+
+            self.advertisingSwitch = true;
+            println("Start Advertising");
+            self.peripheralManager!.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [CBUUID.UUIDWithString(tempUUID)]]);
+            
+            // Button Disable
+            self.takePictureButton.enabled = false;
+
+            */
+            self.countDown(5, panoramaPhotoLeft: 0);
+        }
+        else if self.panoramaSwitch.on == true {
+            self.storeImage = [];
+            self.countDown(5, panoramaPhotoLeft: 5);
+        }
         
-        self.advertisingSwitch = true;
-        println("Start Advertising");
-        self.peripheralManager!.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [CBUUID.UUIDWithString(tempUUID)]]);
-        
-        // Button Disable
-        self.takePictureButton.enabled = false;
         
     }
     
+    func panoramaSwitchFlip (sender:UISwitch) {
+        if self.panoramaSwitch.on {
+            // self.session.sessionPreset = AVCaptureSessionPresetiFrame960x540;
+        }
+        else {
+            // self.session.sessionPreset = AVCaptureSessionPresetiFrame960x540;
+            //self.session.sessionPreset = AVCaptureSessionPresetPhoto;
+        }
+    }
     
     func flipView (sender:UISwitch) {
         if camSwitch.on {
@@ -246,10 +386,10 @@ extension BTPeripheralCamViewController {
             // Present BTCentralViewController
             /*
             self.dismissViewControllerAnimated(false, completion: {
-                self.camCentralViewController!.avSessionSetup();
-                self.camCentralViewController!.subViewSetup();
-                self.camCentralViewController!.camSwitch.on = false;
-                })
+            self.camCentralViewController!.avSessionSetup();
+            self.camCentralViewController!.subViewSetup();
+            self.camCentralViewController!.camSwitch.on = false;
+            })
             */
             
             // Setup the Main View Controller
@@ -274,22 +414,76 @@ extension BTPeripheralCamViewController {
     // A count down function
     // Countdown runs in a seperate thread, so anything after the countdown in
     // main function gets exec() before countdown.
-    func countDown(time:NSInteger) {
+    func countDown(time:NSInteger, panoramaPhotoLeft:NSInteger) {
         var second:NSInteger = time;
         println("CountDowning: \(second)");
         self.countDownLabelRedraw("\(second)");
         if second == 0 {
             // Here, Countdown Complete.
             // Run the Complete Function
-            self.countDownComplete();
+            if self.panoramaSwitch.on == false {
+                self.countDownComplete();
+            }
+            if self.panoramaSwitch.on {
+                self.countDownCompletePanorama(panoramaPhotoLeft);
+            }
             return;
         }
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
-            self.countDown(second - 1);
+            self.countDown(second - 1, panoramaPhotoLeft: panoramaPhotoLeft);
             });
     }
     
+    func countDownCompletePanorama(panoramaPhotoLeft:NSInteger) {
+        
+ 
+        
+        println("CountDown Finished, panoramaPhotoLeft:\(panoramaPhotoLeft)");
+        self.countDownLabel.text = "";
+        self.flashScreen();
+        
+        println("Start Capture Image");
+        // Capture Image:
+        self.stillImageOutput!.captureStillImageAsynchronouslyFromConnection(self.stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo), completionHandler:
+            { (buffer, error:NSError!) in
+                
+                if buffer {
+                    var imageData:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer);
+                    var image:UIImage = UIImage(data: imageData);
+                    println("Save to Array");
+                    self.storeImage.append(image);
+                    self.imagePreviewArray![5-panoramaPhotoLeft].image = self.imageWithImage(image, newSize: CGSizeMake(20, 20));
+                    self.imageLargePreviewArray![5-panoramaPhotoLeft].image = self.imageWithImage(image, newSize: CGSizeMake(64,64));
+                    
+                    // This is for debug
+                    // UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+                    
+                    
+                    
+                    
+                    //
+                    
+                    if panoramaPhotoLeft - 1 == 0 {
+                        println("Prepare for stitch");
+                        // self.stitch();
+                        
+                        println("Ignore Stitch panorama Finished");
+                        
+                        // Reenable Button
+                        self.takePictureButton.enabled = true;
+                        
+                        return;
+                        
+                    }
+                    
+                    self.countDown(3, panoramaPhotoLeft: panoramaPhotoLeft - 1);
+                }
+            });
+        
+        
+        
+    }
     
     // This function get called after the count down 
     func countDownComplete() {
@@ -414,7 +608,7 @@ extension BTPeripheralCamViewController {
                 self.advertisingSwitch = false;
                 
                 // Run CountDown Action
-                self.countDown(5);
+                self.countDown(5, panoramaPhotoLeft: 0);
                 
                 println("sent EOM");
             }
@@ -503,7 +697,7 @@ extension BTPeripheralCamViewController {
                     self.advertisingSwitch = false;
                     
                     // Run CountDown Action
-                    self.countDown(5);
+                    self.countDown(5, panoramaPhotoLeft: 0);
                     
                     println("sent EOM");
                 }
@@ -519,5 +713,36 @@ extension BTPeripheralCamViewController {
         central: CBCentral!,
         didUnsubscribeFromCharacteristic characteristic: CBCharacteristic!) {
             println("Central unsubscribed from characteristic");
+    }
+}
+
+
+
+
+/* 
+* This is for panorama Views
+*/
+extension BTPeripheralCamViewController {
+    
+    func stitch() {
+        var newView:UIView = UIView(frame:UIScreen.mainScreen().bounds);
+        newView.addSubview(spinner);
+        self.view = newView;
+        self.spinner.startAnimating();
+        
+        var imageArray:UIImage[] = self.storeImage;
+        
+        // var stitchedImage:UIImage = CVWrapper.processWithArray(imageArray) as UIImage
+        // UIImageWriteToSavedPhotosAlbum(stitchedImage, nil, nil, nil);
+        
+        // println("Stitch Complete");
+    }
+    
+    func imageWithImage(image:UIImage, newSize:CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height));
+        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
     }
 }
