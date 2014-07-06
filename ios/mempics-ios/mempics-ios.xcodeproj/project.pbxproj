@@ -17,6 +17,8 @@
 		9D048F1A194F5A0B00950494 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F15194F5A0B00950494 /* CameraVC.swift */; };
 		9D048F1B194F5A0B00950494 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D048F16194F5A0B00950494 /* MainVC.swift */; };
 		9D048F1F194F5A5700950494 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D048F1E194F5A5700950494 /* CoreBluetooth.framework */; };
+		9D444E6B195B7F19009511A8 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D444E6A195B7F19009511A8 /* UploadViewController.swift */; };
+		9D444E6F195C8A2E009511A8 /* takePictureButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D444E6E195C8A2E009511A8 /* takePictureButton@2x.png */; };
 		9D59A43C195A68FC00D51025 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D59A439195A68FC00D51025 /* UIImage+OpenCV.mm */; };
 		9D59A43D195A68FC00D51025 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D59A43B195A68FC00D51025 /* CVWrapper.mm */; };
 		9D59A440195A691100D51025 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D59A43E195A691100D51025 /* stitching.cpp */; };
@@ -56,6 +58,8 @@
 		9D048F15194F5A0B00950494 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		9D048F16194F5A0B00950494 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		9D048F1E194F5A5700950494 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9D444E6A195B7F19009511A8 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		9D444E6E195C8A2E009511A8 /* takePictureButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takePictureButton@2x.png"; sourceTree = "<group>"; };
 		9D59A42C195A646100D51025 /* mempics-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mempics-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D59A438195A68FC00D51025 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		9D59A439195A68FC00D51025 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				9D85FB101951C9E7002A5C4D /* CamViewController.swift */,
 				9D00ECD41952181E0037C55C /* BTCentralCamViewController.swift */,
 				9D00ECD619521CE70037C55C /* BTPeripheralCamViewController.swift */,
+				9D444E6A195B7F19009511A8 /* UploadViewController.swift */,
 				9D048F15194F5A0B00950494 /* CameraVC.swift */,
 				9D048F13194F5A0B00950494 /* BTCentral.swift */,
 				9D59A438195A68FC00D51025 /* UIImage+OpenCV.h */,
@@ -167,6 +172,7 @@
 		9D59A42F195A680900D51025 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9D444E6E195C8A2E009511A8 /* takePictureButton@2x.png */,
 				9DA64128195A7A400052B49F /* a1.JPG */,
 				9DA64129195A7A400052B49F /* a2.JPG */,
 				9DA6412A195A7A400052B49F /* a3.JPG */,
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA6412F195A7A400052B49F /* a4.JPG in Resources */,
+				9D444E6F195C8A2E009511A8 /* takePictureButton@2x.png in Resources */,
 				9DA6413B195B40EE0052B49F /* a5.JPG in Resources */,
 				9DF388B519538D2D008CF30E /* Images.xcassets in Resources */,
 				9DA6412E195A7A400052B49F /* a3.JPG in Resources */,
@@ -333,6 +340,7 @@
 				9D59A43D195A68FC00D51025 /* CVWrapper.mm in Sources */,
 				9D59A440195A691100D51025 /* stitching.cpp in Sources */,
 				9D048EF3194F597500950494 /* AppDelegate.swift in Sources */,
+				9D444E6B195B7F19009511A8 /* UploadViewController.swift in Sources */,
 				9D048F18194F5A0B00950494 /* BTCentral.swift in Sources */,
 				9D048F1A194F5A0B00950494 /* CameraVC.swift in Sources */,
 			);

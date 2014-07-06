@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9DBA455C195CC35E00051BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA455B195CC35E00051BA9 /* AppDelegate.swift */; };
+		9DBA455E195CC35E00051BA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA455D195CC35E00051BA9 /* Images.xcassets */; };
+		9DBA456A195CC35E00051BA9 /* BoardCastiPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA4569195CC35E00051BA9 /* BoardCastiPadTests.swift */; };
+		9DBA4574195CC3A600051BA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA4573195CC3A600051BA9 /* MainViewController.swift */; };
+		9DBA4576195CC4F100051BA9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBA4575195CC4F100051BA9 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DBA4564195CC35E00051BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DBA454E195CC35E00051BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DBA4555195CC35E00051BA9;
+			remoteInfo = BoardCastiPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9DBA4556195CC35E00051BA9 /* BoardCastiPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoardCastiPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBA455A195CC35E00051BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DBA455B195CC35E00051BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DBA455D195CC35E00051BA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DBA4563195CC35E00051BA9 /* BoardCastiPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardCastiPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBA4568195CC35E00051BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DBA4569195CC35E00051BA9 /* BoardCastiPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCastiPadTests.swift; sourceTree = "<group>"; };
+		9DBA4573195CC3A600051BA9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9DBA4575195CC4F100051BA9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DBA4553195CC35E00051BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DBA4576195CC4F100051BA9 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DBA4560195CC35E00051BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DBA454D195CC35E00051BA9 = {
+			isa = PBXGroup;
+			children = (
+				9DBA4575195CC4F100051BA9 /* AVFoundation.framework */,
+				9DBA4558195CC35E00051BA9 /* BoardCastiPad */,
+				9DBA4566195CC35E00051BA9 /* BoardCastiPadTests */,
+				9DBA4557195CC35E00051BA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DBA4557195CC35E00051BA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA4556195CC35E00051BA9 /* BoardCastiPad.app */,
+				9DBA4563195CC35E00051BA9 /* BoardCastiPadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DBA4558195CC35E00051BA9 /* BoardCastiPad */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA455B195CC35E00051BA9 /* AppDelegate.swift */,
+				9DBA4573195CC3A600051BA9 /* MainViewController.swift */,
+				9DBA455D195CC35E00051BA9 /* Images.xcassets */,
+				9DBA4559195CC35E00051BA9 /* Supporting Files */,
+			);
+			path = BoardCastiPad;
+			sourceTree = "<group>";
+		};
+		9DBA4559195CC35E00051BA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA455A195CC35E00051BA9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DBA4566195CC35E00051BA9 /* BoardCastiPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA4569195CC35E00051BA9 /* BoardCastiPadTests.swift */,
+				9DBA4567195CC35E00051BA9 /* Supporting Files */,
+			);
+			path = BoardCastiPadTests;
+			sourceTree = "<group>";
+		};
+		9DBA4567195CC35E00051BA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA4568195CC35E00051BA9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DBA4555195CC35E00051BA9 /* BoardCastiPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DBA456D195CC35E00051BA9 /* Build configuration list for PBXNativeTarget "BoardCastiPad" */;
+			buildPhases = (
+				9DBA4552195CC35E00051BA9 /* Sources */,
+				9DBA4553195CC35E00051BA9 /* Frameworks */,
+				9DBA4554195CC35E00051BA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoardCastiPad;
+			productName = BoardCastiPad;
+			productReference = 9DBA4556195CC35E00051BA9 /* BoardCastiPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DBA4562195CC35E00051BA9 /* BoardCastiPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DBA4570195CC35E00051BA9 /* Build configuration list for PBXNativeTarget "BoardCastiPadTests" */;
+			buildPhases = (
+				9DBA455F195CC35E00051BA9 /* Sources */,
+				9DBA4560195CC35E00051BA9 /* Frameworks */,
+				9DBA4561195CC35E00051BA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DBA4565195CC35E00051BA9 /* PBXTargetDependency */,
+			);
+			name = BoardCastiPadTests;
+			productName = BoardCastiPadTests;
+			productReference = 9DBA4563195CC35E00051BA9 /* BoardCastiPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DBA454E195CC35E00051BA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Tianyun Shan";
+				TargetAttributes = {
+					9DBA4555195CC35E00051BA9 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 2VZ58SSC7W;
+					};
+					9DBA4562195CC35E00051BA9 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9DBA4555195CC35E00051BA9;
+					};
+				};
+			};
+			buildConfigurationList = 9DBA4551195CC35E00051BA9 /* Build configuration list for PBXProject "BoardCastiPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9DBA454D195CC35E00051BA9;
+			productRefGroup = 9DBA4557195CC35E00051BA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DBA4555195CC35E00051BA9 /* BoardCastiPad */,
+				9DBA4562195CC35E00051BA9 /* BoardCastiPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DBA4554195CC35E00051BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DBA455E195CC35E00051BA9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DBA4561195CC35E00051BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DBA4552195CC35E00051BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DBA455C195CC35E00051BA9 /* AppDelegate.swift in Sources */,
+				9DBA4574195CC3A600051BA9 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DBA455F195CC35E00051BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DBA456A195CC35E00051BA9 /* BoardCastiPadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DBA4565195CC35E00051BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DBA4555195CC35E00051BA9 /* BoardCastiPad */;
+			targetProxy = 9DBA4564195CC35E00051BA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9DBA456B195CC35E00051BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DBA456C195CC35E00051BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DBA456E195CC35E00051BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BoardCastiPad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9DBA456F195CC35E00051BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BoardCastiPad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		9DBA4571195CC35E00051BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BoardCastiPad.app/BoardCastiPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BoardCastiPadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9DBA4572195CC35E00051BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BoardCastiPad.app/BoardCastiPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BoardCastiPadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DBA4551195CC35E00051BA9 /* Build configuration list for PBXProject "BoardCastiPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DBA456B195CC35E00051BA9 /* Debug */,
+				9DBA456C195CC35E00051BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DBA456D195CC35E00051BA9 /* Build configuration list for PBXNativeTarget "BoardCastiPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DBA456E195CC35E00051BA9 /* Debug */,
+				9DBA456F195CC35E00051BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9DBA4570195CC35E00051BA9 /* Build configuration list for PBXNativeTarget "BoardCastiPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DBA4571195CC35E00051BA9 /* Debug */,
+				9DBA4572195CC35E00051BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DBA454E195CC35E00051BA9 /* Project object */;
+}

@@ -10,34 +10,27 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>00F3C3072A9A4A8696C446AA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>541BD93DFC5B46388F7D5B73</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0100243D18F54369BE23ED50</key>
+		<key>00C4CB8DBA42493CB8CE2172</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>deblurring.hpp</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/deblurring.hpp</string>
+			<string>Pods-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>018B5CDB47B8489BAFB118E6</key>
+		<key>00CFE742D3FB429086E48046</key>
 		<dict>
 			<key>fileRef</key>
-			<string>070DFF91913646B8A193C72A</string>
+			<string>7C1F9DEAAD1442B1A798A3D3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>02308E92E1D74F91936CABAC</key>
+		<key>00E5F028B0F74A209CC1745D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -46,277 +39,147 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>allocator.h</string>
+			<string>random.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/allocator.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/random.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>02BA38A61BDD44E7922D6EC5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>99269EECBA70427BBCD16E79</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>03630256E87C4FA98FB7A8F7</key>
+		<key>019924F55A1C4A8E92C31C6F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>world.hpp</string>
+			<string>contrib.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/world/world.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/contrib/contrib.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>04894699323447B2BAB6A144</key>
+		<key>045CCEB24FDE4187915E8892</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>4E72427B114248A69AAADC82</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>071D9FEBCDB44A19827C0C43</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9817DE5EE2744FABB4EC050A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>07605AD046724AFB88281DD6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BBB587839FF646518128D19B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0A05A5C4B33748BBA2912D34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E458EA917346443BBD91D6E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0A3D054CEF844C50BF8379A1</key>
+		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Podfile</string>
+			<string>CoreImage.framework</string>
 			<key>path</key>
-			<string>../Podfile</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreImage.framework</string>
 			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>06FBC409A8AE4173AB5806EC</key>
+		<key>0B949244DABF4AAB8D40C4E0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>074E505ED2A94923B1A23E47</string>
+			<string>AC5B79785BF94E9CBE7282EA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>070DFF91913646B8A193C72A</key>
+		<key>0C0FF88A8A2149F5BFC03B34</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>nn_index.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/nn_index.h</string>
+			<string>libPods.a</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>074E505ED2A94923B1A23E47</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>retina.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/contrib/retina.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>080CFEDEEC0B41808953E9B7</key>
+		<key>0EDAA14BD2EC42408EA154E6</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D200AB0F477C4839AB985195</string>
+			<string>601530E2B3344F669C1232D7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>09AE4A3473504F789BB02BA3</key>
+		<key>0EDDDED900EA43BC9CFEC4E5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>types_c.h</string>
+			<string>nonfree.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/imgproc/types_c.h</string>
+			<string>opencv2.framework/Versions/A/Headers/nonfree/nonfree.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0A02AE32E51F453F93BC89FF</key>
+		<key>0F27A19688834E36A4636886</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CB21C9DF3D4F4EEAA75328C3</string>
+			<string>FCA6DCA160114830AD5E4C39</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>0A0C2719AD2143FA88313036</key>
+		<key>110C9A9F58214DA6B5105EA2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>internal.hpp</string>
+			<string>opencv_modules.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/internal.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/opencv_modules.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0A275DFC27E7482D94AEABD1</key>
+		<key>11EF43463AB3412E864CF69D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>photo.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/photo/photo.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11F493473B404F7494377CA9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>49216D7347A2463A8EB17253</string>
+			<string>682051F26E2E448BAF10B41C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>0C919D00F65340F5B180A06E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>motion_stabilizing.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/motion_stabilizing.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0CFD0D73686E4361B98C65DF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>opengl_interop.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/opengl_interop.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0E8DEC9678504163BB2B1256</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>core.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/core.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0F92B3FB1B01448596B2A8A2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8B6E694B57434F3F8F844E17</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1417BEB90CE74ED4B0A3ACF6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>index_testing.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/index_testing.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>152F09A6B30C42D0B93E2EFC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>version.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/version.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>165AF84073814602B37888DE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2AFB1EFA68134F049E785073</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16797303AAAB409B8FA342C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6D3C8083D1674F99BC0C1395</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17A2EA4EF0B942878B4FB4CB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AA21D1BFBB4344C584B7C649</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>185BAA0E6B774F669F22B5E3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>03630256E87C4FA98FB7A8F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18E703A085CB4515A18CC4E7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>lsh_table.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/lsh_table.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1911A86A37274AC198BF4444</key>
-		<dict>
-			<key>fileRef</key>
-			<string>65B70D0C700648858F5EE2B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>19485E9D65A24C8D84500767</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E5E0A788BC4E4BA69E320F2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A99C436E61C4B83A6979844</key>
+		<key>123018211EB940118DF86231</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -329,61 +192,59 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1AFAC2CD68904C1E8443B0AF</key>
+		<key>155AE5C8EE084EA8AD9A2052</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0E8DEC9678504163BB2B1256</string>
+			<string>579C6C0A5A034B139D2A62CB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>1C3F73B794DE4BFEAF23A2D5</key>
+		<key>16256034C2734B7399C2D6DA</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>8750B037CD8845C88BF4E953</string>
+			<key>buildConfigurationList</key>
+			<string>DCB27042A5974D9F85268447</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B78F88C63EE64A09A62305FF</string>
+				<string>6782823415AB4EFEA96225F0</string>
+				<string>7FFDA1FBE6E74F099FA4BD92</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>877624726CFA4AE5A2A18BC1</string>
-			<key>remoteInfo</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
 			<string>Pods-OpenCV</string>
+			<key>productName</key>
+			<string>Pods-OpenCV</string>
+			<key>productReference</key>
+			<string>F6288C0E3BD14F5995979198</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>1E5C76764DA34E3F845954E5</key>
+		<key>16763B875CFD41EA906B2DE9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>gpu.hpp</string>
+			<string>streams.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/nonfree/gpu.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/legacy/streams.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1FFB85D2C6AF4FDBAA26C53F</key>
+		<key>1754907CC0B94FCAB9777FFE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>39E551EABDA54B66A9662D86</string>
+			<string>110C9A9F58214DA6B5105EA2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>201AEF02DD4E41CEB1A36ABE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>42B18791208F4AD2BEE15FE2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2114243554F843A1B6DD75D6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5A29D31F3C36409196FCF8E3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>222E68FBED364813B7F924DF</key>
+		<key>1785876592514241831725C1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -392,47 +253,80 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>cap_ios.h</string>
+			<string>composite_index.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/highgui/cap_ios.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/composite_index.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2326BC12F10F4208911D2639</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B734599E1DDA47EF811DFB03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2772AC53A0B049A896230E27</key>
+		<key>18B0960269744990A5626A88</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>wimage.hpp</string>
+			<string>opengl_interop_deprecated.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/wimage.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/core/opengl_interop_deprecated.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>27A9644ADD7745868DE71725</key>
+		<key>1956540F90CA42DF9483FFEA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>52870EA8A572476AB1FFAB96</string>
+			<string>5A0BBDE94C454C2FB1E1BA74</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>28C2281E392C48E1AE2BFFEA</key>
+		<key>19C9FBBC0ECF4312BC20D550</key>
 		<dict>
 			<key>fileRef</key>
-			<string>61B9E53ABABB40B4A2053F31</string>
+			<string>CAB8E835766F474B833C9778</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>28F9788753334E40B52E13CC</key>
+		<key>19DB049AF5B64697934E417B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>deblurring.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/videostab/deblurring.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1A6C0CCB3DEE4CE7AB36A6D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7A13CE08A96A48CE926F58C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BA7BD1A48B04DD3BF93BF15</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>legacy.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/legacy/legacy.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DF9B6ADD7A14301B8693191</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3B9426DC266547108DE0C4F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F3239C6A8394EB790E61CBD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -441,16 +335,332 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>highgui_c.h</string>
+			<string>dynamic_bitset.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/highgui/highgui_c.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/dynamic_bitset.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>29EFAD9A786446149BD07ED1</key>
+		<key>20DB4E30C9404E0FA0EB7B75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A374F459BF8746BF975FF9D5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>211B103EFF6D4AB2ADE7EBF6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>linear_index.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/linear_index.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28704A969CA64BD2A4C93132</key>
+		<dict>
+			<key>fileRef</key>
+			<string>35BFBBAAC34B4234BF7DFFD6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28C01F8B30174F02B0D1603C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ACB896E436E34DDC9DCE4A84</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>29192636961348088BBE8F2E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2BDE5631EDEE4588902DEE3B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2979D77C37B84E26B0874F86</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>lsh_index.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/lsh_index.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2A139A59A6B34D0697E371DD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C5F93EFB49B49B6BF593346</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A406C7B3300477FB17D97CC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2B2315850CEF455FB3629B87</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D68B48C63135454BBCDE839C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2BDE5631EDEE4588902DEE3B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>motion_estimators.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/motion_estimators.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2E3DA66055E2480A8AB6C2A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>flann.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/flann.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>301A857D6A4649E2B00BC5CE</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>5490E45F1A844D6B82026A0B</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>4A84E21A7A704FEA9AF774CB</string>
+			<key>productRefGroup</key>
+			<string>4D9BDA7C8BC849CEA2A8700E</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>E6584E3F2D3749249FEEA42B</string>
+				<string>16256034C2734B7399C2D6DA</string>
+			</array>
+		</dict>
+		<key>3028279FB1664B39886CFFDA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>devmem2d.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/core/devmem2d.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304D50382634419E87AA4BFD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F3239C6A8394EB790E61CBD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3214217EC6274ABDB9AE514E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>328D47690B794B3AA394BE0A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>types_c.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/core/types_c.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>354F930A5F9649A79437F737</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A3A85AEC9BA40BDB7BD0EA5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>35BFBBAAC34B4234BF7DFFD6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>imgproc_c.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/imgproc/imgproc_c.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>36270D405A314785BF09665A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>NO</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3B619809C4ED46228BC5F99C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CED7A1BAF8954805A623AA7F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3B9426DC266547108DE0C4F0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>calib3d.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/calib3d/calib3d.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C24DC196539451BA2B31693</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>seam_finders.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/seam_finders.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CBC90147A034768B3DAA02F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>96CD34829B4C47BE96C309EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3E507EA234B84ED6BF8C6C58</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>4BFB0C9657254EFCA113726B</string>
+			<string>B4D093C8C0CC4BEEA7E01BE8</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -467,6 +677,8 @@
 				<string>0</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Pods-OpenCV-prefix.pch</string>
 				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
 				<array>
 					<string>DEBUG=1</string>
@@ -496,206 +708,134 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>2A4C482A5E5C45D7AD36464C</key>
+		<key>3F2EEAE7B997449C9EA96550</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2E3DA66055E2480A8AB6C2A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3F99779D0C69478BA764A642</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>lsh_table.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/lsh_table.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>40CEA8F03B8247538D7CFB43</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68A7DE1615EE4AC18B25E451</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>44D95C41541A49D690926039</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>miniflann.hpp</string>
+			<string>fast_marching_inl.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/miniflann.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/videostab/fast_marching_inl.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2A813364EB53418985B2DBC5</key>
+		<key>479F1A18EE7044CE9326FB10</key>
 		<dict>
 			<key>fileRef</key>
-			<string>562A833167784043826AD75E</string>
+			<string>F53A495F65A4438DAA82ED7E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>2AFB1EFA68134F049E785073</key>
+		<key>481F11593E4B4C0FABD96377</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C5FD451674EA4EFC8518EBFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>487742E29B4240FEBA7C43BE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF8C564622DB45BAA4D90CB7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>498B76C71F3E4905946F8A77</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F61A7ACE73BB40C2A8119991</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>49EC8373F9954BC58D817FEF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>89FCC9F3AC2A4FAEB10F1325</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4A84E21A7A704FEA9AF774CB</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>AA21D1BFBB4344C584B7C649</string>
-				<string>7B810B9F7D174982AA4AF618</string>
-				<string>D982D562A38747E5BA38381A</string>
-				<string>AE172F6C0C55456585A289B8</string>
-				<string>D363AFB756BA451B80038750</string>
-				<string>7CF7E89CEAD7410B99F44428</string>
-				<string>B8EED01E7ABA480BB2A57BF7</string>
-				<string>459D133AFF494604BC26B87E</string>
-				<string>E5931966F25D49E8B9E6F347</string>
-				<string>805BBD4D64FD433B8D165027</string>
-				<string>6537E1058B394B90BFEDC578</string>
+				<string>C8479C98BE754113B0646BD5</string>
+				<string>ED584A94CDFF4AD08DB6C89E</string>
+				<string>8C35BF7CED774E808B892CA5</string>
+				<string>4D9BDA7C8BC849CEA2A8700E</string>
+				<string>5A31EE7CE0F44A1199394B14</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4B17D4B543774AE788570451</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A147840A2CD44A21AC85BA36</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4BEAF0166C3D444C860F5421</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1D2C208AAD74291AF7E4A57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CEDC85B3F46475CB140E503</key>
+		<dict>
+			<key>fileRef</key>
+			<string>328D47690B794B3AA394BE0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4D9BDA7C8BC849CEA2A8700E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0C0FF88A8A2149F5BFC03B34</string>
+				<string>F6288C0E3BD14F5995979198</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>iOS</string>
+			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2CB24448460E4073B482EEFD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BADEAEF844ED403BAC775591</string>
-				<string>4581524496A343AC82CAD4BB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2D745D40A35344ABBDEB01B0</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4BFB0C9657254EFCA113726B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2E132130222C493686783099</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>photo_c.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/photo/photo_c.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2E64981BF39B43A495A38A35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2772AC53A0B049A896230E27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2EEEC897677F4F7EA493B7BD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C92462CB4C81465D9E617985</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2F86E597F3B041288DFBC216</key>
-		<dict>
-			<key>fileRef</key>
-			<string>490761DE08324C93B5016AF4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3234A91381BE4C24A5822D10</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>ml.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/ml/ml.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>33717C6A3FBE43778694A731</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EB9D590A1F1A4583B5BF952B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3397861386C443A6B4892539</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A03E7C14183A4BE79333AA12</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>33AAE3AF691F40DB8A41FF04</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>matrix.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/matrix.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>34CFDDE81DE1472EB5382913</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9FACE3631D0944388EDC5D53</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>35155BCBD57D4AC2AABA03BB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DA7E4EE0C86B406BB0AABB4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3608D1220665489C9D61A7D0</key>
+		<key>4DD7589653F0457E9394E401</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -708,85 +848,52 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>360C2594838B47B6A9AEBBDF</key>
+		<key>4E4D6E75073E4EE087381C47</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C9249C1D9EC448A2B0A75EE1</string>
+			<string>CBC057D24DD748F2B713DBE3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>38F0B08EACF14910A1C7B991</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-OpenCV.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>38F3317D5B7A450592BB437C</key>
+		<key>4E72427B114248A69AAADC82</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>features2d.hpp</string>
+			<string>blobtrack.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/features2d/features2d.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/legacy/blobtrack.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>39442517FB46485B96AC1BF2</key>
+		<key>50A1B40D66D54D74874B43BD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8F20564F7F084D458F1329C1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>52E45B522E2F4631AB5D1A36</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>photo.hpp</string>
+			<string>core.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/photo/photo.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/core/core.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>39648039DA334168BD08EFDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEE1D3B6924C46308C2EFBC1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>39D1A484470C4782BCA4BBAD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>58898B05DF0049C686389A60</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>39E551EABDA54B66A9662D86</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>streams.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/legacy/streams.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3BB027193DCB442D86208472</key>
+		<key>5490E45F1A844D6B82026A0B</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>29EFAD9A786446149BD07ED1</string>
-				<string>2D745D40A35344ABBDEB01B0</string>
+				<string>805FD576D00448FEA3372869</string>
+				<string>36270D405A314785BF09665A</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -795,95 +902,168 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>3D2C2880DBA44FDD855F20A2</key>
+		<key>56205C3C16F94BCE92F6DB1A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F03A96F5E72849459071C313</string>
+			<string>E6FE86B3C0814D2183C0BA98</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>3D94C069FC73434DA5651CD0</key>
+		<key>579C6C0A5A034B139D2A62CB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>flann_base.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/flann_base.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57C86F87771D4A59ACC768D3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B5B6D2F660064A2DBD21734E</string>
+			<string>EBE8BE3B8DB242DD8E0E6EE0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>42B18791208F4AD2BEE15FE2</key>
+		<key>58070AE2FEB24C9988B68376</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>frame_source.hpp</string>
+			<string>opencv.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/frame_source.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/opencv.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>42B5105BB63544F28C187B71</key>
+		<key>582355C0669342FCA64E36C3</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>682051F26E2E448BAF10B41C</string>
+				<string>BD055DB4BFEE4D3B926C381D</string>
+				<string>8C2019390D054073949E20BF</string>
+				<string>9C604422F33B43BBBE610AAF</string>
+				<string>5A0BBDE94C454C2FB1E1BA74</string>
+				<string>775AC20CC1AF43E09982311E</string>
+				<string>D68B48C63135454BBCDE839C</string>
+				<string>4E72427B114248A69AAADC82</string>
+				<string>3B9426DC266547108DE0C4F0</string>
+				<string>96CD34829B4C47BE96C309EA</string>
+				<string>DB4D56A67DB04BFCB05F8479</string>
+				<string>AC5B79785BF94E9CBE7282EA</string>
+				<string>1785876592514241831725C1</string>
+				<string>CBC057D24DD748F2B713DBE3</string>
+				<string>019924F55A1C4A8E92C31C6F</string>
+				<string>52E45B522E2F4631AB5D1A36</string>
+				<string>E458EA917346443BBD91D6E6</string>
+				<string>D5BE48B18DD14B80B91B0749</string>
+				<string>19DB049AF5B64697934E417B</string>
+				<string>FF958E4028DD404485C5F733</string>
+				<string>B1997D50B505408F9428C1AF</string>
+				<string>3028279FB1664B39886CFFDA</string>
+				<string>CAB8E835766F474B833C9778</string>
+				<string>B43D41110C9247D3BB016946</string>
+				<string>1F3239C6A8394EB790E61CBD</string>
+				<string>F21FD090C033478CA3B3BA82</string>
+				<string>E6FE86B3C0814D2183C0BA98</string>
+				<string>9817DE5EE2744FABB4EC050A</string>
+				<string>44D95C41541A49D690926039</string>
+				<string>D41C2E392B504F39A6FFD9DF</string>
+				<string>9E050651D22545A287351117</string>
+				<string>2E3DA66055E2480A8AB6C2A7</string>
+				<string>579C6C0A5A034B139D2A62CB</string>
+				<string>AF8C564622DB45BAA4D90CB7</string>
+				<string>F53A495F65A4438DAA82ED7E</string>
+				<string>829F8172ACC14ECE9848D83F</string>
+				<string>F61A7ACE73BB40C2A8119991</string>
+				<string>A374F459BF8746BF975FF9D5</string>
+				<string>FD69A92EF7054D30B8144A82</string>
+				<string>D4E7DC60B695443F8FD97896</string>
+				<string>8F20564F7F084D458F1329C1</string>
+				<string>CCC4FCF6F61B47899C3439B3</string>
+				<string>BBB587839FF646518128D19B</string>
+				<string>982250CCD596445D91658517</string>
+				<string>99266288BDDF4DA48534BCFB</string>
+				<string>F0D1097A6682460CA661D89B</string>
+				<string>35BFBBAAC34B4234BF7DFFD6</string>
+				<string>DCA61B9B83F44C06A3D8A825</string>
+				<string>F99A263BC7EF4F81B2A85DD0</string>
+				<string>7A13CE08A96A48CE926F58C5</string>
+				<string>E7277926931346EBA0E099E3</string>
+				<string>C72E50DE8C9E4C51AFE352AA</string>
+				<string>F9E7088FA1264D5C8ABB21CA</string>
+				<string>7485015CE85542C78257667A</string>
+				<string>1BA7BD1A48B04DD3BF93BF15</string>
+				<string>211B103EFF6D4AB2ADE7EBF6</string>
+				<string>89FCC9F3AC2A4FAEB10F1325</string>
+				<string>D3B52C3A634B4697B201EF8F</string>
+				<string>2979D77C37B84E26B0874F86</string>
+				<string>3F99779D0C69478BA764A642</string>
+				<string>A3C356AD3FB947F195B5C108</string>
+				<string>D1D2C208AAD74291AF7E4A57</string>
+				<string>C8ACA60FF43E4C4BB3490410</string>
+				<string>7BBEEA7ADA194FC195C169F2</string>
+				<string>CED7A1BAF8954805A623AA7F</string>
+				<string>2BDE5631EDEE4588902DEE3B</string>
+				<string>9A3A85AEC9BA40BDB7BD0EA5</string>
+				<string>96E90BB8DDBF4C799B4EFE2C</string>
+				<string>0EDDDED900EA43BC9CFEC4E5</string>
+				<string>E406DF17452E4B21A112E90A</string>
+				<string>9D29E7987613421F812FA2C5</string>
+				<string>F2ABA39FDBFA434C859C1413</string>
+				<string>58070AE2FEB24C9988B68376</string>
+				<string>110C9A9F58214DA6B5105EA2</string>
+				<string>713809A4731B4351AD249C81</string>
+				<string>5EE10547F07A45C2B7033D2C</string>
+				<string>18B0960269744990A5626A88</string>
+				<string>ACB896E436E34DDC9DCE4A84</string>
+				<string>7CFF66A5469D46CFB8E2F7A8</string>
+				<string>DC940F5A7EB64A18B3E80660</string>
+				<string>11EF43463AB3412E864CF69D</string>
+				<string>F12367D227654182BBF31342</string>
+				<string>00E5F028B0F74A209CC1745D</string>
+				<string>91804EDE22134950A47FE8C7</string>
+				<string>C8CF2FD7610D4917AB31D595</string>
+				<string>B64EADFF820F4A7B977C87DF</string>
+				<string>A0D0034E0D1F4C299DF50A0E</string>
+				<string>3C24DC196539451BA2B31693</string>
+				<string>7C1F9DEAAD1442B1A798A3D3</string>
+				<string>A04F01A8BCA34060AF8AD67A</string>
+				<string>4DD7589653F0457E9394E401</string>
+				<string>16763B875CFD41EA906B2DE9</string>
+				<string>9EBC3F35337342C397E1C740</string>
+				<string>755C5A5113274BB194BBA934</string>
+				<string>601530E2B3344F669C1232D7</string>
+				<string>328D47690B794B3AA394BE0A</string>
+				<string>62E32DD0346644F7A3BCB68A</string>
+				<string>F64343993DFA483290CA2910</string>
+				<string>A73A9986EB064548AE867CA3</string>
+				<string>AB5D74B64C9545BD914EC1E4</string>
+				<string>C5FD451674EA4EFC8518EBFE</string>
+				<string>BFECF31CC15F4D49870298F5</string>
+				<string>805A562AF38D4F82A28964FD</string>
+				<string>9031D7B8EC88404D90F9CB53</string>
+				<string>FCA6DCA160114830AD5E4C39</string>
+				<string>9C5F93EFB49B49B6BF593346</string>
+				<string>E3BE0964B91E4F559CBD7DFA</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>video.hpp</string>
+			<string>OpenCV</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/video/video.hpp</string>
+			<string>OpenCV</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>450FEA843F5C424B8FD11439</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4530BC322A0E4F03A9085F72</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>composite_index.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/composite_index.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4581524496A343AC82CAD4BB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38F0B08EACF14910A1C7B991</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>459D133AFF494604BC26B87E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4788D795738949A09127200E</key>
+		<key>5A0BBDE94C454C2FB1E1BA74</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -898,53 +1078,269 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>490761DE08324C93B5016AF4</key>
+		<key>5A31EE7CE0F44A1199394B14</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>83C284BD93AA4D2FB0CCE651</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>seam_finders.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/seam_finders.hpp</string>
+			<string>Targets Support Files</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>49216D7347A2463A8EB17253</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>opencv_modules.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/opencv_modules.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49572D0583F74E519970DA4F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>calib3d.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/calib3d/calib3d.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49D038394B624B50B09B389E</key>
+		<key>5B055FF07831402B816CF45E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>222E68FBED364813B7F924DF</string>
+			<string>805A562AF38D4F82A28964FD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4B5DB40ACC504D99BA4CE0F0</key>
+		<key>5B80CF1EC6CD4E9DA8AADDF2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D3B52C3A634B4697B201EF8F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5DAAD24D7C8940CC804638B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F99A263BC7EF4F81B2A85DD0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5EE10547F07A45C2B7033D2C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>opengl_interop.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/core/opengl_interop.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>601530E2B3344F669C1232D7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>types_c.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/imgproc/types_c.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>612186374A824F3CBBB4A892</key>
+		<dict>
+			<key>fileRef</key>
+			<string>755C5A5113274BB194BBA934</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>61B7F1058F3F4BE0ACED6DD9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DCA61B9B83F44C06A3D8A825</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>62AA6F8E5D074C669842AB14</key>
+		<dict>
+			<key>fileRef</key>
+			<string>16763B875CFD41EA906B2DE9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>62E32DD0346644F7A3BCB68A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>util.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/util.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>66118D1F852443C68E98AFD5</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E0E9165A342945C5A0BAD7EA</string>
+				<string>FCE589B899DB4D5AB024695E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6687D98E448441CD8015BD06</key>
+		<dict>
+			<key>fileRef</key>
+			<string>211B103EFF6D4AB2ADE7EBF6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>66CD8EE2BAEE4DABBA7ABB30</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BFECF31CC15F4D49870298F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6782823415AB4EFEA96225F0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>40CEA8F03B8247538D7CFB43</string>
+				<string>76B735F44A9342F08D09E586</string>
+				<string>870C09F9C8414DD39A6391A5</string>
+				<string>E913EC31C46D42758FC2EE4B</string>
+				<string>FB38F0E8AFA6471692FF627D</string>
+				<string>9C1BFF080F6449F980D24D4F</string>
+				<string>9F54EE76909C4A239EAAE2DF</string>
+				<string>E2068A99CBE94EF2AFD1C553</string>
+				<string>DDBB0E3C83EB47CDA977288D</string>
+				<string>57C86F87771D4A59ACC768D3</string>
+				<string>4B17D4B543774AE788570451</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>67B0B67416BD4E07AC585E24</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A73A9986EB064548AE867CA3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>682051F26E2E448BAF10B41C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>all_indices.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/all_indices.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68A0968B1C9445B09BB6F82D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreMedia.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMedia.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>68A7DE1615EE4AC18B25E451</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AVFoundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>6B0CA5B95760477CA6A2470B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>982250CCD596445D91658517</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C9607C8496F4B4DAB4A837F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DA1992D285E64A1EB314194C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6E086F4D01CA4561BEB04C36</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>7050C087179A4CA3A72B7A5B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11EF43463AB3412E864CF69D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>713809A4731B4351AD249C81</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>openfabmap.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/contrib/openfabmap.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>714B2565244941B79CE2E190</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Accelerate.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accelerate.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>73D9E0A01F4E40DA89B3CDDE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>96E90BB8DDBF4C799B4EFE2C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7485015CE85542C78257667A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -959,334 +1355,115 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4B7B49C80BE24708BB523C1D</key>
+		<key>75035FF644ED44FC8881F73A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E5931966F25D49E8B9E6F347</string>
+			<string>9031D7B8EC88404D90F9CB53</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4BFB0C9657254EFCA113726B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CBB7597487F419198A4E3DF</key>
+		<key>755C5A5113274BB194BBA934</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>warpers_inl.hpp</string>
+			<string>tracking.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/warpers_inl.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/video/tracking.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4FB79B59045142EDAAD251BD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>log.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/log.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FF6CF456E4F4F9B8701E190</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>objdetect.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/objdetect/objdetect.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>514AC74067F346BB8BE15EAD</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CD732FDE4EC34513B8ADD1E2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-OpenCV-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>52870EA8A572476AB1FFAB96</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>nonfree.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/nonfree/nonfree.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>541BD93DFC5B46388F7D5B73</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>videostab.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/videostab.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>555A2B3FC7934C4491CA93CE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>562A833167784043826AD75E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>imgproc_c.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/imgproc/imgproc_c.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58898B05DF0049C686389A60</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>params.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/params.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5A29D31F3C36409196FCF8E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>hybridtracker.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/contrib/hybridtracker.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5D47424EEF0E4961A63314B9</key>
+		<key>76B735F44A9342F08D09E586</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6FB0F67B027C4236A6DC45A9</string>
+			<string>714B2565244941B79CE2E190</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>60603B030A234B89B352D470</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>eigen.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/eigen.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>60813A3767044FC0AC508B10</key>
+		<key>7717250DDA6F43D49CA0BF12</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4FB79B59045142EDAAD251BD</string>
+			<string>C8CF2FD7610D4917AB31D595</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6081F877B6A2454087A8E411</key>
+		<key>775AC20CC1AF43E09982311E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>background_segm.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/video/background_segm.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7785B1B3FB9F4E2D9217E52E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>39442517FB46485B96AC1BF2</string>
+			<string>D4E7DC60B695443F8FD97896</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6183EA9362F54E31AAC78513</key>
+		<key>77A9F4344AA747A6AAE505B4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>152F09A6B30C42D0B93E2EFC</string>
+			<string>9D29E7987613421F812FA2C5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>61B9E53ABABB40B4A2053F31</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>matchers.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/matchers.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6453ECBC9DE54011B6BB83D2</key>
+		<key>77CC4DDE49DC462689CEA0FB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>67610E49C69D4E3BA225D6C0</string>
+			<string>0EDDDED900EA43BC9CFEC4E5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6537E1058B394B90BFEDC578</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>opencv2.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/opencv2.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>65B70D0C700648858F5EE2B3</key>
+		<key>7A13CE08A96A48CE926F58C5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>result_set.h</string>
+			<string>internal.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/result_set.h</string>
+			<string>opencv2.framework/Versions/A/Headers/core/internal.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6648CAB739C8406CBAC0A95F</key>
+		<key>7B49C104E59D4728A99AD82C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>829F8172ACC14ECE9848D83F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7B792EF1659F43B3B0AA2EB7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BA7BD1A48B04DD3BF93BF15</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7BBEEA7ADA194FC195C169F2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>defines.h</string>
+			<string>miniflann.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/defines.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/miniflann.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>666011A123A8495EBA064AAB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>sampling.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/sampling.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6680CB67E383496A97C7AD1A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>saving.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/saving.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>67610E49C69D4E3BA225D6C0</key>
+		<key>7C1F9DEAAD1442B1A798A3D3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1301,223 +1478,165 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>68593F3B44D148E7834E7804</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1417BEB90CE74ED4B0A3ACF6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>69CF170828AB4FAB86EB7CC2</key>
+		<key>7CFF66A5469D46CFB8E2F7A8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>devmem2d.hpp</string>
+			<string>optical_flow.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/devmem2d.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/videostab/optical_flow.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6A87216D344444F0BCBFE59F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-OpenCV-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6AC23BED87C547CAB0289EFF</key>
+		<key>7E75D0ABDE6F47F29BC9DD65</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E866B44C4B654E6099C02B39</string>
+			<string>E406DF17452E4B21A112E90A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6BA31A91ECCB48E4BA0C270D</key>
+		<key>7FFDA1FBE6E74F099FA4BD92</key>
 		<dict>
-			<key>fileRef</key>
-			<string>A2C4EC95CCB2484C82E6CB91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6BBA10F3E15F42719536C72B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>motion_estimators.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/motion_estimators.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6D3C8083D1674F99BC0C1395</key>
-		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>A4A71A6F0BB84CBCBEE07D5E</string>
-				<string>02308E92E1D74F91936CABAC</string>
-				<string>FA5584AF60F6470A8AC08421</string>
-				<string>6D771B8200BE4456B7FF1C94</string>
-				<string>4788D795738949A09127200E</string>
-				<string>C3C8D9AC843C43C0942E1975</string>
-				<string>7714D712A5D3477584ED7FA1</string>
-				<string>F03A96F5E72849459071C313</string>
-				<string>49572D0583F74E519970DA4F</string>
-				<string>B20176F0AA56497A86D56D64</string>
-				<string>222E68FBED364813B7F924DF</string>
-				<string>A6DC342F497B48B493D6077B</string>
-				<string>4530BC322A0E4F03A9085F72</string>
-				<string>EB9D590A1F1A4583B5BF952B</string>
-				<string>A03E7C14183A4BE79333AA12</string>
-				<string>0E8DEC9678504163BB2B1256</string>
-				<string>A2561A373DF84CE3B836115B</string>
-				<string>C92462CB4C81465D9E617985</string>
-				<string>0100243D18F54369BE23ED50</string>
-				<string>6648CAB739C8406CBAC0A95F</string>
-				<string>FC5CBF57E1A14448BC514A80</string>
-				<string>69CF170828AB4FAB86EB7CC2</string>
-				<string>E73A1588979D4AFBAAC070A4</string>
-				<string>B123BC01EC49408884D44C26</string>
-				<string>B734599E1DDA47EF811DFB03</string>
-				<string>60603B030A234B89B352D470</string>
-				<string>9440D073CF554E58BB938429</string>
-				<string>DA7E4EE0C86B406BB0AABB4A</string>
-				<string>6FB0F67B027C4236A6DC45A9</string>
-				<string>38F3317D5B7A450592BB437C</string>
-				<string>BBEADA22741A4282A3C6678E</string>
-				<string>BF62F5F9F0484A76BCE17E97</string>
-				<string>A38D366F37DB46CEB2F19508</string>
-				<string>42B18791208F4AD2BEE15FE2</string>
-				<string>CB21C9DF3D4F4EEAA75328C3</string>
-				<string>D4F645170EC346C5B0D21D3E</string>
-				<string>1E5C76764DA34E3F845954E5</string>
-				<string>D200AB0F477C4839AB985195</string>
-				<string>B787F4F02FF54166830C8B34</string>
-				<string>99269EECBA70427BBCD16E79</string>
-				<string>8A016C0745B745E4A3A4EA9E</string>
-				<string>EFEE7642CD274951BDA7135D</string>
-				<string>CEE1D3B6924C46308C2EFBC1</string>
-				<string>28F9788753334E40B52E13CC</string>
-				<string>5A29D31F3C36409196FCF8E3</string>
-				<string>91CD168786034A7BBC49952B</string>
-				<string>562A833167784043826AD75E</string>
-				<string>1417BEB90CE74ED4B0A3ACF6</string>
-				<string>D0AC4C87023C4A5593517D7C</string>
-				<string>0A0C2719AD2143FA88313036</string>
-				<string>A2C4EC95CCB2484C82E6CB91</string>
-				<string>947E20ADBF374AA3A5A72417</string>
-				<string>F5632A5DAC084ECF9816D455</string>
-				<string>4B5DB40ACC504D99BA4CE0F0</string>
-				<string>D36DA5C875FD484DB3C36451</string>
-				<string>8113E941C2DE464A9F4080FA</string>
-				<string>4FB79B59045142EDAAD251BD</string>
-				<string>6E8E371897144BE9A224C753</string>
-				<string>72E35AB1F10144C680A9E933</string>
-				<string>18E703A085CB4515A18CC4E7</string>
-				<string>91CDEC743B4E4C978F3334C7</string>
-				<string>61B9E53ABABB40B4A2053F31</string>
-				<string>33AAE3AF691F40DB8A41FF04</string>
-				<string>2A4C482A5E5C45D7AD36464C</string>
-				<string>3234A91381BE4C24A5822D10</string>
-				<string>6BBA10F3E15F42719536C72B</string>
-				<string>0C919D00F65340F5B180A06E</string>
-				<string>070DFF91913646B8A193C72A</string>
-				<string>52870EA8A572476AB1FFAB96</string>
-				<string>4FF6CF456E4F4F9B8701E190</string>
-				<string>D2C9B5850C294AF1B0D8FDBE</string>
-				<string>DDFC003E60C44631A1E68E04</string>
-				<string>9FACE3631D0944388EDC5D53</string>
-				<string>49216D7347A2463A8EB17253</string>
-				<string>879D8921534746EEBAC4DD25</string>
-				<string>0CFD0D73686E4361B98C65DF</string>
-				<string>9A49DA9272354677A4CCB6D0</string>
-				<string>CC9E616F32E640BC8EC65758</string>
-				<string>DECCDA1B44594C78B51F1AC6</string>
-				<string>58898B05DF0049C686389A60</string>
-				<string>39442517FB46485B96AC1BF2</string>
-				<string>2E132130222C493686783099</string>
-				<string>E5E0A788BC4E4BA69E320F2E</string>
-				<string>65B70D0C700648858F5EE2B3</string>
-				<string>074E505ED2A94923B1A23E47</string>
-				<string>666011A123A8495EBA064AAB</string>
-				<string>6680CB67E383496A97C7AD1A</string>
-				<string>490761DE08324C93B5016AF4</string>
-				<string>67610E49C69D4E3BA225D6C0</string>
-				<string>8B6E694B57434F3F8F844E17</string>
-				<string>3608D1220665489C9D61A7D0</string>
-				<string>39E551EABDA54B66A9662D86</string>
-				<string>A66DC415AE4E484584D5054A</string>
-				<string>C09AC64C37494AE887D79CA8</string>
-				<string>09AE4A3473504F789BB02BA3</string>
-				<string>D37D3A8845DC40B7A117140D</string>
-				<string>C9249C1D9EC448A2B0A75EE1</string>
-				<string>E866B44C4B654E6099C02B39</string>
-				<string>152F09A6B30C42D0B93E2EFC</string>
-				<string>42B5105BB63544F28C187B71</string>
-				<string>541BD93DFC5B46388F7D5B73</string>
-				<string>E78F3608A5724ED596AC3B7D</string>
-				<string>B5B6D2F660064A2DBD21734E</string>
-				<string>4CBB7597487F419198A4E3DF</string>
-				<string>2772AC53A0B049A896230E27</string>
-				<string>03630256E87C4FA98FB7A8F7</string>
-				<string>7865234C3BE34060A183FC39</string>
+				<string>11F493473B404F7494377CA9</string>
+				<string>D64A6FF508E547EE948C5EDB</string>
+				<string>C59BC83E138E4C88979E097B</string>
+				<string>B2628A675A654C2D8C3FBD38</string>
+				<string>1956540F90CA42DF9483FFEA</string>
+				<string>F6D7DC35A6AA4D8CB0710F53</string>
+				<string>2B2315850CEF455FB3629B87</string>
+				<string>045CCEB24FDE4187915E8892</string>
+				<string>1DF9B6ADD7A14301B8693191</string>
+				<string>3CBC90147A034768B3DAA02F</string>
+				<string>941ED3C698E9429F8D9A7B81</string>
+				<string>0B949244DABF4AAB8D40C4E0</string>
+				<string>9EA165B6CDDB45B28702FC8C</string>
+				<string>4E4D6E75073E4EE087381C47</string>
+				<string>C1293C446F0249B4BD12E8CA</string>
+				<string>E2094E792DDF40F986F21B76</string>
+				<string>0A05A5C4B33748BBA2912D34</string>
+				<string>8AA1729BBFB84F7FBE278768</string>
+				<string>A3E048A252DB4472B8C09674</string>
+				<string>82BC91AADC45420F9DC7A443</string>
+				<string>B17E623BC08946DFA92D7D4E</string>
+				<string>D4A13A3649B2499A9DBF5CF7</string>
+				<string>19C9FBBC0ECF4312BC20D550</string>
+				<string>BCE1AE340B3D4DE3BF55CFE8</string>
+				<string>304D50382634419E87AA4BFD</string>
+				<string>92555A67627C4EF3AA2AD477</string>
+				<string>56205C3C16F94BCE92F6DB1A</string>
+				<string>071D9FEBCDB44A19827C0C43</string>
+				<string>BAFDA284CD5E4AD1AA814552</string>
+				<string>D22412C8BE004D53BA3EED02</string>
+				<string>D458FDF4B824463887EAA4AF</string>
+				<string>3F2EEAE7B997449C9EA96550</string>
+				<string>155AE5C8EE084EA8AD9A2052</string>
+				<string>487742E29B4240FEBA7C43BE</string>
+				<string>479F1A18EE7044CE9326FB10</string>
+				<string>7B49C104E59D4728A99AD82C</string>
+				<string>498B76C71F3E4905946F8A77</string>
+				<string>20DB4E30C9404E0FA0EB7B75</string>
+				<string>D50729A5DB834950A7EFAAF0</string>
+				<string>7785B1B3FB9F4E2D9217E52E</string>
+				<string>50A1B40D66D54D74874B43BD</string>
+				<string>9EE77E5FE3F34CD081A6340C</string>
+				<string>07605AD046724AFB88281DD6</string>
+				<string>6B0CA5B95760477CA6A2470B</string>
+				<string>F71FF8C04F894566B27FE0C4</string>
+				<string>84056911A490449EA032D4BE</string>
+				<string>28704A969CA64BD2A4C93132</string>
+				<string>61B7F1058F3F4BE0ACED6DD9</string>
+				<string>5DAAD24D7C8940CC804638B0</string>
+				<string>1A6C0CCB3DEE4CE7AB36A6D7</string>
+				<string>954D32868D9B4A6296329EBD</string>
+				<string>FE73D79C0C754B0DAEDCBC7A</string>
+				<string>8B6F321314D144259C5726FC</string>
+				<string>AF3C391D9202415A90F93774</string>
+				<string>7B792EF1659F43B3B0AA2EB7</string>
+				<string>6687D98E448441CD8015BD06</string>
+				<string>49EC8373F9954BC58D817FEF</string>
+				<string>5B80CF1EC6CD4E9DA8AADDF2</string>
+				<string>CFBA8B244C9F40288B5D1164</string>
+				<string>898DD01FE31D4C018A93508E</string>
+				<string>948A58457C004AB19075DB0A</string>
+				<string>4BEAF0166C3D444C860F5421</string>
+				<string>A78A3EB14ECA4B09BF5845E8</string>
+				<string>B7ADB428E67B44909ED941F5</string>
+				<string>3B619809C4ED46228BC5F99C</string>
+				<string>29192636961348088BBE8F2E</string>
+				<string>354F930A5F9649A79437F737</string>
+				<string>73D9E0A01F4E40DA89B3CDDE</string>
+				<string>77CC4DDE49DC462689CEA0FB</string>
+				<string>7E75D0ABDE6F47F29BC9DD65</string>
+				<string>77A9F4344AA747A6AAE505B4</string>
+				<string>D3C0D54199304276B74E7066</string>
+				<string>F7D7837B65694C169F49ADB1</string>
+				<string>1754907CC0B94FCAB9777FFE</string>
+				<string>A342E30ED05F4653B0D52F83</string>
+				<string>E246549F65C347BC84371039</string>
+				<string>E42AB99A2C6E411D9B2CF0B6</string>
+				<string>28C01F8B30174F02B0D1603C</string>
+				<string>AF79CB991B5A494A87F10D06</string>
+				<string>90958331A6E84CD39CECF2AC</string>
+				<string>7050C087179A4CA3A72B7A5B</string>
+				<string>80BD132161D3460CA90C3119</string>
+				<string>9B7A91816BC14A129BA67196</string>
+				<string>C49EF496496246A9BB4B9C0B</string>
+				<string>7717250DDA6F43D49CA0BF12</string>
+				<string>9D098C7583CE4B61BDA86C52</string>
+				<string>C7C51B1F1022413E82C77172</string>
+				<string>8425D8743BF54BC6B845D696</string>
+				<string>00CFE742D3FB429086E48046</string>
+				<string>9D30AB32675B4471812F5C57</string>
+				<string>A3D84314BC334BF4A5024E9F</string>
+				<string>62AA6F8E5D074C669842AB14</string>
+				<string>FE3EB70389354718B9F08309</string>
+				<string>612186374A824F3CBBB4A892</string>
+				<string>0EDAA14BD2EC42408EA154E6</string>
+				<string>4CEDC85B3F46475CB140E503</string>
+				<string>F0D49159EBD6406F873933A2</string>
+				<string>8037DC37BC71413BBB4684D9</string>
+				<string>67B0B67416BD4E07AC585E24</string>
+				<string>FB17CE04368B464DA9E9C2C1</string>
+				<string>481F11593E4B4C0FABD96377</string>
+				<string>66CD8EE2BAEE4DABBA7ABB30</string>
+				<string>5B055FF07831402B816CF45E</string>
+				<string>75035FF644ED44FC8881F73A</string>
+				<string>0F27A19688834E36A4636886</string>
+				<string>2A139A59A6B34D0697E371DD</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>OpenCV</string>
-			<key>path</key>
-			<string>OpenCV</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>6D771B8200BE4456B7FF1C94</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>autocalib.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/autocalib.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6E36F4985D394AAB9CA28FD3</key>
+		<key>8037DC37BC71413BBB4684D9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A4A71A6F0BB84CBCBEE07D5E</string>
+			<string>F64343993DFA483290CA2910</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6E8E371897144BE9A224C753</key>
+		<key>805A562AF38D4F82A28964FD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>logger.h</string>
+			<string>warpers.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/logger.h</string>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/warpers.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6EA91BD2024941548A44EC98</key>
+		<key>805FD576D00448FEA3372869</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -1584,262 +1703,116 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>6FB0F67B027C4236A6DC45A9</key>
+		<key>80BD132161D3460CA90C3119</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F12367D227654182BBF31342</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>81186605AC844A2BBD597945</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>16256034C2734B7399C2D6DA</string>
+			<key>targetProxy</key>
+			<string>9610D129364C4D8889C42E63</string>
+		</dict>
+		<key>829F8172ACC14ECE9848D83F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>fast_marching_inl.hpp</string>
+			<string>global_motion.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/fast_marching_inl.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/videostab/global_motion.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>71506240DC004AEA812B939A</key>
+		<key>82BC91AADC45420F9DC7A443</key>
 		<dict>
 			<key>fileRef</key>
-			<string>947E20ADBF374AA3A5A72417</string>
+			<string>FF958E4028DD404485C5F733</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7161A5A498FE4423B6A1DA60</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8A016C0745B745E4A3A4EA9E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>721B66827AEC4E8A95A4227A</key>
+		<key>83C284BD93AA4D2FB0CCE651</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>CB97712081274B088DD2D2AC</string>
-				<string>38F0B08EACF14910A1C7B991</string>
+				<string>F14046B9069D4AFBA8051E15</string>
+				<string>2A406C7B3300477FB17D97CC</string>
+				<string>A2716BA219FA4B2DB8FF1A0D</string>
+				<string>3214217EC6274ABDB9AE514E</string>
+				<string>926D3D89235844F682709498</string>
+				<string>00C4CB8DBA42493CB8CE2172</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Products</string>
+			<string>Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>722FD6C5503641FFADA70F95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>72451EA7B3FD4CEC882BC8C2</key>
+		<key>84056911A490449EA032D4BE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A66DC415AE4E484584D5054A</string>
+			<string>F0D1097A6682460CA661D89B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>72683E501E1342ABBCC17E06</key>
+		<key>8425D8743BF54BC6B845D696</key>
 		<dict>
 			<key>fileRef</key>
-			<string>02308E92E1D74F91936CABAC</string>
+			<string>3C24DC196539451BA2B31693</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>72E35AB1F10144C680A9E933</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>lsh_index.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/lsh_index.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>734D65A86A3348C78FE41264</key>
+		<key>870C09F9C8414DD39A6391A5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>805BBD4D64FD433B8D165027</string>
+			<string>BBA8138C202048BAB29BC881</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>75BF9A4A3A954059A4E636A2</key>
+		<key>898DD01FE31D4C018A93508E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0CFD0D73686E4361B98C65DF</string>
+			<string>3F99779D0C69478BA764A642</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7647B0BFF8DC4F29B2A6B4D0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2A4C482A5E5C45D7AD36464C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>76C5E8DF739D4C6EA32233EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC9E616F32E640BC8EC65758</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>76F872CB49074E6081AAD9AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8113E941C2DE464A9F4080FA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>76FD2A28528A486E93DF1422</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A82BFEF5BDC8406CB7E35FB8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7714D712A5D3477584ED7FA1</key>
+		<key>89FCC9F3AC2A4FAEB10F1325</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>blenders.hpp</string>
+			<string>log.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/blenders.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/videostab/log.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7865234C3BE34060A183FC39</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEDCDF03A2064F62ABB3F410</string>
-				<string>CD732FDE4EC34513B8ADD1E2</string>
-				<string>6A87216D344444F0BCBFE59F</string>
-				<string>1A99C436E61C4B83A6979844</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>786A099B6D58484D9C960205</key>
+		<key>8AA1729BBFB84F7FBE278768</key>
 		<dict>
 			<key>fileRef</key>
-			<string>91CDEC743B4E4C978F3334C7</string>
+			<string>D5BE48B18DD14B80B91B0749</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>788F7B0B2BB14E37B8CBC548</key>
+		<key>8B6F321314D144259C5726FC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E78F3608A5724ED596AC3B7D</string>
+			<string>F9E7088FA1264D5C8ABB21CA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7A5A11CC330646F5ACE3A406</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6E8E371897144BE9A224C753</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B810B9F7D174982AA4AF618</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Accelerate.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accelerate.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>7BCF9804516A4D1180E13C3F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D36DA5C875FD484DB3C36451</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7CE734D7137C4B348B214DDC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D37D3A8845DC40B7A117140D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7CF7E89CEAD7410B99F44428</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreMedia.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMedia.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>7D87A832B14E467F9C7C2B3F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6D771B8200BE4456B7FF1C94</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7EB2F16422CA49659448F751</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CBB7597487F419198A4E3DF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7F592B721C784E069D82D625</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4530BC322A0E4F03A9085F72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>805BBD4D64FD433B8D165027</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8113E941C2DE464A9F4080FA</key>
+		<key>8C2019390D054073949E20BF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1848,283 +1821,26 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>linear_index.h</string>
+			<string>any.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/linear_index.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/any.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>81658106C8194771A9477B94</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6E36F4985D394AAB9CA28FD3</string>
-				<string>72683E501E1342ABBCC17E06</string>
-				<string>8215604113BC4D1695B89022</string>
-				<string>7D87A832B14E467F9C7C2B3F</string>
-				<string>B2A5C8D2A3914AF8B5FF6C10</string>
-				<string>8A50A9D0B0574F4EA8DAFE0B</string>
-				<string>9EC21CC2C383430EBA2BD895</string>
-				<string>3D2C2880DBA44FDD855F20A2</string>
-				<string>DC503C12DB684A55B6747A5E</string>
-				<string>D8A32C82C4794E7AA6497AC0</string>
-				<string>49D038394B624B50B09B389E</string>
-				<string>8FFF736702B64497930C0E45</string>
-				<string>7F592B721C784E069D82D625</string>
-				<string>33717C6A3FBE43778694A731</string>
-				<string>3397861386C443A6B4892539</string>
-				<string>1AFAC2CD68904C1E8443B0AF</string>
-				<string>8254E1F96C87488D99B200A4</string>
-				<string>2EEEC897677F4F7EA493B7BD</string>
-				<string>B949EB18EB834150923A4506</string>
-				<string>A9E7CB79B5EB409998B38319</string>
-				<string>9BB209514B2248AD8C686858</string>
-				<string>A537B87F86CA43BC96D1DDE3</string>
-				<string>DE43D0C512794A459B22A7E0</string>
-				<string>D4DE5489573A43178E738851</string>
-				<string>2326BC12F10F4208911D2639</string>
-				<string>8F3ACFBB40D8467186F1880D</string>
-				<string>9A772C5BFFC04B93AE253C4C</string>
-				<string>35155BCBD57D4AC2AABA03BB</string>
-				<string>5D47424EEF0E4961A63314B9</string>
-				<string>AFDDE45534D5445B837230F0</string>
-				<string>A8AC3B76084A4551BE3ED0A3</string>
-				<string>E58AFA91520242FD8D86DB3F</string>
-				<string>B85A0841A1434F3A924B6402</string>
-				<string>201AEF02DD4E41CEB1A36ABE</string>
-				<string>0A02AE32E51F453F93BC89FF</string>
-				<string>8357819BEEFD4E76B8D0D861</string>
-				<string>BA8ED05F57B7483F9EB82309</string>
-				<string>080CFEDEEC0B41808953E9B7</string>
-				<string>8F7A1ABB7CDC4255935373BE</string>
-				<string>02BA38A61BDD44E7922D6EC5</string>
-				<string>7161A5A498FE4423B6A1DA60</string>
-				<string>C63CFFE1DF954484AA384B71</string>
-				<string>39648039DA334168BD08EFDF</string>
-				<string>FCBE573C88E340F6AEB639C4</string>
-				<string>2114243554F843A1B6DD75D6</string>
-				<string>FED81906FD9D4FC6B4830A83</string>
-				<string>2A813364EB53418985B2DBC5</string>
-				<string>68593F3B44D148E7834E7804</string>
-				<string>ED29E79FC798442083EEBD44</string>
-				<string>E478E1A0CC9D42868989B55D</string>
-				<string>6BA31A91ECCB48E4BA0C270D</string>
-				<string>71506240DC004AEA812B939A</string>
-				<string>F2C77C4EF9BA4309B899BF5A</string>
-				<string>9A2137B1748C4AACA841D739</string>
-				<string>7BCF9804516A4D1180E13C3F</string>
-				<string>76F872CB49074E6081AAD9AF</string>
-				<string>60813A3767044FC0AC508B10</string>
-				<string>7A5A11CC330646F5ACE3A406</string>
-				<string>A1159CB162B14A50B2C7E459</string>
-				<string>C07957255E27496CBEAC020D</string>
-				<string>786A099B6D58484D9C960205</string>
-				<string>28C2281E392C48E1AE2BFFEA</string>
-				<string>9AB803649A8A4B98AAB7CA27</string>
-				<string>7647B0BFF8DC4F29B2A6B4D0</string>
-				<string>DB9C2A6EB20548D9B901CD51</string>
-				<string>999CEA42E40F4D1AA44342BE</string>
-				<string>FD9851D5321A49CFA554B8AA</string>
-				<string>018B5CDB47B8489BAFB118E6</string>
-				<string>27A9644ADD7745868DE71725</string>
-				<string>86029F4EA6CA4802B802847D</string>
-				<string>B19FFC5D6E1743F8B0C3085A</string>
-				<string>B4E02240C35F4045B4AAABE5</string>
-				<string>34CFDDE81DE1472EB5382913</string>
-				<string>0A275DFC27E7482D94AEABD1</string>
-				<string>87C853ADCD2145ED9B0F6984</string>
-				<string>75BF9A4A3A954059A4E636A2</string>
-				<string>F8415A70D0D045DD920B0772</string>
-				<string>76C5E8DF739D4C6EA32233EC</string>
-				<string>9EF785DDCDE641BBB6E0A2AA</string>
-				<string>39D1A484470C4782BCA4BBAD</string>
-				<string>6081F877B6A2454087A8E411</string>
-				<string>879B399CCB9740E085609DC9</string>
-				<string>19485E9D65A24C8D84500767</string>
-				<string>1911A86A37274AC198BF4444</string>
-				<string>06FBC409A8AE4173AB5806EC</string>
-				<string>C8C8568D4453426B961FF0FA</string>
-				<string>857AC592229642698BCB014E</string>
-				<string>2F86E597F3B041288DFBC216</string>
-				<string>6453ECBC9DE54011B6BB83D2</string>
-				<string>0F92B3FB1B01448596B2A8A2</string>
-				<string>F4375139F56744E39423A11C</string>
-				<string>1FFB85D2C6AF4FDBAA26C53F</string>
-				<string>72451EA7B3FD4CEC882BC8C2</string>
-				<string>ECB444E905604D138359E9B6</string>
-				<string>D6A746C5191248049039B728</string>
-				<string>7CE734D7137C4B348B214DDC</string>
-				<string>360C2594838B47B6A9AEBBDF</string>
-				<string>6AC23BED87C547CAB0289EFF</string>
-				<string>6183EA9362F54E31AAC78513</string>
-				<string>ACEB2B6DDA1949E08BF24269</string>
-				<string>00F3C3072A9A4A8696C446AA</string>
-				<string>788F7B0B2BB14E37B8CBC548</string>
-				<string>3D94C069FC73434DA5651CD0</string>
-				<string>7EB2F16422CA49659448F751</string>
-				<string>2E64981BF39B43A495A38A35</string>
-				<string>185BAA0E6B774F669F22B5E3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8215604113BC4D1695B89022</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FA5584AF60F6470A8AC08421</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8254E1F96C87488D99B200A4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A2561A373DF84CE3B836115B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>827AC393B54B4A0F8BA8BD1D</key>
+		<key>8C35BF7CED774E808B892CA5</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>04894699323447B2BAB6A144</string>
-				<string>165AF84073814602B37888DE</string>
-				<string>16797303AAAB409B8FA342C3</string>
-				<string>721B66827AEC4E8A95A4227A</string>
-				<string>76FD2A28528A486E93DF1422</string>
+				<string>582355C0669342FCA64E36C3</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8357819BEEFD4E76B8D0D861</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4F645170EC346C5B0D21D3E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>857AC592229642698BCB014E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6680CB67E383496A97C7AD1A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>86029F4EA6CA4802B802847D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4FF6CF456E4F4F9B8701E190</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8750B037CD8845C88BF4E953</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>A520222653D14074AFCD4E47</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>827AC393B54B4A0F8BA8BD1D</string>
-			<key>productRefGroup</key>
-			<string>721B66827AEC4E8A95A4227A</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>9FB29E8979054050B60ECAA2</string>
-				<string>877624726CFA4AE5A2A18BC1</string>
-			</array>
-		</dict>
-		<key>877624726CFA4AE5A2A18BC1</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A72002B4B5AB45948923D403</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E7E3631766D44B1C9C9400E1</string>
-				<string>AF7FEDCE744D464D9A358A07</string>
-				<string>81658106C8194771A9477B94</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>Pods-OpenCV</string>
-			<key>productName</key>
-			<string>Pods-OpenCV</string>
-			<key>productReference</key>
-			<string>38F0B08EACF14910A1C7B991</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>879B399CCB9740E085609DC9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2E132130222C493686783099</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>879D8921534746EEBAC4DD25</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>openfabmap.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/contrib/openfabmap.hpp</string>
+			<string>Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>87C853ADCD2145ED9B0F6984</key>
-		<dict>
-			<key>fileRef</key>
-			<string>879D8921534746EEBAC4DD25</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8951A870816F4C3BABAB8588</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A016C0745B745E4A3A4EA9E</key>
+		<key>8F20564F7F084D458F1329C1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2139,14 +1855,309 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8A50A9D0B0574F4EA8DAFE0B</key>
+		<key>9031D7B8EC88404D90F9CB53</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>warpers_inl.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/warpers_inl.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90958331A6E84CD39CECF2AC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C3C8D9AC843C43C0942E1975</string>
+			<string>DC940F5A7EB64A18B3E80660</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>8B6E694B57434F3F8F844E17</key>
+		<key>91804EDE22134950A47FE8C7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>result_set.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/result_set.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>92555A67627C4EF3AA2AD477</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F21FD090C033478CA3B3BA82</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>926D3D89235844F682709498</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>941ED3C698E9429F8D9A7B81</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DB4D56A67DB04BFCB05F8479</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>948A58457C004AB19075DB0A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C356AD3FB947F195B5C108</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>954D32868D9B4A6296329EBD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7277926931346EBA0E099E3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9610D129364C4D8889C42E63</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>301A857D6A4649E2B00BC5CE</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>16256034C2734B7399C2D6DA</string>
+			<key>remoteInfo</key>
+			<string>Pods-OpenCV</string>
+		</dict>
+		<key>96CD34829B4C47BE96C309EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>camera.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/camera.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>96E90BB8DDBF4C799B4EFE2C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>nn_index.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/nn_index.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9817DE5EE2744FABB4EC050A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>fast_marching.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/videostab/fast_marching.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>982250CCD596445D91658517</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>highgui_c.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/highgui/highgui_c.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>99266288BDDF4DA48534BCFB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>hybridtracker.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/contrib/hybridtracker.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9A3A85AEC9BA40BDB7BD0EA5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>motion_stabilizing.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/videostab/motion_stabilizing.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9B7A91816BC14A129BA67196</key>
+		<dict>
+			<key>fileRef</key>
+			<string>00E5F028B0F74A209CC1745D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C1BFF080F6449F980D24D4F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68A0968B1C9445B09BB6F82D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9C51F6CE3711491D81A6157B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-OpenCV-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C5F93EFB49B49B6BF593346</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>world.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/world/world.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9C604422F33B43BBBE610AAF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>autocalib.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/autocalib.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D098C7583CE4B61BDA86C52</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B64EADFF820F4A7B977C87DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D29E7987613421F812FA2C5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>object_factory.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/object_factory.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D30AB32675B4471812F5C57</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A04F01A8BCA34060AF8AD67A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9E050651D22545A287351117</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>features2d.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/nonfree/features2d.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EA165B6CDDB45B28702FC8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1785876592514241831725C1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9EBC3F35337342C397E1C740</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>timer.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/timer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EE77E5FE3F34CD081A6340C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CCC4FCF6F61B47899C3439B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9F54EE76909C4A239EAAE2DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C1E4583881B44B16A66396F1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A04F01A8BCA34060AF8AD67A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2159,55 +2170,68 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8B9F3AC3875A47B9B3D42A04</key>
+		<key>A0D0034E0D1F4C299DF50A0E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>saving.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/saving.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A147840A2CD44A21AC85BA36</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>opencv2.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/opencv2.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>A2716BA219FA4B2DB8FF1A0D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A342E30ED05F4653B0D52F83</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D363AFB756BA451B80038750</string>
+			<string>713809A4731B4351AD249C81</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>8F073D0766E44784BFC8ABEE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AE172F6C0C55456585A289B8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8F3ACFBB40D8467186F1880D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>60603B030A234B89B352D470</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8F7A1ABB7CDC4255935373BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B787F4F02FF54166830C8B34</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8FFF736702B64497930C0E45</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A6DC342F497B48B493D6077B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>91CD168786034A7BBC49952B</key>
+		<key>A374F459BF8746BF975FF9D5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>imgproc.hpp</string>
+			<string>gpumat.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/imgproc/imgproc.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/core/gpumat.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>91CDEC743B4E4C978F3334C7</key>
+		<key>A3C356AD3FB947F195B5C108</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2220,29 +2244,355 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>93CB2FFE308B46979B2E7856</key>
+		<key>A3D84314BC334BF4A5024E9F</key>
 		<dict>
+			<key>fileRef</key>
+			<string>4DD7589653F0457E9394E401</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>877624726CFA4AE5A2A18BC1</string>
-			<key>targetProxy</key>
-			<string>1C3F73B794DE4BFEAF23A2D5</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>9440D073CF554E58BB938429</key>
+		<key>A3E048A252DB4472B8C09674</key>
+		<dict>
+			<key>fileRef</key>
+			<string>19DB049AF5B64697934E417B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A73A9986EB064548AE867CA3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>exposure_compensate.hpp</string>
+			<string>version.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/exposure_compensate.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/core/version.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>947E20ADBF374AA3A5A72417</key>
+		<key>A78A3EB14ECA4B09BF5845E8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C8ACA60FF43E4C4BB3490410</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB5D74B64C9545BD914EC1E4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>video.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/video/video.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AC5B79785BF94E9CBE7282EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>compat.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/legacy/compat.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ACB896E436E34DDC9DCE4A84</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>operations.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/core/operations.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF3C391D9202415A90F93774</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7485015CE85542C78257667A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF79CB991B5A494A87F10D06</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7CFF66A5469D46CFB8E2F7A8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF8C564622DB45BAA4D90CB7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>frame_source.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/videostab/frame_source.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B17E623BC08946DFA92D7D4E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1997D50B505408F9428C1AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B1997D50B505408F9428C1AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>detection_based_tracker.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/contrib/detection_based_tracker.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B2628A675A654C2D8C3FBD38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9C604422F33B43BBBE610AAF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B43D41110C9247D3BB016946</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>dummy.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/dummy.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B4D093C8C0CC4BEEA7E01BE8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-OpenCV-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B64EADFF820F4A7B977C87DF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>sampling.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/sampling.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B78F88C63EE64A09A62305FF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EA555EA9C2C444DC982252EA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B7ADB428E67B44909ED941F5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7BBEEA7ADA194FC195C169F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BAFDA284CD5E4AD1AA814552</key>
+		<dict>
+			<key>fileRef</key>
+			<string>44D95C41541A49D690926039</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BBA8138C202048BAB29BC881</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AssetsLibrary.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>BBB587839FF646518128D19B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>highgui.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/highgui/highgui.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BCE1AE340B3D4DE3BF55CFE8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B43D41110C9247D3BB016946</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BD055DB4BFEE4D3B926C381D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>allocator.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/allocator.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF14AE03EF344C969F3A1FDD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68A7DE1615EE4AC18B25E451</string>
+				<string>714B2565244941B79CE2E190</string>
+				<string>BBA8138C202048BAB29BC881</string>
+				<string>EFF0DED7A531421E8F021F09</string>
+				<string>0A3D054CEF844C50BF8379A1</string>
+				<string>68A0968B1C9445B09BB6F82D</string>
+				<string>C1E4583881B44B16A66396F1</string>
+				<string>DA1992D285E64A1EB314194C</string>
+				<string>6E086F4D01CA4561BEB04C36</string>
+				<string>EBE8BE3B8DB242DD8E0E6EE0</string>
+				<string>A147840A2CD44A21AC85BA36</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BFECF31CC15F4D49870298F5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>warpers.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/warpers.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C1293C446F0249B4BD12E8CA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>019924F55A1C4A8E92C31C6F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C1E4583881B44B16A66396F1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreVideo.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreVideo.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>C49EF496496246A9BB4B9C0B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>91804EDE22134950A47FE8C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C50CE82B9BB74756B64639D4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D56C01D873C04111B607FFB9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C59BC83E138E4C88979E097B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8C2019390D054073949E20BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C59FB6E983804DE2B8A75B7C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F6288C0E3BD14F5995979198</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C5FD451674EA4EFC8518EBFE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>videostab.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/videostab/videostab.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C72E50DE8C9E4C51AFE352AA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2257,7 +2607,206 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>99269EECBA70427BBCD16E79</key>
+		<key>C7C51B1F1022413E82C77172</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A0D0034E0D1F4C299DF50A0E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C8479C98BE754113B0646BD5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>C8ACA60FF43E4C4BB3490410</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>matrix.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/matrix.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C8CF2FD7610D4917AB31D595</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>retina.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/contrib/retina.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CA6572A2EEDA45DFAC263516</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-OpenCV.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CAB8E835766F474B833C9778</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>dist.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/dist.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CBC057D24DD748F2B713DBE3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>config.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/config.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCC4FCF6F61B47899C3439B3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>hierarchical_clustering_index.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/hierarchical_clustering_index.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CED7A1BAF8954805A623AA7F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>ml.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/ml/ml.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CFBA8B244C9F40288B5D1164</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2979D77C37B84E26B0874F86</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1D2C208AAD74291AF7E4A57</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>matchers.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/matchers.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D22412C8BE004D53BA3EED02</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D41C2E392B504F39A6FFD9DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D3B52C3A634B4697B201EF8F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>logger.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/flann/logger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D3C0D54199304276B74E7066</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F2ABA39FDBFA434C859C1413</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D41C2E392B504F39A6FFD9DF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>features2d.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/features2d/features2d.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D458FDF4B824463887EAA4AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9E050651D22545A287351117</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4A13A3649B2499A9DBF5CF7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3028279FB1664B39886CFFDA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4E7DC60B695443F8FD97896</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2272,128 +2821,67 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>999CEA42E40F4D1AA44342BE</key>
+		<key>D50729A5DB834950A7EFAAF0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6BBA10F3E15F42719536C72B</string>
+			<string>FD69A92EF7054D30B8144A82</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>9A2137B1748C4AACA841D739</key>
+		<key>D56C01D873C04111B607FFB9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4B5DB40ACC504D99BA4CE0F0</string>
+			<string>3214217EC6274ABDB9AE514E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>9A49DA9272354677A4CCB6D0</key>
+		<key>D5BE48B18DD14B80B91B0749</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>opengl_interop_deprecated.hpp</string>
+			<string>cuda_devptrs.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/opengl_interop_deprecated.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/core/cuda_devptrs.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9A772C5BFFC04B93AE253C4C</key>
+		<key>D64A6FF508E547EE948C5EDB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9440D073CF554E58BB938429</string>
+			<string>BD055DB4BFEE4D3B926C381D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>9AB803649A8A4B98AAB7CA27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>33AAE3AF691F40DB8A41FF04</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9BB209514B2248AD8C686858</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FC5CBF57E1A14448BC514A80</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9EC21CC2C383430EBA2BD895</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7714D712A5D3477584ED7FA1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9EF785DDCDE641BBB6E0A2AA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DECCDA1B44594C78B51F1AC6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9FACE3631D0944388EDC5D53</key>
+		<key>D68B48C63135454BBCDE839C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>opencv.hpp</string>
+			<string>blenders.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/opencv.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/blenders.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9FB29E8979054050B60ECAA2</key>
+		<key>DA1992D285E64A1EB314194C</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>3BB027193DCB442D86208472</string>
-			<key>buildPhases</key>
-			<array>
-				<string>EAD234F1099C44B68C299EEC</string>
-				<string>2CB24448460E4073B482EEFD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>93CB2FFE308B46979B2E7856</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>CB97712081274B088DD2D2AC</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>A03E7C14183A4BE79333AA12</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>contrib.hpp</string>
+			<string>Foundation.framework</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/contrib/contrib.hpp</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>A1159CB162B14A50B2C7E459</key>
-		<dict>
-			<key>fileRef</key>
-			<string>72E35AB1F10144C680A9E933</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A2561A373DF84CE3B836115B</key>
+		<key>DB4D56A67DB04BFCB05F8479</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2402,13 +2890,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>core_c.h</string>
+			<string>cap_ios.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/core_c.h</string>
+			<string>opencv2.framework/Versions/A/Headers/highgui/cap_ios.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A2C4EC95CCB2484C82E6CB91</key>
+		<key>DC940F5A7EB64A18B3E80660</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2417,26 +2905,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ios.h</string>
+			<string>params.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/highgui/ios.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/params.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A38D366F37DB46CEB2F19508</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>flann_base.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/flann_base.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A4A71A6F0BB84CBCBEE07D5E</key>
+		<key>DCA61B9B83F44C06A3D8A825</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2445,18 +2920,18 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>all_indices.h</string>
+			<string>index_testing.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/all_indices.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/index_testing.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A520222653D14074AFCD4E47</key>
+		<key>DCB27042A5974D9F85268447</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>6EA91BD2024941548A44EC98</string>
-				<string>A62B2AAA777B4D4C8C867CCE</string>
+				<string>3E507EA234B84ED6BF8C6C58</string>
+				<string>E2BBF0B2772C4E92902A84DC</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -2465,17 +2940,31 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>A537B87F86CA43BC96D1DDE3</key>
+		<key>DDBB0E3C83EB47CDA977288D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>69CF170828AB4FAB86EB7CC2</string>
+			<string>6E086F4D01CA4561BEB04C36</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>A595A0A54C2C445BBDE47E8C</key>
+		<key>DFF6B72640EA4230B5A037AC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6C9607C8496F4B4DAB4A837F</string>
+				<string>C59FB6E983804DE2B8A75B7C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E0E9165A342945C5A0BAD7EA</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>CD732FDE4EC34513B8ADD1E2</string>
+			<string>F14046B9069D4AFBA8051E15</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -2492,8 +2981,6 @@
 				<string>0</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-OpenCV-prefix.pch</string>
 				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
 				<array>
 					<string>DEBUG=1</string>
@@ -2523,56 +3010,71 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A62B2AAA777B4D4C8C867CCE</key>
+		<key>E2068A99CBE94EF2AFD1C553</key>
 		<dict>
+			<key>fileRef</key>
+			<string>DA1992D285E64A1EB314194C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E2094E792DDF40F986F21B76</key>
+		<dict>
+			<key>fileRef</key>
+			<string>52E45B522E2F4631AB5D1A36</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E246549F65C347BC84371039</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5EE10547F07A45C2B7033D2C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E2BBF0B2772C4E92902A84DC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B4D093C8C0CC4BEEA7E01BE8</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
 				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
 				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
 				<key>GCC_C_LANGUAGE_STANDARD</key>
 				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Pods-OpenCV-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>7.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
 				<key>VALIDATE_PRODUCT</key>
 				<string>YES</string>
 			</dict>
@@ -2581,7 +3083,43 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>A66DC415AE4E484584D5054A</key>
+		<key>E3BE0964B91E4F559CBD7DFA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CA6572A2EEDA45DFAC263516</string>
+				<string>B4D093C8C0CC4BEEA7E01BE8</string>
+				<string>9C51F6CE3711491D81A6157B</string>
+				<string>123018211EB940118DF86231</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E406DF17452E4B21A112E90A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>objdetect.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/objdetect/objdetect.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E42AB99A2C6E411D9B2CF0B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>18B0960269744990A5626A88</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E458EA917346443BBD91D6E6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2590,92 +3128,107 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>timer.h</string>
+			<string>core_c.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/timer.h</string>
+			<string>opencv2.framework/Versions/A/Headers/core/core_c.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A6DC342F497B48B493D6077B</key>
+		<key>E6584E3F2D3749249FEEA42B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>66118D1F852443C68E98AFD5</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C50CE82B9BB74756B64639D4</string>
+				<string>DFF6B72640EA4230B5A037AC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>81186605AC844A2BBD597945</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>0C0FF88A8A2149F5BFC03B34</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>E6FE86B3C0814D2183C0BA98</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>compat.hpp</string>
+			<string>exposure_compensate.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/legacy/compat.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/stitching/detail/exposure_compensate.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A72002B4B5AB45948923D403</key>
+		<key>E7277926931346EBA0E099E3</key>
 		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A595A0A54C2C445BBDE47E8C</string>
-				<string>514AC74067F346BB8BE15EAD</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A82BFEF5BDC8406CB7E35FB8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4BFB0C9657254EFCA113726B</string>
-				<string>555A2B3FC7934C4491CA93CE</string>
-				<string>8951A870816F4C3BABAB8588</string>
-				<string>450FEA843F5C424B8FD11439</string>
-				<string>722FD6C5503641FFADA70F95</string>
-				<string>B4B7A86765E843CCB44CA87C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Pods</string>
+			<string>ios.h</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/highgui/ios.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A8AC3B76084A4551BE3ED0A3</key>
+		<key>E913EC31C46D42758FC2EE4B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BBEADA22741A4282A3C6678E</string>
+			<string>EFF0DED7A531421E8F021F09</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>A9E7CB79B5EB409998B38319</key>
+		<key>EA555EA9C2C444DC982252EA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6648CAB739C8406CBAC0A95F</string>
+			<string>9C51F6CE3711491D81A6157B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>AA21D1BFBB4344C584B7C649</key>
+		<key>EBE8BE3B8DB242DD8E0E6EE0</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>AVFoundation.framework</string>
+			<string>UIKit.framework</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>ACEB2B6DDA1949E08BF24269</key>
+		<key>ED584A94CDFF4AD08DB6C89E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>42B5105BB63544F28C187B71</string>
+			<key>children</key>
+			<array>
+				<string>BF14AE03EF344C969F3A1FDD</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AE172F6C0C55456585A289B8</key>
+		<key>EFF0DED7A531421E8F021F09</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -2688,37 +3241,27 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>AF7FEDCE744D464D9A358A07</key>
+		<key>F0D1097A6682460CA661D89B</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>17A2EA4EF0B942878B4FB4CB</string>
-				<string>DFB0656A805C4CAFA4E562DF</string>
-				<string>B4047F29AEF14632BC5A2A83</string>
-				<string>8F073D0766E44784BFC8ABEE</string>
-				<string>8B9F3AC3875A47B9B3D42A04</string>
-				<string>E64AD83B9E634890923CBE74</string>
-				<string>B423F81C2F1D4458B895D73A</string>
-				<string>E06A839173D1467485DE6153</string>
-				<string>4B7B49C80BE24708BB523C1D</string>
-				<string>734D65A86A3348C78FE41264</string>
-				<string>F7DAC7DA82D04E4BA644B1CB</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>imgproc.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/imgproc/imgproc.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AFDDE45534D5445B837230F0</key>
+		<key>F0D49159EBD6406F873933A2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>38F3317D5B7A450592BB437C</string>
+			<string>62E32DD0346644F7A3BCB68A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>B123BC01EC49408884D44C26</key>
+		<key>F12367D227654182BBF31342</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2727,257 +3270,52 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>dummy.h</string>
+			<string>photo_c.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/dummy.h</string>
+			<string>opencv2.framework/Versions/A/Headers/photo/photo_c.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B19FFC5D6E1743F8B0C3085A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D2C9B5850C294AF1B0D8FDBE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B20176F0AA56497A86D56D64</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>camera.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/camera.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2A5C8D2A3914AF8B5FF6C10</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4788D795738949A09127200E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B4047F29AEF14632BC5A2A83</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D982D562A38747E5BA38381A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B423F81C2F1D4458B895D73A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B8EED01E7ABA480BB2A57BF7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B4B7A86765E843CCB44CA87C</key>
+		<key>F14046B9069D4AFBA8051E15</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pods-resources.sh</string>
+			<string>Pods.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B4E02240C35F4045B4AAABE5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DDFC003E60C44631A1E68E04</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5B6D2F660064A2DBD21734E</key>
+		<key>F21FD090C033478CA3B3BA82</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>warpers.hpp</string>
+			<string>eigen.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/warpers.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/core/eigen.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B734599E1DDA47EF811DFB03</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>dynamic_bitset.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/dynamic_bitset.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B787F4F02FF54166830C8B34</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ground_truth.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/ground_truth.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B85A0841A1434F3A924B6402</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A38D366F37DB46CEB2F19508</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B8EED01E7ABA480BB2A57BF7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreVideo.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreVideo.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>B949EB18EB834150923A4506</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0100243D18F54369BE23ED50</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BA8ED05F57B7483F9EB82309</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1E5C76764DA34E3F845954E5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BADEAEF844ED403BAC775591</key>
-		<dict>
-			<key>fileRef</key>
-			<string>459D133AFF494604BC26B87E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BBEADA22741A4282A3C6678E</key>
+		<key>F2ABA39FDBFA434C859C1413</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>features2d.hpp</string>
+			<string>ocl.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/nonfree/features2d.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/nonfree/ocl.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BF62F5F9F0484A76BCE17E97</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>flann.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/flann.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C07957255E27496CBEAC020D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18E703A085CB4515A18CC4E7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C09AC64C37494AE887D79CA8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>tracking.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/video/tracking.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C3C8D9AC843C43C0942E1975</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>background_segm.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/video/background_segm.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C63CFFE1DF954484AA384B71</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EFEE7642CD274951BDA7135D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8C8568D4453426B961FF0FA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>666011A123A8495EBA064AAB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C92462CB4C81465D9E617985</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>cuda_devptrs.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/cuda_devptrs.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C9249C1D9EC448A2B0A75EE1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>util.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/detail/util.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CB21C9DF3D4F4EEAA75328C3</key>
+		<key>F53A495F65A4438DAA82ED7E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2992,7 +3330,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CB97712081274B088DD2D2AC</key>
+		<key>F61A7ACE73BB40C2A8119991</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>gpu.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/nonfree/gpu.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F6288C0E3BD14F5995979198</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -3001,350 +3352,11 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>libPods.a</string>
+			<string>libPods-OpenCV.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>CC9E616F32E640BC8EC65758</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>operations.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/operations.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD732FDE4EC34513B8ADD1E2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-OpenCV-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CEE1D3B6924C46308C2EFBC1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>highgui.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/highgui/highgui.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0AC4C87023C4A5593517D7C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>inpainting.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/inpainting.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D200AB0F477C4839AB985195</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>gpumat.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/gpumat.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D2C9B5850C294AF1B0D8FDBE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>object_factory.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/object_factory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D363AFB756BA451B80038750</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreImage.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreImage.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>D36DA5C875FD484DB3C36451</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>legacy.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/legacy/legacy.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D37D3A8845DC40B7A117140D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>types_c.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/core/types_c.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4DE5489573A43178E738851</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B123BC01EC49408884D44C26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4F645170EC346C5B0D21D3E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>global_motion.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/global_motion.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D6A746C5191248049039B728</key>
-		<dict>
-			<key>fileRef</key>
-			<string>09AE4A3473504F789BB02BA3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8A32C82C4794E7AA6497AC0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B20176F0AA56497A86D56D64</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D982D562A38747E5BA38381A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>AssetsLibrary.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>DA7E4EE0C86B406BB0AABB4A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>fast_marching.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/fast_marching.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB9C2A6EB20548D9B901CD51</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3234A91381BE4C24A5822D10</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DC503C12DB684A55B6747A5E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>49572D0583F74E519970DA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DDFC003E60C44631A1E68E04</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>ocl.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/nonfree/ocl.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE43D0C512794A459B22A7E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E73A1588979D4AFBAAC070A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DECCDA1B44594C78B51F1AC6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>optical_flow.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/videostab/optical_flow.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DFB0656A805C4CAFA4E562DF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B810B9F7D174982AA4AF618</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E06A839173D1467485DE6153</key>
-		<dict>
-			<key>fileRef</key>
-			<string>459D133AFF494604BC26B87E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E3F127766465420FB8E696C8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>450FEA843F5C424B8FD11439</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E478E1A0CC9D42868989B55D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0A0C2719AD2143FA88313036</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E58AFA91520242FD8D86DB3F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BF62F5F9F0484A76BCE17E97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E5931966F25D49E8B9E6F347</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>E5E0A788BC4E4BA69E320F2E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>random.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/random.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E64AD83B9E634890923CBE74</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7CF7E89CEAD7410B99F44428</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E73A1588979D4AFBAAC070A4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>dist.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/dist.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E78F3608A5724ED596AC3B7D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>warpers.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/stitching/warpers.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7E3631766D44B1C9C9400E1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F221615624904D7988B35C35</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E866B44C4B654E6099C02B39</key>
+		<key>F64343993DFA483290CA2910</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3357,98 +3369,41 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EAD234F1099C44B68C299EEC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E3F127766465420FB8E696C8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EB9D590A1F1A4583B5BF952B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>config.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/config.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ECB444E905604D138359E9B6</key>
+		<key>F6D7DC35A6AA4D8CB0710F53</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C09AC64C37494AE887D79CA8</string>
+			<string>775AC20CC1AF43E09982311E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>ED29E79FC798442083EEBD44</key>
+		<key>F71FF8C04F894566B27FE0C4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D0AC4C87023C4A5593517D7C</string>
+			<string>99266288BDDF4DA48534BCFB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>EFEE7642CD274951BDA7135D</key>
+		<key>F7D7837B65694C169F49ADB1</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>58070AE2FEB24C9988B68376</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>hierarchical_clustering_index.h</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/hierarchical_clustering_index.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>F03A96F5E72849459071C313</key>
+		<key>F99A263BC7EF4F81B2A85DD0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>blobtrack.hpp</string>
+			<string>inpainting.hpp</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/legacy/blobtrack.hpp</string>
+			<string>opencv2.framework/Versions/A/Headers/videostab/inpainting.hpp</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F221615624904D7988B35C35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6A87216D344444F0BCBFE59F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F2C77C4EF9BA4309B899BF5A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F5632A5DAC084ECF9816D455</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F4375139F56744E39423A11C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3608D1220665489C9D61A7D0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F5632A5DAC084ECF9816D455</key>
+		<key>F9E7088FA1264D5C8ABB21CA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3463,21 +3418,84 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F7DAC7DA82D04E4BA644B1CB</key>
+		<key>FB17CE04368B464DA9E9C2C1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6537E1058B394B90BFEDC578</string>
+			<string>AB5D74B64C9545BD914EC1E4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>F8415A70D0D045DD920B0772</key>
+		<key>FB38F0E8AFA6471692FF627D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9A49DA9272354677A4CCB6D0</string>
+			<string>0A3D054CEF844C50BF8379A1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>FA5584AF60F6470A8AC08421</key>
+		<key>FCA6DCA160114830AD5E4C39</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>wimage.hpp</string>
+			<key>path</key>
+			<string>opencv2.framework/Versions/A/Headers/core/wimage.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FCE589B899DB4D5AB024695E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F14046B9069D4AFBA8051E15</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FD69A92EF7054D30B8144A82</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3486,61 +3504,43 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>any.h</string>
+			<string>ground_truth.h</string>
 			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/flann/any.h</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/ground_truth.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FC5CBF57E1A14448BC514A80</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>detection_based_tracker.hpp</string>
-			<key>path</key>
-			<string>opencv2.framework/Versions/A/Headers/contrib/detection_based_tracker.hpp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FCBE573C88E340F6AEB639C4</key>
+		<key>FE3EB70389354718B9F08309</key>
 		<dict>
 			<key>fileRef</key>
-			<string>28F9788753334E40B52E13CC</string>
+			<string>9EBC3F35337342C397E1C740</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>FD9851D5321A49CFA554B8AA</key>
+		<key>FE73D79C0C754B0DAEDCBC7A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0C919D00F65340F5B180A06E</string>
+			<string>C72E50DE8C9E4C51AFE352AA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>FED81906FD9D4FC6B4830A83</key>
-		<dict>
-			<key>fileRef</key>
-			<string>91CD168786034A7BBC49952B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEDCDF03A2064F62ABB3F410</key>
+		<key>FF958E4028DD404485C5F733</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>defines.h</string>
 			<key>path</key>
-			<string>Pods-OpenCV.xcconfig</string>
+			<string>opencv2.framework/Versions/A/Headers/flann/defines.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>8750B037CD8845C88BF4E953</string>
+	<string>301A857D6A4649E2B00BC5CE</string>
 </dict>
 </plist>

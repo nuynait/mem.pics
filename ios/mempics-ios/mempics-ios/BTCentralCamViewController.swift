@@ -49,9 +49,38 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CB
     
     // Flags
     
+    // Photoponorama
+    var storeImage:Array<UIImage> = [];
+    var isPhotoponorama:Bool = false;
     
     
+    // ImageViewer
+    var imagePreview1:UIImageView = UIImageView();
+    var imagePreview2:UIImageView = UIImageView();
+    var imagePreview3:UIImageView = UIImageView();
+    var imagePreview4:UIImageView = UIImageView();
+    var imagePreview5:UIImageView = UIImageView();
+    var imagePreviewArray:Array<UIImageView>?;
     
+    
+    var imageLargePreview1:UIImageView = UIImageView();
+    var imageLargePreview2:UIImageView = UIImageView();
+    var imageLargePreview3:UIImageView = UIImageView();
+    var imageLargePreview4:UIImageView = UIImageView();
+    var imageLargePreview5:UIImageView = UIImageView();
+    var imageLargePreviewArray:Array<UIImageView>?;
+    
+    
+    // Upload
+    var pid:NSString = UIDevice.currentDevice().identifierForVendor.UUIDString;
+    var mainPID:NSString?;
+    var eye:NSString = "l";
+    var imageToSave:UIImage?;
+    var uploadViewController:UploadViewController?;
+    
+    
+    var pidDisplay:NSString?;
+    var pidDisplayLabel:UILabel = UILabel();
     
     
     
@@ -70,6 +99,13 @@ class BTCentralCamViewController: UIViewController, CBCentralManagerDelegate, CB
         self.view.addSubview(self.focusDotLabel);
         self.view.addSubview(self.camSwitch);
         self.view.addSubview(self.bluetoothStatus);
+        self.view.addSubview(self.pidDisplayLabel);
+        
+        
+        self.pidDisplay = self.pid.substringWithRange(NSRange(location: self.pid.length - 5, length: 5));
+        println("pid: \(self.pid)");
+        println("pidDisplay: \(self.pidDisplay)");
+        
     }
     
     override func viewDidLoad() {
@@ -105,6 +141,7 @@ extension BTCentralCamViewController {
     func avSessionSetup() {
         // Set up a Camera Preview Layer
         self.session.sessionPreset = AVCaptureSessionPresetPhoto;
+        // self.session.sessionPreset = AVCaptureSessionPreset640x480;
         var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
         previewLayer.backgroundColor = UIColor.blackColor().CGColor;
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
@@ -176,7 +213,9 @@ extension BTCentralCamViewController {
             forControlEvents: UIControlEvents.TouchUpInside);
         self.view.bringSubviewToFront(takePictureButton);
         
-        self.focusDotLabel.text = ".";
+        
+        self.focusDotLabel.font = UIFont.systemFontOfSize(66);
+        self.focusDotLabel.text = "+";
         self.focusDotLabel.textColor = UIColor.redColor();
         self.focusDotLabel.sizeToFit();
         self.focusDotLabel.frame = CGRectMake(
@@ -184,18 +223,110 @@ extension BTCentralCamViewController {
             (self.view.frame.height - self.focusDotLabel.frame.height) / 2,
             self.focusDotLabel.frame.width,
             self.focusDotLabel.frame.height);
+        self.focusDotLabel.alpha = 0.6;
         self.view.bringSubviewToFront(focusDotLabel);
         
-        self.camSwitch.frame = CGRectMake(10,self.view.frame.height - 30, 79, 27);
+        self.camSwitch.frame = CGRectMake(10,self.view.frame.height - 60, 79, 27);
         self.camSwitch.addTarget(self,
             action: "flipView:",
             forControlEvents: UIControlEvents.ValueChanged);
+        self.camSwitch.alpha = 0.6;
         self.view.bringSubviewToFront(camSwitch);
         
+        // Size 20*20
+        self.imagePreview1.frame.size = CGSizeMake(20, 20);
+        self.imagePreview1.frame = CGRectMake(2, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview1);
         
+        self.imagePreview2.frame.size = CGSizeMake(20, 20);
+        self.imagePreview2.sizeToFit();
+        self.imagePreview2.frame = CGRectMake(self.imagePreview1.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview2);
+        
+        self.imagePreview3.frame.size = CGSizeMake(20, 20);
+        self.imagePreview3.sizeToFit();
+        self.imagePreview3.frame = CGRectMake(self.imagePreview2.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview3);
+        
+        self.imagePreview4.frame.size = CGSizeMake(20, 20);
+        self.imagePreview4.sizeToFit();
+        self.imagePreview4.frame = CGRectMake(self.imagePreview3.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview4);
+        
+        self.imagePreview5.frame.size = CGSizeMake(20, 20);
+        self.imagePreview5.sizeToFit();
+        self.imagePreview5.frame = CGRectMake(self.imagePreview4.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
+        self.view.bringSubviewToFront(imagePreview5);
+        
+        self.imagePreviewArray = [self.imagePreview1, self.imagePreview2, self.imagePreview3, self.imagePreview4, self.imagePreview5];
+        
+        
+        // Size 64*64
+        self.imageLargePreview1.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview1.frame = CGRectMake(0,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview1.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview1);
+        self.view.addSubview(imageLargePreview1);
+        
+        self.imageLargePreview2.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview2.frame = CGRectMake(self.imageLargePreview1.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview2.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview2);
+        self.view.addSubview(imageLargePreview2);
+        
+        self.imageLargePreview3.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview3.frame = CGRectMake(self.imageLargePreview2.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview3.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview3);
+        self.view.addSubview(imageLargePreview3);
+        
+        self.imageLargePreview4.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview4.frame = CGRectMake(self.imageLargePreview3.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview4.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview4);
+        self.view.addSubview(imageLargePreview4);
+        
+        self.imageLargePreview5.frame.size = CGSizeMake(64,64);
+        self.imageLargePreview5.frame = CGRectMake(self.imageLargePreview4.frame.maxX,
+            (self.view.frame.height - self.imageLargePreview1.frame.height) / 2, self.imageLargePreview1.frame.width, self.imageLargePreview1.frame.height);
+        self.imageLargePreview5.alpha = 0.6;
+        self.view.bringSubviewToFront(imageLargePreview5);
+        self.view.addSubview(imageLargePreview5);
+        
+        self.imageLargePreviewArray = [self.imageLargePreview1, self.imageLargePreview2, self.imageLargePreview3, self.imageLargePreview4, self.imageLargePreview5];
+        
+        
+        self.pidDisplayLabel.textColor = UIColor.whiteColor();
+        self.pidDisplayLabel.text = "ID: \(self.pidDisplay)";
+        self.pidDisplayLabel.sizeToFit();
+        self.pidDisplayLabel.frame = CGRectMake(
+            5, 5,
+            self.pidDisplayLabel.frame.width,
+            self.pidDisplayLabel.frame.height);
+        self.view.bringSubviewToFront(self.pidDisplayLabel);
+        self.view.addSubview(self.pidDisplayLabel);
+    }
+    
+    func clearImagePreview () {
+        self.imagePreview1.image = nil;
+        self.imagePreview2.image = nil;
+        self.imagePreview3.image = nil;
+        self.imagePreview4.image = nil;
+        self.imagePreview5.image = nil;
+        
+        self.imageLargePreview1.image = nil;
+        self.imageLargePreview2.image = nil;
+        self.imageLargePreview3.image = nil;
+        self.imageLargePreview4.image = nil;
+        self.imageLargePreview5.image = nil;
     }
     
     func flipView (sender:UISwitch) {
+        self.clearImagePreview();
         if camSwitch.on {
             // Should go to BTPeripheral
             
@@ -251,6 +382,7 @@ extension BTCentralCamViewController {
     
     // Rerender CountDown Label
     func countDownLabelRedraw(labelText:NSString) {
+        self.countDownLabel.font = UIFont.systemFontOfSize(44);
         self.countDownLabel.text = labelText;
         self.countDownLabel.textColor = UIColor.redColor();
         self.countDownLabel.sizeToFit();
@@ -281,29 +413,83 @@ extension BTCentralCamViewController {
         // Count Down 5 Seconds
         // Count Down Runs In A Seperate Thread
         println("Start Count Down");
-        countDown(5);
+        // countDown(5);
         
     }
     
     // A count down function
     // Countdown runs in a seperate thread, so anything after the countdown in
     // main function gets exec() before countdown.
-    func countDown(time:NSInteger) {
+    func countDown(time:NSInteger, panoramaPhotoLeft:NSInteger) {
         var second:NSInteger = time;
         println("CountDowning: \(second)");
         self.countDownLabelRedraw("\(second)");
         if second == 0 {
             // Here, Countdown Complete.
             // Run the Complete Function
-            self.countDownComplete();
+            if self.isPhotoponorama == false {
+                self.countDownComplete();
+            }
+            if self.isPhotoponorama {
+                self.countDownCompletePanorama(panoramaPhotoLeft);
+            }
             return;
         }
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
-            self.countDown(second - 1);
+            self.countDown(second - 1, panoramaPhotoLeft: panoramaPhotoLeft);
             });
     }
     
+    func countDownCompletePanorama(panoramaPhotoLeft:NSInteger) {
+        
+        
+        
+        println("CountDown Finished, panoramaPhotoLeft:\(panoramaPhotoLeft)");
+        self.countDownLabel.text = "";
+        self.flashScreen();
+        
+        println("Start Capture Image");
+        // Capture Image:
+        self.stillImageOutput!.captureStillImageAsynchronouslyFromConnection(self.stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo), completionHandler:
+            { (buffer, error:NSError!) in
+                
+                if buffer {
+                    var imageData:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer);
+                    var image:UIImage = UIImage(data: imageData);
+                    println("Save to Array");
+                    self.storeImage.append(image);
+                    self.imagePreviewArray![5-panoramaPhotoLeft].image = self.imageWithImage(image, newSize: CGSizeMake(20, 20));
+                    self.imageLargePreviewArray![5-panoramaPhotoLeft].image = self.imageWithImage(image, newSize: CGSizeMake(64,64));
+                    
+                    // This is for debug
+                    // UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+                    
+                    
+                    
+                    
+                    //
+                    
+                    if panoramaPhotoLeft - 1 == 0 {
+                        println("Prepare for stitch");
+                        // self.stitch();
+                        
+                        println("Ignore Stitch panorama Finished");
+                        
+                        // Reenable Button
+                        self.takePictureButton.enabled = true;
+                        
+                        return;
+                        
+                    }
+                    
+                    self.countDown(3, panoramaPhotoLeft: panoramaPhotoLeft - 1);
+                }
+            });
+        
+        
+        
+    }
     
     // This function get called after the count down
     func countDownComplete() {
@@ -320,7 +506,16 @@ extension BTCentralCamViewController {
                     var imageData:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer);
                     var image:UIImage = UIImage(data: imageData);
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-                    println("Save to Album finished");
+                    // println("Save to Album finished");
+                    self.imageToSave = image;
+                    // self.upLoad();
+                    self.uploadViewController = UploadViewController(nibName: nil, bundle: nil);
+                    self.uploadViewController!.eye = "l";
+                    self.uploadViewController!.pid = self.pid;
+                    self.uploadViewController!.mainPID = self.mainPID;
+                    self.uploadViewController!.imageToSave = self.imageToSave;
+                    self.presentViewController(self.uploadViewController, animated: true, completion:nil);
+                    
                 }
             });
     }
@@ -465,6 +660,14 @@ extension BTCentralCamViewController {
                 var finalString:NSString = NSString(data: self.data, encoding: NSUTF8StringEncoding);
                 println("!!!!!!ALL DATA RECEIVED!!!!!!!!: \(finalString)");
                 
+                if finalString.isEqualToString("CAT") {
+                    self.isPhotoponorama = true;
+                }
+                else {
+                    self.isPhotoponorama = false;
+                    self.mainPID = finalString;
+                }
+                
                 // Cancel Subscribtion
                 peripheral.setNotifyValue(false, forCharacteristic: characteristic);
                 
@@ -473,7 +676,15 @@ extension BTCentralCamViewController {
                 
                 
                 // All the data has been received. Start Camera Shooting Action
-                self.countDown(5);
+                if self.isPhotoponorama {
+                    self.clearImagePreview();
+                    self.countDown(5, panoramaPhotoLeft: 5);
+                }
+                else {
+                    self.clearImagePreview();
+                    self.countDown(5, panoramaPhotoLeft: 0);
+                }
+                
                 
             }
             else {
@@ -553,5 +764,84 @@ extension BTCentralCamViewController {
         self.centralManager!.cancelPeripheralConnection(self.discoveredPeriperal);
     }
     
+}
+
+
+
+/*
+* This is for panorama Views
+*/
+extension BTCentralCamViewController {
+    
+    func upLoad() {
+        
+        
+        println("Prepare Upload: Pid: \(self.pid), eye: \(self.eye)");
+        println("MainPID: \(self.mainPID)");
+        
+        
+        // Here, Upload Image to Server Using Http Post
+        var imageData:NSData? = UIImagePNGRepresentation(self.imageToSave);
+        var urlString:NSString = "http://107.170.171.175:3000/uploadImg";
+        
+        var request:NSMutableURLRequest = NSMutableURLRequest();
+        request.HTTPMethod = "Post";
+        request.URL = NSURL.URLWithString(urlString);
+        var boundary:NSString = NSString.stringWithString("----WebKitFormBoundaryqFAZHDjmNaoRiQYZ");
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type");
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control");
+        
+        var body:NSMutableData = NSMutableData();
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"eye\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.eye)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"PID\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.pid)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"mainPID\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.mainPID)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"image\"; filename=\"upload.png\"\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Type: image/png\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSData.dataWithData(imageData));
+        body.appendData(NSString.stringWithString("\r\n--\(boundary)--\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        var postLength:NSString = "\(body.length)";
+        request.setValue(postLength, forHTTPHeaderField: "Content-Length");
+        
+        
+        request.HTTPBody = body;
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:
+            { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                var httpResponse:NSHTTPURLResponse = response as NSHTTPURLResponse;
+                println("response: \(response)");
+                println("Status Code = \(httpResponse.statusCode)");
+            });
+        
+        println("Finish Camera Function, Waiting for Uploading Response");
+    }
+    
+    func stitch() {
+        // var newView:UIView = UIView(frame:UIScreen.mainScreen().bounds);
+        // newView.addSubview(spinner);
+        // self.view = newView;
+        // self.spinner.startAnimating();
+        
+        // var imageArray:UIImage[] = self.storeImage;
+        
+        // var stitchedImage:UIImage = CVWrapper.processWithArray(imageArray) as UIImage
+        // UIImageWriteToSavedPhotosAlbum(stitchedImage, nil, nil, nil);
+        
+        // println("Stitch Complete");
+    }
+    
+    func imageWithImage(image:UIImage, newSize:CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height));
+        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
+    }
 }
 

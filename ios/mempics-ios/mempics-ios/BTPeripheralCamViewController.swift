@@ -13,7 +13,7 @@ import CoreBluetooth
 class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelegate {
     
     var session:AVCaptureSession = AVCaptureSession();
-    var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
+    var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton;
     var focusDotLabel:UILabel = UILabel();
     var countDownLabel:UILabel = UILabel();
     var camSwitch:UISwitch = UISwitch();
@@ -75,7 +75,16 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
     
     
     
-    // Flags
+    // Upload
+    var pid:NSString = UIDevice.currentDevice().identifierForVendor.UUIDString;
+    var eye:NSString = "r";
+    var imageToSave:UIImage?;
+    var uploadViewController:UploadViewController?;
+    
+    
+    var pidDisplay:NSString?;
+    var pidDisplayLabel:UILabel = UILabel();
+    
     
     
     
@@ -95,6 +104,10 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
         self.view.addSubview(self.panoramaSwitch);
         self.view.addSubview(self.bluetoothStatus);
         self.view.addSubview(self.spinner);
+        
+        self.pidDisplay = self.pid.substringWithRange(NSRange(location: self.pid.length - 5, length: 5));
+        println("pid: \(self.pid)");
+        println("pidDisplay: \(self.pidDisplay)");
     }
     
     override func viewDidLoad() {
@@ -108,7 +121,6 @@ class BTPeripheralCamViewController: UIViewController, CBPeripheralManagerDelega
         
         // Start up the CBPeripheralManger
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil);
-        self.stringToSend = "This is a test!!!!! This is really a test!!!!! Please Trust me, this is absolutly a test!!!!";
         
         self.spinner.frame = CGRectMake(
             (self.view.frame.width - 25) / 2,
@@ -136,6 +148,7 @@ extension BTPeripheralCamViewController {
     func avSessionSetup() {
         // Set up a Camera Preview Layer
         self.session.sessionPreset = AVCaptureSessionPresetPhoto;
+        // self.session.sessionPreset = AVCaptureSessionPreset640x480;
         // self.session.sessionPreset = AVCaptureSessionPreset640x480;
         var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
         previewLayer.backgroundColor = UIColor.blackColor().CGColor;
@@ -194,19 +207,23 @@ extension BTPeripheralCamViewController {
     
     // Render all the subviews above the preview layer
     func subViewSetup() {
-        self.takePictureButton.setTitle("Take Picture", forState:UIControlState.Normal);
+        var buttonImage:UIImage = UIImage(named: "takePictureButton@2x.png");
+        self.takePictureButton.setImage(buttonImage, forState: UIControlState.Normal);
+        // self.takePictureButton.setTitle("Take Picture", forState:UIControlState.Normal);
         self.takePictureButton.sizeToFit();
         self.takePictureButton.frame = CGRectMake(
             (self.view.frame.width - self.takePictureButton.frame.width) / 2,
             400,
             takePictureButton.frame.width,
             takePictureButton.frame.height);
+        self.takePictureButton.alpha = 0.9;
         self.takePictureButton.addTarget(self,
             action: "takePictureAction:",
             forControlEvents: UIControlEvents.TouchUpInside);
         self.view.bringSubviewToFront(takePictureButton);
         
-        self.focusDotLabel.text = ".";
+        self.focusDotLabel.font = UIFont.systemFontOfSize(66);
+        self.focusDotLabel.text = "+";
         self.focusDotLabel.textColor = UIColor.redColor();
         self.focusDotLabel.sizeToFit();
         self.focusDotLabel.frame = CGRectMake(
@@ -216,20 +233,22 @@ extension BTPeripheralCamViewController {
             self.focusDotLabel.frame.height);
         self.view.bringSubviewToFront(focusDotLabel);
         
-        self.camSwitch.frame = CGRectMake(10,self.view.frame.height - 30, 79, 27);
+        self.camSwitch.frame = CGRectMake(10,self.view.frame.height - 60, 79, 27);
         self.camSwitch.on = true;
         self.camSwitch.addTarget(self,
             action: "flipView:",
             forControlEvents: UIControlEvents.ValueChanged);
+        self.camSwitch.alpha = 0.6;
         self.view.bringSubviewToFront(camSwitch);
         
         self.panoramaSwitch.sizeToFit();
         self.panoramaSwitch.frame = CGRectMake(
             self.view.frame.width - self.panoramaSwitch.frame.width - 10,
-            self.view.frame.height - 30,
+            self.view.frame.height - 60,
             79,
             27);
         self.panoramaSwitch.on = false;
+        self.panoramaSwitch.alpha = 0.6;
         self.panoramaSwitch.addTarget(self,
             action: "panoramaSwitchFlip:",
             forControlEvents: UIControlEvents.ValueChanged);
@@ -239,31 +258,26 @@ extension BTPeripheralCamViewController {
         self.imagePreview1.frame.size = CGSizeMake(20, 20);
         self.imagePreview1.frame = CGRectMake(2, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
         self.view.bringSubviewToFront(imagePreview1);
-        self.view.addSubview(imagePreview1);
         
         self.imagePreview2.frame.size = CGSizeMake(20, 20);
         self.imagePreview2.sizeToFit();
         self.imagePreview2.frame = CGRectMake(self.imagePreview1.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
         self.view.bringSubviewToFront(imagePreview2);
-        self.view.addSubview(imagePreview2);
         
         self.imagePreview3.frame.size = CGSizeMake(20, 20);
         self.imagePreview3.sizeToFit();
         self.imagePreview3.frame = CGRectMake(self.imagePreview2.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
         self.view.bringSubviewToFront(imagePreview3);
-        self.view.addSubview(imagePreview3);
         
         self.imagePreview4.frame.size = CGSizeMake(20, 20);
         self.imagePreview4.sizeToFit();
         self.imagePreview4.frame = CGRectMake(self.imagePreview3.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
         self.view.bringSubviewToFront(imagePreview4);
-        self.view.addSubview(imagePreview4);
         
         self.imagePreview5.frame.size = CGSizeMake(20, 20);
         self.imagePreview5.sizeToFit();
         self.imagePreview5.frame = CGRectMake(self.imagePreview4.frame.maxX, 2, self.imagePreview1.frame.width, self.imagePreview1.frame.height);
         self.view.bringSubviewToFront(imagePreview5);
-        self.view.addSubview(imagePreview5);
         
         self.imagePreviewArray = [self.imagePreview1, self.imagePreview2, self.imagePreview3, self.imagePreview4, self.imagePreview5];
         
@@ -305,11 +319,22 @@ extension BTPeripheralCamViewController {
         self.view.addSubview(imageLargePreview5);
         
         self.imageLargePreviewArray = [self.imageLargePreview1, self.imageLargePreview2, self.imageLargePreview3, self.imageLargePreview4, self.imageLargePreview5];
+        
+        self.pidDisplayLabel.textColor = UIColor.whiteColor();
+        self.pidDisplayLabel.text = "ID: \(self.pidDisplay)";
+        self.pidDisplayLabel.sizeToFit();
+        self.pidDisplayLabel.frame = CGRectMake(
+            5, 5,
+            self.pidDisplayLabel.frame.width,
+            self.pidDisplayLabel.frame.height);
+        self.view.bringSubviewToFront(self.pidDisplayLabel);
+        self.view.addSubview(self.pidDisplayLabel);
     }
     
     
     // Rerender CountDown Label
     func countDownLabelRedraw(labelText:NSString) {
+        self.countDownLabel.font = UIFont.systemFontOfSize(44);
         self.countDownLabel.text = labelText;
         self.countDownLabel.textColor = UIColor.redColor();
         self.countDownLabel.sizeToFit();
@@ -335,6 +360,7 @@ extension BTPeripheralCamViewController {
     }
     
     func takePictureAction(sender:UIButton) {
+        self.clearImagePreview();
         
         // Count Down 5 Seconds
         // Count Down Runs In A Seperate Thread
@@ -347,27 +373,50 @@ extension BTPeripheralCamViewController {
 
         
         if self.panoramaSwitch.on == false {
-            /* Debuging
 
             self.advertisingSwitch = true;
             println("Start Advertising");
+            self.stringToSend = self.pid;
             self.peripheralManager!.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [CBUUID.UUIDWithString(tempUUID)]]);
             
             // Button Disable
             self.takePictureButton.enabled = false;
 
-            */
-            self.countDown(5, panoramaPhotoLeft: 0);
+            // self.countDown(5, panoramaPhotoLeft: 0);
         }
         else if self.panoramaSwitch.on == true {
             self.storeImage = [];
-            self.countDown(5, panoramaPhotoLeft: 5);
+            
+            self.advertisingSwitch = true;
+            println("Start Advertising");
+            self.stringToSend = "CAT";
+            self.peripheralManager!.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [CBUUID.UUIDWithString(tempUUID)]]);
+            
+            // Button Disable
+            self.takePictureButton.enabled = false;
+            
+            // self.countDown(5, panoramaPhotoLeft: 5);
         }
         
         
     }
     
+    func clearImagePreview () {
+        self.imagePreview1.image = nil;
+        self.imagePreview2.image = nil;
+        self.imagePreview3.image = nil;
+        self.imagePreview4.image = nil;
+        self.imagePreview5.image = nil;
+        
+        self.imageLargePreview1.image = nil;
+        self.imageLargePreview2.image = nil;
+        self.imageLargePreview3.image = nil;
+        self.imageLargePreview4.image = nil;
+        self.imageLargePreview5.image = nil;
+    }
+    
     func panoramaSwitchFlip (sender:UISwitch) {
+        self.clearImagePreview();
         if self.panoramaSwitch.on {
             // self.session.sessionPreset = AVCaptureSessionPresetiFrame960x540;
         }
@@ -378,6 +427,7 @@ extension BTPeripheralCamViewController {
     }
     
     func flipView (sender:UISwitch) {
+        self.clearImagePreview();
         if camSwitch.on {
             
             // Stay Here
@@ -500,7 +550,15 @@ extension BTPeripheralCamViewController {
                     var imageData:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer);
                     var image:UIImage = UIImage(data: imageData);
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-                    println("Save to Album finished");
+                    self.imageToSave = image;
+                    // self.upLoad();
+                    self.uploadViewController = UploadViewController(nibName: nil, bundle: nil);
+                    self.uploadViewController!.eye = "r";
+                    self.uploadViewController!.pid = self.pid;
+                    self.uploadViewController!.mainPID = self.pid;
+                    self.uploadViewController!.imageToSave = self.imageToSave;
+                    // self.uploadViewController!.imageToSave = UIImage(named: "a1.JPG");
+                    self.presentViewController(self.uploadViewController, animated: true, completion:nil);
                     
                     // Reenable Button
                     self.takePictureButton.enabled = true;
@@ -608,7 +666,13 @@ extension BTPeripheralCamViewController {
                 self.advertisingSwitch = false;
                 
                 // Run CountDown Action
-                self.countDown(5, panoramaPhotoLeft: 0);
+                if self.panoramaSwitch.on {
+                    self.countDown(5, panoramaPhotoLeft: 5);
+                    
+                }
+                else {
+                    self.countDown(5, panoramaPhotoLeft: 0);
+                }
                 
                 println("sent EOM");
             }
@@ -716,10 +780,63 @@ extension BTPeripheralCamViewController {
     }
 }
 
+/*
+ * upLoad Methods
+ */
+extension BTPeripheralCamViewController {
+    
+    func upLoad() {
+        
+        
+        println("Prepare Upload: Pid: \(self.pid), eye: \(self.eye)");
+        
+        
+        // Here, Upload Image to Server Using Http Post
+        var imageData:NSData? = UIImagePNGRepresentation(self.imageToSave);
+        var urlString:NSString = "http://107.170.171.175:3000/uploadImg";
+        
+        var request:NSMutableURLRequest = NSMutableURLRequest();
+        request.HTTPMethod = "Post";
+        request.URL = NSURL.URLWithString(urlString);
+        var boundary:NSString = NSString.stringWithString("----WebKitFormBoundaryqFAZHDjmNaoRiQYZ");
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type");
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control");
+        
+        var body:NSMutableData = NSMutableData();
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"eye\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.eye)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"PID\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.pid)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"mainPID\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.pid)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"image\"; filename=\"upload.png\"\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Type: image/png\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSData.dataWithData(imageData));
+        body.appendData(NSString.stringWithString("\r\n--\(boundary)--\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        var postLength:NSString = "\(body.length)";
+        request.setValue(postLength, forHTTPHeaderField: "Content-Length");
+        
+        
+        request.HTTPBody = body;
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:
+            { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                var httpResponse:NSHTTPURLResponse = response as NSHTTPURLResponse;
+                println("response: \(response)");
+                println("Status Code = \(httpResponse.statusCode)");
+            });
+        
+        println("Finish Camera Function, Waiting for Uploading Response");
+    }
+}
 
 
 
-/* 
+/*
 * This is for panorama Views
 */
 extension BTPeripheralCamViewController {
