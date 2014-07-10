@@ -10,6 +10,8 @@ import UIKit
 import CoreBluetooth
 
 enum BTLECentralState {
+    case Connecting
+    case Connected
     case EOMReceived
 }
 
@@ -52,6 +54,7 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     // Scan For Avaliable Bluetooth
     func scan() {
         self.centralManager!.scanForPeripheralsWithServices([CBUUID.UUIDWithString(self.transferServiceUUID)], options: [CBCentralManagerScanOptionAllowDuplicatesKey: true]);
+        self.NotifyMainViewController(BTLECentralState.Connecting);
     }
 
     func centralManager(central: CBCentralManager!,
@@ -129,6 +132,8 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 }
                 
             }
+            
+            self.NotifyMainViewController(BTLECentralState.Connected);
             
             // Complete! Need to wait for the data to come in
     }

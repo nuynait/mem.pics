@@ -11,6 +11,7 @@ import UIKit
 class CentralState: CamState {
     
     func subViewSetup(mainView:MainView) {
+        mainView.removeAllFromSubview();
         mainView.addSubview(mainView.countDownLabel);
         mainView.addSubview(mainView.focusDotLabel);
         mainView.addSubview(mainView.camSwitch);
@@ -22,16 +23,11 @@ class CentralState: CamState {
         mainView.pidDisplayLabelRedraw();
     }
     
-
-    func paring(currentBTLEModel:AnyObject) {
-        var bluetoothCentralModel:BTLECentralModel = currentBTLEModel as BTLECentralModel;
-        bluetoothCentralModel.scan();
-    }
-    func boardCasting(currentBTLEModel:AnyObject) {
-        
-        // No Event
-        println("boardCasting, Not For Central State");
-        
+    func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel) {
+        central.scan();
     }
    
+    func BTLETrigger(peripheral:BTLEPeripheralModel) {
+        // Central Don't Have BTLETrigger
+    }
 }

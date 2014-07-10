@@ -52,12 +52,16 @@ class MainViewController: UIViewController {
         // init ViewControllers
         self.upLoadViewController = UploadViewController(nibName: nil, bundle: nil);
     }
+    override func loadView() {
+        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+        drawView();
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Render View
-        self.currentState!.paring(self.bluetoothCentralModel!);
+        self.currentState!.turnOnBluetooth(self.bluetoothCentralModel!, peripheral: self.bluetoothPeripheralModel!);
 
     }
     
@@ -66,8 +70,6 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
-        drawView();
     }
     
     
@@ -92,6 +94,7 @@ class MainViewController: UIViewController {
         self.mainView!.countDownLabelRedraw("\(second)");
         if second == 0 {
             self.successActionImp!.countDownComplete(photoLeft, mainVC: self);
+            self.mainView!.bluetoothStatusLabelRedraw("Waiting For Trigger...");
             return;
         }
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
@@ -137,17 +140,19 @@ extension MainViewController {
     // targets action Functions
     func takePictureButtonPressed(sender: UIButton) {
         self.mainView!.takePictureButton.enabled = false;
-        self.currentState!.boardCasting(self.bluetoothCentralModel!);
+        self.currentState!.BTLETrigger(self.bluetoothPeripheralModel!);
     }
 
     
     func camSwitchSwitcherFliped(sender: UISwitch) {
         self.setState(sender.on);
+        self.currentState!.subViewSetup(self.mainView!);
     }
 
     
     
     func panoramaSwitchFliped(sender: UISwitch) {
+        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
         if sender.on {
             self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
             self.successActionImp = PanoramicPhotoSuccessActionImp();
@@ -168,11 +173,23 @@ extension MainViewController {
         
         switch state {
             
+        case BTLECentralState.Connecting:
+            println("Case: BTLECentralState.Connecting");
+            self.mainView!.bluetoothStatusLabelRedraw("Connecting...");
+            
+        case BTLECentralState.Connected:
+            println("Case: BTLECentralState.Connected");
+            self.mainView!.bluetoothStatusLabelRedraw("Waiting For Trigger ...");
+            
         case BTLECentralState.EOMReceived:
             // Run Success Function
             println("Case: BTLECentralState.EOMRecieved");
+            self.mainView!.bluetoothStatusLabelRedraw("Take Action");
             self.upLoadViewController!.uploadModel.mainPid = stringReceived;
             self.upLoadViewController!.uploadModel.eye = "l";
+            
+        default:
+            println("ERROR, Not an Avaliable bluetooth state");
         }
         
     }
@@ -182,11 +199,19 @@ extension MainViewController {
         
         switch state {
             
+        case BTLEPeripheralState.Connected:
+            println("Case: BTLEPeripheralState.Connected");
+            self.mainView!.bluetoothStatusLabelRedraw("Waiting For Trigger... ");
+            
         case BTLEPeripheralState.EOMSent:
             // Run Success Function
             println("Case: BTLEPeripheralState.EOMSent");
+            self.mainView!.bluetoothStatusLabelRedraw("Take Action");
             self.upLoadViewController!.uploadModel.mainPid = DeviceInfo.getDevicePid();
             self.upLoadViewController!.uploadModel.eye = "r";
+            
+        default:
+            println("ERROR, Not an Avaliable bluetooth state");
         }
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 import CoreBluetooth
 
 enum BTLEPeripheralState {
+    case Connected
+    case SendData
     case EOMSent
 }
 
@@ -104,7 +106,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             
             
             // SendData
-            self.sendData();
+            // self.sendData();
             
     }
     

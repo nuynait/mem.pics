@@ -11,6 +11,7 @@ import UIKit
 class PeripheralState: CamState {
     
     func subViewSetup(mainView:MainView) {
+        mainView.removeAllFromSubview();
         
         mainView.addSubview(mainView.countDownLabel);
         mainView.addSubview(mainView.takePictureButton);
@@ -24,18 +25,15 @@ class PeripheralState: CamState {
         mainView.camSwitchRedraw();
         mainView.panoramaSwitchRedraw();
         mainView.pidDisplayLabelRedraw();
+    }
+    
+    
+    func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel) {
+        peripheral.changeAdvertisingState();
         
     }
     
-
-    func paring(currentBTLEModel:AnyObject) {
-        println("Peripheral State Do not need to scan");
-        
-    }
-    func boardCasting(currentBTLEModel:AnyObject) {
-        // start advertising (boardcasting)
-        
-        var bluetoothPeripheralModel:BTLEPeripheralModel = currentBTLEModel as BTLEPeripheralModel;
-        bluetoothPeripheralModel.changeAdvertisingState();
+    func BTLETrigger(peripheral:BTLEPeripheralModel) {
+        peripheral.sendData();
     }
 }

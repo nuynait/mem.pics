@@ -86,6 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D4EC966196D94CB00BE88C7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		9D740060196A951900754B54 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +114,7 @@
 		9D74006B196A951900754B54 /* MemPics */ = {
 			isa = PBXGroup;
 			children = (
+				9D4EC966196D94CB00BE88C7 /* Images */,
 				9D73C3C2196CA8E3000218C2 /* DeviceInfo.swift */,
 				9D740092196A95CC00754B54 /* AVSessionSetupImp.swift */,
 				9D740096196A970100754B54 /* AVPanoramicPhotoSessionSetupImp.swift */,

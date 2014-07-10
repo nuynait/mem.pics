@@ -10,6 +10,6 @@ import UIKit
 
 protocol CamState {
     func subViewSetup(mainView:MainView);
-    func paring(currentBTLEModel:AnyObject);
-    func boardCasting(currentBTLEModel:AnyObject);
+    func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel);
+    func BTLETrigger(peripheral:BTLEPeripheralModel);
 }

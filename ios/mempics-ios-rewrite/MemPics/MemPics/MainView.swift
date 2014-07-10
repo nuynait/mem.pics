@@ -54,6 +54,15 @@ class MainView: UIView {
  * 
  */
 extension MainView {
+    func removeAllFromSubview() {
+        self.countDownLabel.removeFromSuperview();
+        self.takePictureButton.removeFromSuperview();
+        self.focusDotLabel.removeFromSuperview();
+        self.camSwitch.removeFromSuperview();
+        self.panoramaSwitch.removeFromSuperview();
+        self.bluetoothStatusLabel.removeFromSuperview();
+    }
+    
     func countDownLabelRedraw(labelText:NSString) {
         self.countDownLabel.font = UIFont.systemFontOfSize(44);
         self.countDownLabel.text = labelText;
