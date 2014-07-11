@@ -11,6 +11,7 @@ import UIKit
 class CentralState: CamState {
     
     func subViewSetup(mainView:MainView) {
+        println("Subview Setup From CentralState");
         mainView.removeAllFromSubview();
         mainView.addSubview(mainView.countDownLabel);
         mainView.addSubview(mainView.focusDotLabel);
@@ -24,7 +25,7 @@ class CentralState: CamState {
     }
     
     func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel) {
-        central.scan();
+        central.setupCentralManager();
     }
    
     func BTLETrigger(peripheral:BTLEPeripheralModel) {

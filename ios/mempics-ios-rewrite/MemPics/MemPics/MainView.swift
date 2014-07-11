@@ -105,9 +105,6 @@ extension MainView {
     
     func camSwitchRedraw() {
         self.camSwitch.frame = CGRectMake(10,self.frame.height - 60, 79, 27);
-        self.camSwitch.addTarget(self,
-            action: "flipView:",
-            forControlEvents: UIControlEvents.ValueChanged);
         self.camSwitch.alpha = 0.6;
         self.bringSubviewToFront(self.camSwitch);
     }
@@ -131,13 +128,10 @@ extension MainView {
         self.takePictureButton.sizeToFit();
         self.takePictureButton.frame = CGRectMake(
             (self.frame.width - self.takePictureButton.frame.width) / 2,
-            400,
+            self.frame.height - 100,
             self.takePictureButton.frame.width,
             self.takePictureButton.frame.height);
         self.takePictureButton.alpha = 0.9;
-        self.takePictureButton.addTarget(self,
-            action: "takePictureAction:",
-            forControlEvents: UIControlEvents.TouchUpInside);
         self.bringSubviewToFront(self.takePictureButton);
     }
     
@@ -150,9 +144,6 @@ extension MainView {
             27);
         self.panoramaSwitch.on = false;
         self.panoramaSwitch.alpha = 0.6;
-        self.panoramaSwitch.addTarget(self,
-            action: "panoramaSwitchFlip:",
-            forControlEvents: UIControlEvents.ValueChanged);
         self.bringSubviewToFront(self.panoramaSwitch);
     }
     

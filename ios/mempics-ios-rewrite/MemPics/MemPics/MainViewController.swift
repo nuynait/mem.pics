@@ -47,20 +47,29 @@ class MainViewController: UIViewController {
         // init Models
         self.bluetoothCentralModel = BTLECentralModel(mainVC: self);
         self.bluetoothPeripheralModel = BTLEPeripheralModel(mainVC: self);
+        self.avFoundationModel = AVFoundationDeviceModel();
+        self.uploadModel = UploadModel();
+        
         
         
         // init ViewControllers
         self.upLoadViewController = UploadViewController(nibName: nil, bundle: nil);
     }
-    override func loadView() {
-        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
-        drawView();
-    }
 
+    override func loadView() {
+        // init View
+        self.mainView = MainView(frame: UIScreen.mainScreen().bounds);
+        self.view = mainView;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Render View
+        println("Prepare Set AVSession");
+        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+        drawView();
+        self.addSubViewTargets();
         self.currentState!.turnOnBluetooth(self.bluetoothCentralModel!, peripheral: self.bluetoothPeripheralModel!);
 
     }
@@ -80,6 +89,7 @@ class MainViewController: UIViewController {
     // if state == true, means peripheral
     func setState(state:Bool) {
         if state {
+            println("Change Current State to Peripheral State");
             self.currentState = self.peripheralState!;
         }
         else {
@@ -132,26 +142,28 @@ extension MainViewController {
     // Add subview targets
     // Button Listeners
     func addSubViewTargets() {
-        self.mainView!.takePictureButton.addTarget(self, action: "takePictureButtonPressed", forControlEvents: UIControlEvents.TouchUpInside);
-        self.mainView!.camSwitch.addTarget(self, action: "camSwitchSwitcherFliped", forControlEvents: UIControlEvents.TouchUpInside);
-        self.mainView!.panoramaSwitch.addTarget(self, action: "panoramaSwitchFliped", forControlEvents: UIControlEvents.TouchUpInside);
+        self.mainView!.takePictureButton.addTarget(self, action: "takePictureButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside);
+        self.mainView!.camSwitch.addTarget(self, action: "camSwitchSwitcherFliped:", forControlEvents: UIControlEvents.TouchUpInside);
+        self.mainView!.panoramaSwitch.addTarget(self, action: "panoramaSwitchFliped:", forControlEvents: UIControlEvents.TouchUpInside);
     }
     
     // targets action Functions
-    func takePictureButtonPressed(sender: UIButton) {
+    func takePictureButtonPressed(sender:UIButton) {
         self.mainView!.takePictureButton.enabled = false;
         self.currentState!.BTLETrigger(self.bluetoothPeripheralModel!);
     }
 
     
-    func camSwitchSwitcherFliped(sender: UISwitch) {
+    func camSwitchSwitcherFliped(sender:UISwitch) {
+        println("camSwitch Switcher Flipped: currentState: \(sender.on)");
         self.setState(sender.on);
         self.currentState!.subViewSetup(self.mainView!);
+        self.currentState!.turnOnBluetooth(bluetoothCentralModel!, peripheral: bluetoothPeripheralModel!);
     }
 
     
     
-    func panoramaSwitchFliped(sender: UISwitch) {
+    func panoramaSwitchFliped(sender:UISwitch) {
         self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
         if sender.on {
             self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
@@ -187,6 +199,7 @@ extension MainViewController {
             self.mainView!.bluetoothStatusLabelRedraw("Take Action");
             self.upLoadViewController!.uploadModel.mainPid = stringReceived;
             self.upLoadViewController!.uploadModel.eye = "l";
+            self.successActionImp!.startCountDown(self);
             
         default:
             println("ERROR, Not an Avaliable bluetooth state");
@@ -198,10 +211,17 @@ extension MainViewController {
         println("Receive Notify From BTLE CentralModel");
         
         switch state {
+        case BTLEPeripheralState.Connecting:
+            println("Case: BTLEPeripheralState.Connecting");
+            self.mainView!.bluetoothStatusLabelRedraw("Connecting");
             
         case BTLEPeripheralState.Connected:
             println("Case: BTLEPeripheralState.Connected");
-            self.mainView!.bluetoothStatusLabelRedraw("Waiting For Trigger... ");
+            self.mainView!.bluetoothStatusLabelRedraw("Connected");
+            
+        case BTLEPeripheralState.SendData:
+            println("Case: BTLEPeripheralState.SendData");
+            self.mainView!.bluetoothStatusLabelRedraw("Sending Data")
             
         case BTLEPeripheralState.EOMSent:
             // Run Success Function
@@ -209,6 +229,7 @@ extension MainViewController {
             self.mainView!.bluetoothStatusLabelRedraw("Take Action");
             self.upLoadViewController!.uploadModel.mainPid = DeviceInfo.getDevicePid();
             self.upLoadViewController!.uploadModel.eye = "r";
+            self.successActionImp!.startCountDown(self);
             
         default:
             println("ERROR, Not an Avaliable bluetooth state");

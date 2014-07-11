@@ -10,6 +10,7 @@ import UIKit
 import CoreBluetooth
 
 enum BTLEPeripheralState {
+    case Connecting
     case Connected
     case SendData
     case EOMSent
@@ -23,7 +24,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
     var dataToSend:NSData?;
     var sendDataIndex:NSInteger?;
     var sendingEOM:Bool = false;
-    var stringToSend:NSString?;
+    var stringToSend:NSString = DeviceInfo.getDevicePid();
     var peripheralManager:CBPeripheralManager?;
     var transferCharacteristic:CBMutableCharacteristic?;
     var advertisingSwitch:Bool = false;
@@ -57,6 +58,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             self.peripheralManager!.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [CBUUID.UUIDWithString(transferServiceUUID)]]);
             self.advertisingSwitch = true;
         }
+        self.NotifyMainViewController(BTLEPeripheralState.Connecting);
     }
     
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
@@ -96,7 +98,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             println("Central subscribed to characteristic");
             
             // Get the data
-            self.dataToSend = self.stringToSend!.dataUsingEncoding(NSUTF8StringEncoding);
+            self.dataToSend = self.stringToSend.dataUsingEncoding(NSUTF8StringEncoding);
             
             // Reset the index
             // Because this is the first time central subscribe to peripheral
@@ -107,6 +109,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             
             // SendData
             // self.sendData();
+            self.NotifyMainViewController(BTLEPeripheralState.Connected);
             
     }
     
@@ -123,6 +126,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
     
     
     func sendData() {
+        self.NotifyMainViewController(BTLEPeripheralState.SendData);
         
         if sendingEOM {
             self.sendEOMString();

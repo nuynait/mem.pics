@@ -15,6 +15,7 @@ class AVFoundationDeviceModel: NSObject {
     var stillImageOutput:AVCaptureStillImageOutput?;
     
     
+    
     class func deviceWithMediaType(mediaType:NSString, position:AVCaptureDevicePosition) -> AVCaptureDevice {
         var devices:NSArray = AVCaptureDevice.devicesWithMediaType(mediaType);
         var captureDevice:AVCaptureDevice = devices.firstObject as AVCaptureDevice;

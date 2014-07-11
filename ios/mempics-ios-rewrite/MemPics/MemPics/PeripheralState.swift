@@ -11,6 +11,7 @@ import UIKit
 class PeripheralState: CamState {
     
     func subViewSetup(mainView:MainView) {
+        println("Subview Setup From PeripheralState");
         mainView.removeAllFromSubview();
         
         mainView.addSubview(mainView.countDownLabel);
@@ -29,6 +30,7 @@ class PeripheralState: CamState {
     
     
     func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel) {
+        central.cleanUp();
         peripheral.changeAdvertisingState();
         
     }

@@ -27,6 +27,7 @@
 		9D7400A3196A976D00754B54 /* CamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7400A2196A976D00754B54 /* CamState.swift */; };
 		9D7400A5196A978600754B54 /* CentralState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7400A4196A978600754B54 /* CentralState.swift */; };
 		9D7400A7196A979400754B54 /* PeripheralState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7400A6196A979400754B54 /* PeripheralState.swift */; };
+		9DD293691970671400874FE8 /* takePictureButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD293681970671400874FE8 /* takePictureButton@2x.png */; };
 		9DDAB562196C99720052F1B0 /* AVFoundationDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAB561196C99720052F1B0 /* AVFoundationDeviceModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		9D7400A2196A976D00754B54 /* CamState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamState.swift; sourceTree = "<group>"; };
 		9D7400A4196A978600754B54 /* CentralState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralState.swift; sourceTree = "<group>"; };
 		9D7400A6196A979400754B54 /* PeripheralState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralState.swift; sourceTree = "<group>"; };
+		9DD293681970671400874FE8 /* takePictureButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takePictureButton@2x.png"; sourceTree = "<group>"; };
 		9DDAB561196C99720052F1B0 /* AVFoundationDeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationDeviceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 		9D4EC966196D94CB00BE88C7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9DD293681970671400874FE8 /* takePictureButton@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD293691970671400874FE8 /* takePictureButton@2x.png in Resources */,
 				9D740071196A951900754B54 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

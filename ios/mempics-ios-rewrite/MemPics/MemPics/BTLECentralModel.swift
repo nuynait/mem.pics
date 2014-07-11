@@ -37,9 +37,12 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     init(mainVC:MainViewController) {
         super.init();
         self.mainViewController = mainVC;
-        self.centralManager = CBCentralManager(delegate: self, queue: nil);
+        self.stringReceived = "";
     }
     
+    func setupCentralManager() {
+        self.centralManager = CBCentralManager(delegate: self, queue: nil);
+    }
     
     func centralManagerDidUpdateState(central: CBCentralManager!)  {
         if (central.state != CBCentralManagerState.PoweredOn) {
@@ -161,14 +164,6 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 self.stringReceived = finalString;
                 
                 
-                
-                // Cancel Subscribtion
-                peripheral.setNotifyValue(false, forCharacteristic: characteristic);
-                
-                // Disconnect from peripheral
-                self.centralManager!.cancelPeripheralConnection(peripheral);
-                
-                
                 // All the data has been received. Start Camera Shooting Action
                 self.NotifyMainViewController(BTLECentralState.EOMReceived);
                 
@@ -221,6 +216,10 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     
     func cleanUp() {
         println("ready to clean up");
+        self.centralManager!.stopScan();
+        if self.discoveredPeriperal == nil {
+            return;
+        }
         // Do nothing if we are not connected
         if !self.discoveredPeriperal!.isConnected {
             return;
