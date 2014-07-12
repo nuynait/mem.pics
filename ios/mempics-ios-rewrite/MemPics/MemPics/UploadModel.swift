@@ -36,12 +36,66 @@ class UploadModel: NSObject {
 extension UploadModel {
     func storeImage() {
         self.imageStored.addObject(self.imageToSave!);
+        println("Add image to stored Array, imageStored Size: \(self.imageStored.count)");
+    }
+    
+    func clearArray() {
+        // self.imageStored.removeAllObjects();
     }
     
     func stitch() {
         // Stitch image to a panoramic photo
         println("Stitch Image to Panoramic Photo");
+        
+        println("Prepare Stitching, size of imageStored: \(self.imageStored.count)");
+        var imageArray:NSArray = NSArray(array: self.imageStored);
+        println("Finish Preparing imageArray, size of imageArray: \(imageArray.count)");
+        self.NotifyViewController("Stitching");
+        var stitchedImage:UIImage = CVWrapper.processWithArray(imageArray) as UIImage;
+        self.NotifyViewController("Stitched Successfully");
+        
+        // Debug
+        UIImageWriteToSavedPhotosAlbum(stitchedImage, nil, nil, nil);
+        self.NotifyViewController("Added To Camera Album");
     }
+    
+    // A helper function use to rescale image
+    func resizeImage(image:UIImage, newSize:CGSize) -> UIImage {
+        var newRect:CGRect = CGRectIntegral(CGRectMake(
+            0, 0, newSize.width, newSize.height));
+        var imageRef:CGImageRef = image.CGImage;
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0);
+        var context:CGContextRef = UIGraphicsGetCurrentContext();
+        
+        // Set the quality level to use when rescaling
+        CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+        var flipVertical:CGAffineTransform = CGAffineTransformMake(
+            1, 0, 0, -1, 0, newSize.height);
+        CGContextConcatCTM(context, flipVertical);
+        
+
+        // Draw into the context; this scales the image
+        CGContextDrawImage(context, newRect, imageRef);
+        
+        // Get the resized image from the context and a UIImage
+        var newImageRef = CGBitmapContextCreateImage(context);
+        var newImage:UIImage = UIImage(CGImage: newImageRef);
+        
+        CGImageRelease(newImageRef);
+        UIGraphicsEndImageContext();
+        
+        return newImage;
+    }
+    
+    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height));
+        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
+    }
+    
 }
 
 

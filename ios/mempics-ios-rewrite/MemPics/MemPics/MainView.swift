@@ -17,6 +17,7 @@ class MainView: UIView {
     var bluetoothStatusLabel:UILabel = UILabel();
     var camSwitch:UISwitch = UISwitch();
     var panoramaSwitch:UISwitch = UISwitch();
+    var imagePreviewArray:UIImageView[]?;
 
     init(frame: CGRect) {
         super.init(frame: frame)
@@ -144,6 +145,63 @@ extension MainView {
             27);
         self.panoramaSwitch.alpha = 0.6;
         self.bringSubviewToFront(self.panoramaSwitch);
+    }
+    
+    func imagePreviewSetup() {
+        var imagePreview1:UIImageView = UIImageView();
+        var imagePreview2:UIImageView = UIImageView();
+        var imagePreview3:UIImageView = UIImageView();
+        var imagePreview4:UIImageView = UIImageView();
+        var imagePreview5:UIImageView = UIImageView();
+        
+        imagePreview1.frame.size = CGSizeMake(64,64);
+        imagePreview1.frame = CGRectMake(0,
+            (self.frame.height - imagePreview1.frame.height) / 2, imagePreview1.frame.width, imagePreview1.frame.height);
+        imagePreview1.alpha = 0.6;
+        self.bringSubviewToFront(imagePreview1);
+        self.addSubview(imagePreview1);
+        
+        imagePreview2.frame.size = CGSizeMake(64,64);
+        imagePreview2.frame = CGRectMake(imagePreview1.frame.maxX,
+            (self.frame.height - imagePreview1.frame.height) / 2, imagePreview1.frame.width, imagePreview1.frame.height);
+        imagePreview2.alpha = 0.6;
+        self.bringSubviewToFront(imagePreview2);
+        self.addSubview(imagePreview2);
+        
+        imagePreview3.frame.size = CGSizeMake(64,64);
+        imagePreview3.frame = CGRectMake(imagePreview2.frame.maxX,
+            (self.frame.height - imagePreview1.frame.height) / 2, imagePreview1.frame.width, imagePreview1.frame.height);
+        imagePreview3.alpha = 0.6;
+        self.bringSubviewToFront(imagePreview3);
+        self.addSubview(imagePreview3);
+        
+        imagePreview4.frame.size = CGSizeMake(64,64);
+        imagePreview4.frame = CGRectMake(imagePreview3.frame.maxX,
+            (self.frame.height - imagePreview1.frame.height) / 2, imagePreview1.frame.width, imagePreview1.frame.height);
+        imagePreview4.alpha = 0.6;
+        self.bringSubviewToFront(imagePreview4);
+        self.addSubview(imagePreview4);
+        
+        imagePreview5.frame.size = CGSizeMake(64,64);
+        imagePreview5.frame = CGRectMake(imagePreview4.frame.maxX,
+            (self.frame.height - imagePreview1.frame.height) / 2, imagePreview1.frame.width, imagePreview1.frame.height);
+        imagePreview5.alpha = 0.6;
+        self.bringSubviewToFront(imagePreview5);
+        self.addSubview(imagePreview5);
+        
+        imagePreviewArray = [imagePreview1, imagePreview2, imagePreview3, imagePreview4, imagePreview5];
+    }
+    
+    func imageDrawPreview(imageToDraw:UIImage, index:Int) {
+        self.imagePreviewArray![index].image = self.imageWithImage(imageToDraw, newSize: CGSizeMake(64,64));
+    }
+    
+    func imageWithImage(image:UIImage, newSize:CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height));
+        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
     }
     
 }

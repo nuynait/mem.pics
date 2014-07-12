@@ -33,7 +33,8 @@ class PhotoSuccessActionImp: SuccessActionImp {
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
                     // mainVC.uploadViewController!.uploadModel!.imageToSave = image;
                     // self.upLoad();
-                    mainVC.upLoadViewController!.uploadModel.imageToSave = image;
+                    mainVC.upLoadViewController!.uploadModel!.imageToSave = image;
+                    mainVC.upLoadViewController!.modeFlag = true;
                     // self.uploadViewController!.imageToSave = UIImage(named: "a1.JPG");
                     mainVC.switchToUploadViewController();
                     

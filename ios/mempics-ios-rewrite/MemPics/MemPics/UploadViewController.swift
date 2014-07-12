@@ -10,13 +10,15 @@ import UIKit
 
 class UploadViewController: UIViewController {
     
-    var uploadModel:UploadModel = UploadModel();
+    var uploadModel:UploadModel?;
     var uploadView:UploadView = UploadView(frame: UIScreen.mainScreen().bounds);
+    var modeFlag:Bool?;
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
-        self.uploadModel.uploadVC = self;
+        self.uploadModel = UploadModel();
+        self.uploadModel!.uploadVC = self;
     }
 
     override func loadView() {
@@ -26,19 +28,33 @@ class UploadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.uploadView.loadView();
+        self.uploadView.viewDidLoad();
+        self.runModel();
         
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         
+    }
+    
+    func runModel() {
         self.uploadView.retryButton.removeFromSuperview();
         self.uploadView.dismissVCButton.removeFromSuperview();
         self.uploadView.spinner.startAnimating();
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            self.uploadModel.upLoad();
+            if self.modeFlag == true {
+                println("modeFlag = True, Run upload");
+                self.uploadModel!.upLoad();
+            }
+            else {
+                println("modeFlag = False, Run Stitch, check stored image size: \(self.uploadModel!.imageStored.count)");
+                self.uploadModel!.stitch();
+            }
             });
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,7 +71,7 @@ class UploadViewController: UIViewController {
         // retryButtonPressed
         self.uploadView.retryButton.removeFromSuperview();
         self.uploadView.dismissVCButton.removeFromSuperview();
-        self.uploadModel.upLoad();
+        self.uploadModel!.upLoad();
     }
     
     func dismissButtonPressed(sender:UIButton) {

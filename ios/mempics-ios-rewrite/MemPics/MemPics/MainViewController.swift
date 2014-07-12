@@ -15,7 +15,6 @@ class MainViewController: UIViewController {
     var avFoundationModel:AVFoundationDeviceModel?;
     var bluetoothCentralModel:BTLECentralModel?;
     var bluetoothPeripheralModel:BTLEPeripheralModel?;
-    var uploadModel:UploadModel?;
     
     // Bridge
     var avSessionSetupImp:AVSessionSetupImp?;
@@ -48,7 +47,6 @@ class MainViewController: UIViewController {
         self.bluetoothCentralModel = BTLECentralModel(mainVC: self);
         self.bluetoothPeripheralModel = BTLEPeripheralModel(mainVC: self);
         self.avFoundationModel = AVFoundationDeviceModel();
-        self.uploadModel = UploadModel();
         
         
         
@@ -69,6 +67,9 @@ class MainViewController: UIViewController {
         println("Prepare Set AVSession");
         self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
         drawView();
+        self.mainView!.imagePreviewSetup();
+        
+        
         self.addSubViewTargets();
         self.currentState!.turnOnBluetooth(self.bluetoothCentralModel!, peripheral: self.bluetoothPeripheralModel!);
 
@@ -114,6 +115,7 @@ class MainViewController: UIViewController {
     }
     
     func switchToUploadViewController() {
+        println("Before Present uploadViewController, Check Stored Image Size: \(self.upLoadViewController!.uploadModel!.imageStored.count)");
         self.presentViewController(self.upLoadViewController!, animated: true, completion: nil);
     }
     
@@ -197,8 +199,9 @@ extension MainViewController {
             // Run Success Function
             println("Case: BTLECentralState.EOMRecieved");
             self.mainView!.bluetoothStatusLabelRedraw("Take Action");
-            self.upLoadViewController!.uploadModel.mainPid = stringReceived;
-            self.upLoadViewController!.uploadModel.eye = "l";
+            self.upLoadViewController!.uploadModel!.mainPid = stringReceived;
+            self.upLoadViewController!.uploadModel!.eye = "l";
+            self.upLoadViewController!.uploadModel!.clearArray();
             self.successActionImp!.startCountDown(self);
             
         default:
@@ -227,8 +230,9 @@ extension MainViewController {
             // Run Success Function
             println("Case: BTLEPeripheralState.EOMSent");
             self.mainView!.bluetoothStatusLabelRedraw("Take Action");
-            self.upLoadViewController!.uploadModel.mainPid = DeviceInfo.getDevicePid();
-            self.upLoadViewController!.uploadModel.eye = "r";
+            self.upLoadViewController!.uploadModel!.mainPid = DeviceInfo.getDevicePid();
+            self.upLoadViewController!.uploadModel!.eye = "r";
+            self.upLoadViewController!.uploadModel!.clearArray();
             self.successActionImp!.startCountDown(self);
             
         default:
