@@ -164,7 +164,6 @@ extension MainViewController {
     
     
     func panoramaSwitchFliped(sender:UISwitch) {
-        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
         if sender.on {
             self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
             self.successActionImp = PanoramicPhotoSuccessActionImp();
@@ -173,7 +172,8 @@ extension MainViewController {
             self.avSessionSetupImp = AVPhotoSessionSetupImp();
             self.successActionImp = PhotoSuccessActionImp();
         }
-        
+        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+        self.currentState!.subViewSetup(self.mainView!);
     }
     
 }

@@ -142,7 +142,6 @@ extension MainView {
             self.frame.height - 60,
             79,
             27);
-        self.panoramaSwitch.on = false;
         self.panoramaSwitch.alpha = 0.6;
         self.bringSubviewToFront(self.panoramaSwitch);
     }
