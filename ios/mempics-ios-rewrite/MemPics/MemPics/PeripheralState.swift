@@ -35,7 +35,15 @@ class PeripheralState: CamState {
         
     }
     
-    func BTLETrigger(peripheral:BTLEPeripheralModel) {
-        peripheral.sendData();
+    func BTLETrigger(peripheral:BTLEPeripheralModel, panoramicPhoto:Bool) {
+        if panoramicPhoto {
+            peripheral.stringToSend = "ABC";
+            peripheral.dataToSend = peripheral.stringToSend.dataUsingEncoding(NSUTF8StringEncoding);
+            peripheral.sendData();
+            
+        }
+        else {
+            peripheral.sendData();
+        }
     }
 }

@@ -14,6 +14,7 @@ enum BTLEPeripheralState {
     case Connected
     case SendData
     case EOMSent
+    case EOMSentPanoramic
 }
 
 class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
@@ -227,9 +228,15 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             // self.countDown(5, panoramaPhotoLeft: 0);
             
             // Notify View Controller EOM Has Been Sent
-            self.NotifyMainViewController(BTLEPeripheralState.EOMSent);
+            if self.stringToSend == "ABC" {
+                println("Sent ABC");
+                self.NotifyMainViewController(BTLEPeripheralState.EOMSentPanoramic);
+            }
+            else {
+                println("Sent EOM");
+                self.NotifyMainViewController(BTLEPeripheralState.EOMSent);
+            }
             
-            println("sent EOM");
         }
     }
     

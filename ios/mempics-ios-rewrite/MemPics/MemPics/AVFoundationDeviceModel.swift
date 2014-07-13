@@ -16,9 +16,13 @@ class AVFoundationDeviceModel: NSObject {
     
     
     
+    
     class func deviceWithMediaType(mediaType:NSString, position:AVCaptureDevicePosition) -> AVCaptureDevice {
         var devices:NSArray = AVCaptureDevice.devicesWithMediaType(mediaType);
         var captureDevice:AVCaptureDevice = devices.firstObject as AVCaptureDevice;
+        // captureDevice.lockForConfiguration(nil);
+        // captureDevice.exposureMode = AVCaptureExposureMode.Locked;
+        // captureDevice.unlockForConfiguration();
         
         for item : AnyObject in devices{
             var device:AVCaptureDevice = item as AVCaptureDevice;
@@ -28,5 +32,15 @@ class AVFoundationDeviceModel: NSObject {
             }
         }
         return captureDevice;
+    }
+    
+    func lockExposure() {
+        var devices:NSArray = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo);
+        var captureDevice:AVCaptureDevice = devices.firstObject as AVCaptureDevice;
+        captureDevice.lockForConfiguration(nil);
+        captureDevice.exposureMode = AVCaptureExposureMode.Locked;
+        captureDevice.focusMode = AVCaptureFocusMode.Locked;
+        captureDevice.whiteBalanceMode = AVCaptureWhiteBalanceMode.Locked;
+        captureDevice.unlockForConfiguration();
     }
 }

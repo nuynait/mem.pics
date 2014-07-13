@@ -18,6 +18,8 @@ class MainView: UIView {
     var camSwitch:UISwitch = UISwitch();
     var panoramaSwitch:UISwitch = UISwitch();
     var imagePreviewArray:UIImageView[]?;
+    var imagePreviewTesting:UIImageView = UIImageView();
+    var imagePreviewTesting2:UIImageView = UIImageView();
 
     init(frame: CGRect) {
         super.init(frame: frame)
@@ -145,6 +147,43 @@ extension MainView {
             27);
         self.panoramaSwitch.alpha = 0.6;
         self.bringSubviewToFront(self.panoramaSwitch);
+    }
+    
+    func imagePreviewSetupTesting() {
+        
+        self.imagePreviewTesting.frame.size = CGSizeMake(336,448);
+        
+        var testRect:CGRect = CGRectMake(
+            -176,
+            15,
+            336,
+            448);
+        
+        self.imagePreviewTesting.frame = testRect;
+        // imagePreviewTesting.alpha = 0.6;
+        self.bringSubviewToFront(self.imagePreviewTesting);
+        // imagePreviewTesting.image = self.imageWithImage(UIImage(named: "a1.jpg"), newSize: CGSizeMake(144, 192));
+        self.addSubview(self.imagePreviewTesting);
+        
+        
+        // self.imagePreviewTesting2.frame.size = CGSizeMake(64,89);
+        // 
+        // var testRect2:CGRect = CGRectMake(
+        //     200,
+        //     150,
+        //     64,
+        //     98);
+        // 
+        // self.imagePreviewTesting2.frame = testRect2;
+        // // imagePreviewTesting.alpha = 0.6;
+        // self.bringSubviewToFront(self.imagePreviewTesting2);
+        // // imagePreviewTesting.image = self.imageWithImage(UIImage(named: "a1.jpg"), newSize: CGSizeMake(144, 192));
+        // self.addSubview(self.imagePreviewTesting2);
+    }
+    
+    func imageDrawPreviewTesting(image:UIImage) {
+        self.imagePreviewTesting.image = self.imageWithImage(image, newSize: CGSizeMake(352, 432));
+        // self.imagePreviewTesting2.image = self.imageWithImage(image, newSize: CGSizeMake(64, 98));
     }
     
     func imagePreviewSetup() {

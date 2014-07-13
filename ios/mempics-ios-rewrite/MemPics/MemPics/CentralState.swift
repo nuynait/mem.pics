@@ -28,7 +28,7 @@ class CentralState: CamState {
         central.setupCentralManager();
     }
    
-    func BTLETrigger(peripheral:BTLEPeripheralModel) {
+    func BTLETrigger(peripheral:BTLEPeripheralModel, panoramicPhoto:Bool) {
         // Central Don't Have BTLETrigger
     }
 }

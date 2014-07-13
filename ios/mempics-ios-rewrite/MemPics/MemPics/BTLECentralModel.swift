@@ -13,6 +13,7 @@ enum BTLECentralState {
     case Connecting
     case Connected
     case EOMReceived
+    case EOMReceivedPanoramic
 }
 
 
@@ -162,10 +163,17 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 
 
                 self.stringReceived = finalString;
+                if stringReceived == "ABC" {
+                    self.NotifyMainViewController(BTLECentralState.EOMReceivedPanoramic);
+                    
+                }
+                else {
+                    
+                    // All the data has been received. Start Camera Shooting Action
+                    self.NotifyMainViewController(BTLECentralState.EOMReceived);
+                }
                 
                 
-                // All the data has been received. Start Camera Shooting Action
-                self.NotifyMainViewController(BTLECentralState.EOMReceived);
                 
             }
             else {

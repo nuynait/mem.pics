@@ -25,12 +25,22 @@ class AVPhotoSessionSetupImp: AVSessionSetupImp {
         mainView.layer.masksToBounds = true;
         mainView.layer.addSublayer(previewLayer);
         
+        
+        
+        
+        // var previewLayer2:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(avFoundationDeviceModel.session) as AVCaptureVideoPreviewLayer;
+        // previewLayer2.backgroundColor = UIColor.blackColor().CGColor;
+        // previewLayer2.videoGravity = AVLayerVideoGravityResizeAspect;
+        // previewLayer2.frame = CGRectMake(30, 30, 100, 100);
+        // mainView.layer.addSublayer(previewLayer2);
+        
         // According to Apple Documentation, The following actions takes times and will
         // cause ui to freeze, should put them into a dispatch_queue and run on the
         // other thread. Determain what device to use.
         var error:NSError?;
         var videoDevice:AVCaptureDevice = AVFoundationDeviceModel.deviceWithMediaType(AVMediaTypeVideo, position: AVCaptureDevicePosition.Back);
         var videoDeviceInput:AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(videoDevice, error: &error) as AVCaptureDeviceInput;
+        
         
         if error {
             println("Got Error: \(error)");

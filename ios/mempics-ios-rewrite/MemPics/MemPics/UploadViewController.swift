@@ -50,7 +50,8 @@ class UploadViewController: UIViewController {
             }
             else {
                 println("modeFlag = False, Run Stitch, check stored image size: \(self.uploadModel!.imageStored.count)");
-                self.uploadModel!.stitch();
+                // self.uploadModel!.stitch();
+                self.uploadModel!.mergeImage();
             }
             });
     }

@@ -17,6 +17,11 @@ class UploadModel: NSObject {
     var imageStored:NSMutableArray = NSMutableArray(); // This is for panoramic Photo
     
     
+    var widthBase:CGFloat = 720;
+    var widthOfMerge:CGFloat = 720;
+    var heightOfMerge:CGFloat = 964;
+    
+    
     // Main Info
     var eye:NSString?;
     var pid:NSString?;
@@ -35,8 +40,24 @@ class UploadModel: NSObject {
 // Panaramic Upload Model
 extension UploadModel {
     func storeImage() {
-        self.imageStored.addObject(self.imageToSave!);
-        println("Add image to stored Array, imageStored Size: \(self.imageStored.count)");
+        if self.imageStored.count == 0 {
+            self.imageStored[0] = imageToSave;
+            return;
+        }
+        var firstImage:UIImage = self.imageStored[0] as UIImage;
+        var secondImage:UIImage = self.imageToSave!;
+        
+        self.widthOfMerge = self.widthOfMerge + self.widthBase;
+        
+        var newSize:CGSize = CGSizeMake(self.widthOfMerge,self.heightOfMerge);
+        UIGraphicsBeginImageContext(newSize);
+        firstImage.drawInRect(CGRectMake(0, 0, firstImage.size.width, firstImage.size.height));
+        secondImage.drawInRect(CGRectMake(firstImage.size.width, 0, self.widthBase, self.heightOfMerge), blendMode: kCGBlendModeNormal, alpha: 1.0);
+        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
+        
+        self.imageStored[0] = newImage;
     }
     
     func clearArray() {
@@ -57,6 +78,22 @@ extension UploadModel {
         // Debug
         UIImageWriteToSavedPhotosAlbum(stitchedImage, nil, nil, nil);
         self.NotifyViewController("Added To Camera Album");
+    }
+    
+    func mergeImage() {
+        UIImageWriteToSavedPhotosAlbum(self.imageStored[0] as UIImage, nil, nil, nil);
+    }
+    
+    func testMergeImage() {
+        var firstImage:UIImage = UIImage(named: "a1.jpg");
+        var secondImage:UIImage = UIImage(named: "a2.jpg");
+        var newSize:CGSize = CGSizeMake(1440,964);
+        UIGraphicsBeginImageContext(newSize);
+        firstImage.drawInRect(CGRectMake(0, 0, 720, 964));
+        secondImage.drawInRect(CGRectMake(720, 0, 720, 964), blendMode: kCGBlendModeNormal, alpha: 1.0);
+        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
     }
     
     // A helper function use to rescale image

@@ -50,6 +50,11 @@ class MainViewController: UIViewController {
         
         
         
+        
+        
+
+
+        
         // init ViewControllers
         self.upLoadViewController = UploadViewController(nibName: nil, bundle: nil);
     }
@@ -67,7 +72,8 @@ class MainViewController: UIViewController {
         println("Prepare Set AVSession");
         self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
         drawView();
-        self.mainView!.imagePreviewSetup();
+        self.mainView!.imagePreviewSetupTesting();
+        //self.mainView!.imagePreviewSetup();
         
         
         self.addSubViewTargets();
@@ -152,7 +158,7 @@ extension MainViewController {
     // targets action Functions
     func takePictureButtonPressed(sender:UIButton) {
         self.mainView!.takePictureButton.enabled = false;
-        self.currentState!.BTLETrigger(self.bluetoothPeripheralModel!);
+        self.currentState!.BTLETrigger(self.bluetoothPeripheralModel!, panoramicPhoto: self.mainView!.camSwitch.on);
     }
 
     
@@ -173,9 +179,9 @@ extension MainViewController {
         else {
             self.avSessionSetupImp = AVPhotoSessionSetupImp();
             self.successActionImp = PhotoSuccessActionImp();
+            self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+            self.currentState!.subViewSetup(self.mainView!);
         }
-        self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
-        self.currentState!.subViewSetup(self.mainView!);
     }
     
 }
@@ -197,11 +203,26 @@ extension MainViewController {
             
         case BTLECentralState.EOMReceived:
             // Run Success Function
+            
+            self.avSessionSetupImp = AVPhotoSessionSetupImp();
+            self.successActionImp = PhotoSuccessActionImp();
+            self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+            self.currentState!.subViewSetup(self.mainView!);
+            
+            
             println("Case: BTLECentralState.EOMRecieved");
             self.mainView!.bluetoothStatusLabelRedraw("Take Action");
             self.upLoadViewController!.uploadModel!.mainPid = stringReceived;
             self.upLoadViewController!.uploadModel!.eye = "l";
             self.upLoadViewController!.uploadModel!.clearArray();
+            
+            self.successActionImp!.startCountDown(self);
+        case BTLECentralState.EOMReceivedPanoramic:
+            self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
+            self.successActionImp = PanoramicPhotoSuccessActionImp();
+            self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+            self.currentState!.subViewSetup(self.mainView!);
+            
             self.successActionImp!.startCountDown(self);
             
         default:
@@ -235,9 +256,18 @@ extension MainViewController {
             self.upLoadViewController!.uploadModel!.clearArray();
             self.successActionImp!.startCountDown(self);
             
+        case BTLEPeripheralState.EOMSentPanoramic:
+            self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
+            self.successActionImp = PanoramicPhotoSuccessActionImp();
+            self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+            self.currentState!.subViewSetup(self.mainView!);
+            
+            self.successActionImp!.startCountDown(self);
+            
         default:
             println("ERROR, Not an Avaliable bluetooth state");
         }
     }
+    
 }
 

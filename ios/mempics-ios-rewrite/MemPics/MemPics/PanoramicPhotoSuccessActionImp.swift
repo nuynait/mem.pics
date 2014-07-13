@@ -12,7 +12,8 @@ import AVFoundation
 class PanoramicPhotoSuccessActionImp: SuccessActionImp {
     
     func startCountDown(mainVC:MainViewController) {
-        mainVC.countDown(5, photoLeft: 5);
+        mainVC.avFoundationModel!.lockExposure();
+        mainVC.countDown(3, photoLeft: 4);
     }
 
     
@@ -43,7 +44,8 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
                     println("Scaled Original image size: \(image.size.width), \(image.size.height)");
                     
                     println("Scaled New image size: \(newImage.size.width), \(newImage.size.height)");
-                    mainVC.mainView!.imageDrawPreview(newImage, index: 5 - PhotoLeft);
+                    // mainVC.mainView!.imageDrawPreview(newImage, index: 5 - PhotoLeft);
+                    mainVC.mainView!.imageDrawPreviewTesting(image);
                     
                     UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
                     mainVC.upLoadViewController!.uploadModel!.imageToSave = newImage;
@@ -58,7 +60,7 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
                         mainVC.switchToUploadViewController();
                     }
                     else {
-                        mainVC.countDown(3, photoLeft: PhotoLeft-1);
+                        mainVC.countDown(10, photoLeft: PhotoLeft-1);
                     }
                 }
             });
