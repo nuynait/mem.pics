@@ -16,7 +16,8 @@ enum BTLEPeripheralState {
     case WaitingTrigger
     case SentPhotoTrigger
     case SentPanoramicTrigger
-
+    case SentCountDown
+    case SentCountDownComplete
 }
 
 class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
@@ -236,6 +237,14 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             }
             else if stringToSend == "Take Panoramic Trigger" {
                 self.NotifyMainViewController(BTLEPeripheralState.SentPanoramicTrigger);
+            }
+            else if stringToSend == "0" {
+                // Here CountDown Completes
+                self.NotifyMainViewController(BTLEPeripheralState.SentCountDownComplete);
+            }
+            else if stringToSend.length == 1 {
+                // This is the count down
+                self.NotifyMainViewController(BTLEPeripheralState.SentCountDown);
             }
             else {
                 self.NotifyMainViewController(BTLEPeripheralState.WaitingTrigger);

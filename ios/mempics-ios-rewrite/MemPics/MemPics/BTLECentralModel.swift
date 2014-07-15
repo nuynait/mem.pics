@@ -17,6 +17,8 @@ enum BTLECentralState {
     case PhotoModeSetup
     case TakePhotoTriggerReceived
     case TakePanoramicTriggerReceived
+    case CountDownReceived
+    case CountDownCompleteReceived
 }
 
 
@@ -177,10 +179,17 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 }
                 else if self.stringReceived == "Setup Photo Mode" {
                     self.NotifyMainViewController(BTLECentralState.PhotoModeSetup);
+                }
+                else if self.stringReceived == "0" {
+                    // Here Count Down Completes
+                    self.NotifyMainViewController(BTLECentralState.CountDownCompleteReceived);
+                }
+                else if self.stringReceived!.length == 1 {
+                    // this is the count down
+                    self.NotifyMainViewController(BTLECentralState.CountDownReceived);
                     
                 }
                 else {
-                    
                     // All the data has been received. Start Camera Shooting Action
                     self.NotifyMainViewController(BTLECentralState.PIDReceived);
                 }

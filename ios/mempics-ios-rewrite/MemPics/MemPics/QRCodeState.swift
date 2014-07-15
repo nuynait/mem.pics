@@ -22,5 +22,9 @@ class QRCodeState: CamState {
         // QRCode Do Not Need To Manage With Bluetooth
         
     }
+    
+    func BTLESendCountDown(seconds:NSInteger, peripheral:BTLEPeripheralModel) {
+        // QRCode Do Not Need To Send Count Down
+    }
    
 }

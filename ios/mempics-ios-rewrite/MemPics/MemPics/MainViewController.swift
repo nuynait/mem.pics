@@ -29,6 +29,12 @@ class MainViewController: UIViewController {
     var centralState:CentralState?;
     var peripheralState:PeripheralState?;
     var qrCodeState:QRCodeState?;
+    
+    
+    // Variable For CountDown Use
+    var second:NSInteger?;
+    var photoTaken:NSInteger = 4;
+    var photoLeft:NSInteger?;
 
     
     // View
@@ -110,17 +116,21 @@ class MainViewController: UIViewController {
     
     // A countDown
     func countDown(time:NSInteger, photoLeft:NSInteger) {
-        var second:NSInteger = time;
+        self.second = time;
+        self.photoLeft = photoLeft;
         println("CountDowning: \(second)");
-        self.mainView!.countDownLabelRedraw("\(second)");
+        
+        self.currentState!.BTLESendCountDown(self.second!, peripheral: bluetoothPeripheralModel!);
+        
         if second == 0 {
-            self.successActionImp!.countDownComplete(photoLeft, mainVC: self);
+            // self.successActionImp!.countDownComplete(photoLeft, mainVC: self);
             self.mainView!.bluetoothStatusLabelRedraw("Waiting For Trigger...");
             return;
         }
+        
         var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
-            self.countDown(second - 1, photoLeft: photoLeft);
+            self.countDown(self.second! - 1, photoLeft: photoLeft);
             });
     }
     
@@ -236,6 +246,8 @@ extension MainViewController {
             println("Case: BTLECentralState.Connected");
             self.mainView!.bluetoothStatusLabelRedraw("Waiting For PID");
             
+            self.photoLeft = self.photoTaken;
+            
         case BTLECentralState.PIDReceived:
             println("Case: BTLECentralState.PIDReceived");
             self.deviceInfo!.mainPid = self.bluetoothCentralModel!.stringReceived;
@@ -266,7 +278,7 @@ extension MainViewController {
             self.upLoadViewController!.uploadModel!.clearArray();
             
             println("Take Picture Action");
-            self.successActionImp!.startCountDown(self);
+            // self.successActionImp!.startCountDown(self);
             
         case BTLECentralState.TakePanoramicTriggerReceived:
             println("Case: BTLECentral.TakePanoramicTriggerReceived");
@@ -277,7 +289,26 @@ extension MainViewController {
             
             println("SETUP AVSESSION PREVIEW");
             self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
-            self.successActionImp!.startCountDown(self);
+            // self.successActionImp!.startCountDown(self);
+            
+        case BTLECentralState.CountDownReceived:
+            println("Case: BTLECentral.CountDownReceived");
+            self.mainView!.countDownLabelRedraw(stringReceived);
+            
+        case BTLECentralState.CountDownCompleteReceived:
+            println("Case: BTLECentral.CountDownCompleteReceived");
+            
+            self.mainView!.countDownLabel.text = "";
+            self.mainView!.flashScreen();
+            
+            if (self.photoLeft == 1) {
+                self.successActionImp!.countDownComplete(1, mainVC: self);
+                self.photoLeft == photoTaken;
+            }
+            else {
+                self.successActionImp!.countDownComplete(-1, mainVC: self);
+            }
+            
             
         default:
             println("ERROR, Not an Avaliable bluetooth state");
@@ -338,6 +369,17 @@ extension MainViewController {
             println("SETUP AVSESSION PREVIEW");
             self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
             self.successActionImp!.startCountDown(self);
+            
+        case BTLEPeripheralState.SentCountDown:
+            println("Case BTLEPeripheralState.SentCountDown, Second: \(self.second)");
+            self.mainView!.countDownLabelRedraw("\(self.second)");
+            
+        case BTLEPeripheralState.SentCountDownComplete:
+            println("Case BTLEPeripheralState.COMPLETE");
+            
+            self.mainView!.countDownLabel.text = "";
+            self.mainView!.flashScreen();
+            self.successActionImp!.countDownComplete(self.photoLeft!, mainVC: self);
 
         default:
             println("ERROR, Not an Avaliable bluetooth state");

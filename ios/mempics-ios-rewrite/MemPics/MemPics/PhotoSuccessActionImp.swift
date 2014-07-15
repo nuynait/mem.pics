@@ -19,8 +19,8 @@ class PhotoSuccessActionImp: SuccessActionImp {
     
     func countDownComplete(PhotoLeft:NSInteger, mainVC:MainViewController) {
         println("CountDown Finished");
-        mainVC.mainView!.countDownLabel.text = "";
-        mainVC.mainView!.flashScreen();
+        // mainVC.mainView!.countDownLabel.text = "";
+        // mainVC.mainView!.flashScreen();
         
         println("Start Capture Image");
         // Capture Image:

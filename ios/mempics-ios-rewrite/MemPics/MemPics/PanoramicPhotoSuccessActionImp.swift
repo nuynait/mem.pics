@@ -13,17 +13,21 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
     
     func startCountDown(mainVC:MainViewController) {
         mainVC.avFoundationModel!.lockExposure();
-        mainVC.countDown(3, photoLeft: 1);
+        mainVC.countDown(3, photoLeft: 4);
     }
 
     
     
     func countDownComplete(PhotoLeft:NSInteger, mainVC:MainViewController) {
         
+        
+        // bluetooth handler
+        mainVC.photoLeft = mainVC.photoLeft! - 1;
+        
         println("Shooting Panoramic Photos");
         println("CountDown Finished");
-        mainVC.mainView!.countDownLabel.text = "";
-        mainVC.mainView!.flashScreen();
+        // mainVC.mainView!.countDownLabel.text = "";
+        // mainVC.mainView!.flashScreen();
         
         // Capture Image:
         mainVC.avFoundationModel!.stillImageOutput!.captureStillImageAsynchronouslyFromConnection(mainVC.avFoundationModel!.stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo), completionHandler:
@@ -59,8 +63,12 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
                         mainVC.upLoadViewController!.modeFlag = false;
                         mainVC.switchToUploadViewController();
                     }
+                    else if PhotoLeft == -1 {
+                        // This is the central state, do nothing. Let the peripheral control the central
+                        println("Do Nothing");
+                    }
                     else {
-                        mainVC.countDown(10, photoLeft: PhotoLeft-1);
+                        mainVC.countDown(9, photoLeft: PhotoLeft-1);
                     }
                 }
             });

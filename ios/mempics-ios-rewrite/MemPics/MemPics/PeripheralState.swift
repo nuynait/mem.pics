@@ -72,8 +72,11 @@ class PeripheralState: CamState {
             println("ERROR, not an avaliable trigger case");
         }
         
-        
-        
-        
+    }
+    
+    // Send the count down seconds to central
+    func BTLESendCountDown(seconds:NSInteger, peripheral:BTLEPeripheralModel) {
+        peripheral.setupStringToSend("\(seconds)");
+        peripheral.sendData();
     }
 }

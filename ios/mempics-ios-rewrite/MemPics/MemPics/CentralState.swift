@@ -36,4 +36,9 @@ class CentralState: CamState {
     func BTLETrigger(peripheral:BTLEPeripheralModel, triggerType:Int, panoramicPhoto:Bool) {
         // Central Don't Have BTLETrigger
     }
+    
+    func BTLESendCountDown(seconds:NSInteger, peripheral:BTLEPeripheralModel) {
+        // Central Don'e Send Count Down
+        
+    }
 }

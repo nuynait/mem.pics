@@ -12,4 +12,5 @@ protocol CamState {
     func subViewSetup(mainView:MainView);
     func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel);
     func BTLETrigger(peripheral:BTLEPeripheralModel, triggerType:Int, panoramicPhoto:Bool);
+    func BTLESendCountDown(seconds:NSInteger, peripheral:BTLEPeripheralModel);
 }
