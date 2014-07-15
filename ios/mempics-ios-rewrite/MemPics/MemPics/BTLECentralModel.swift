@@ -12,8 +12,11 @@ import CoreBluetooth
 enum BTLECentralState {
     case Connecting
     case Connected
-    case EOMReceived
-    case EOMReceivedPanoramic
+    case PIDReceived
+    case PanoramicModeSetup
+    case PhotoModeSetup
+    case TakePhotoTriggerReceived
+    case TakePanoramicTriggerReceived
 }
 
 
@@ -163,16 +166,26 @@ class BTLECentralModel: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 
 
                 self.stringReceived = finalString;
-                if stringReceived == "ABC" {
-                    self.NotifyMainViewController(BTLECentralState.EOMReceivedPanoramic);
+                if self.stringReceived == "Take Photo Trigger" {
+                    self.NotifyMainViewController(BTLECentralState.TakePhotoTriggerReceived);
+                }
+                else if self.stringReceived == "Take Panoramic Trigger" {
+                    self.NotifyMainViewController(BTLECentralState.TakePanoramicTriggerReceived);
+                }
+                else if self.stringReceived == "Setup Panoramic Mode" {
+                    self.NotifyMainViewController(BTLECentralState.PanoramicModeSetup);
+                }
+                else if self.stringReceived == "Setup Photo Mode" {
+                    self.NotifyMainViewController(BTLECentralState.PhotoModeSetup);
                     
                 }
                 else {
                     
                     // All the data has been received. Start Camera Shooting Action
-                    self.NotifyMainViewController(BTLECentralState.EOMReceived);
+                    self.NotifyMainViewController(BTLECentralState.PIDReceived);
                 }
                 
+                self.data.length = 0;
                 
                 
             }

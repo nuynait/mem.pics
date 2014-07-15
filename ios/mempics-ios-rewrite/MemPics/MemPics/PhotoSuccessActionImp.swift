@@ -30,13 +30,14 @@ class PhotoSuccessActionImp: SuccessActionImp {
                 if buffer {
                     var imageData:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer);
                     var image:UIImage = UIImage(data: imageData);
+                    println("Saving image to Album, image size check: [\(image.size.width), \(image.size.height)]");
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
                     // mainVC.uploadViewController!.uploadModel!.imageToSave = image;
                     // self.upLoad();
                     mainVC.upLoadViewController!.uploadModel!.imageToSave = image;
                     mainVC.upLoadViewController!.modeFlag = true;
                     // self.uploadViewController!.imageToSave = UIImage(named: "a1.JPG");
-                    mainVC.switchToUploadViewController();
+                    // mainVC.switchToUploadViewController();
                     
                     // Reenable Button
                     mainVC.mainView!.takePictureButton.enabled = true;

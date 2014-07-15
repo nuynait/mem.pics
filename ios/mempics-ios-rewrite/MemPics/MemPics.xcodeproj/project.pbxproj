@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2917FA1974C5A70015FE58 /* qrcodeOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D2917F91974C5A70015FE58 /* qrcodeOff@2x.png */; };
+		9D58B00E197443D400961C31 /* qrcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D58B00D197443D400961C31 /* qrcode@2x.png */; };
+		9D58B0561974482C00961C31 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B0551974482C00961C31 /* libiconv.dylib */; };
+		9D58B0581974483300961C31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B0571974483300961C31 /* QuartzCore.framework */; };
+		9D58B05A1974483A00961C31 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B0591974483A00961C31 /* CoreVideo.framework */; };
+		9D58B05C1974484100961C31 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B05B1974484100961C31 /* CoreMedia.framework */; };
+		9D58B05E1974484700961C31 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B05D1974484700961C31 /* AVFoundation.framework */; };
 		9D73C3C3196CA8E3000218C2 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73C3C2196CA8E3000218C2 /* DeviceInfo.swift */; };
 		9D74006F196A951900754B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D74006E196A951900754B54 /* AppDelegate.swift */; };
 		9D740071196A951900754B54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D740070196A951900754B54 /* Images.xcassets */; };
@@ -27,6 +34,8 @@
 		9D7400A3196A976D00754B54 /* CamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7400A2196A976D00754B54 /* CamState.swift */; };
 		9D7400A5196A978600754B54 /* CentralState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7400A4196A978600754B54 /* CentralState.swift */; };
 		9D7400A7196A979400754B54 /* PeripheralState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7400A6196A979400754B54 /* PeripheralState.swift */; };
+		9D7C5F7C197458C2003E9D8C /* BarCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C5F7B197458C2003E9D8C /* BarCodeModel.swift */; };
+		9D7C5F7E197497C1003E9D8C /* QRCodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C5F7D197497C1003E9D8C /* QRCodeState.swift */; };
 		9DD293691970671400874FE8 /* takePictureButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD293681970671400874FE8 /* takePictureButton@2x.png */; };
 		9DD75DD91970F4BF002667FA /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DD75DD41970F4BF002667FA /* UIImage+OpenCV.mm */; };
 		9DD75DDA1970F4BF002667FA /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DD75DD61970F4BF002667FA /* CVWrapper.mm */; };
@@ -56,6 +65,13 @@
 /* Begin PBXFileReference section */
 		36626CB71C2E492DBC9E3860 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		49AA1B58C32B4CF59BDCA5DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2917F91974C5A70015FE58 /* qrcodeOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcodeOff@2x.png"; sourceTree = "<group>"; };
+		9D58B00D197443D400961C31 /* qrcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode@2x.png"; sourceTree = "<group>"; };
+		9D58B0551974482C00961C31 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		9D58B0571974483300961C31 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9D58B0591974483A00961C31 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9D58B05B1974484100961C31 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9D58B05D1974484700961C31 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9D73C3C2196CA8E3000218C2 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		9D740069196A951900754B54 /* MemPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D74006D196A951900754B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +96,8 @@
 		9D7400A2196A976D00754B54 /* CamState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamState.swift; sourceTree = "<group>"; };
 		9D7400A4196A978600754B54 /* CentralState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralState.swift; sourceTree = "<group>"; };
 		9D7400A6196A979400754B54 /* PeripheralState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralState.swift; sourceTree = "<group>"; };
+		9D7C5F7B197458C2003E9D8C /* BarCodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeModel.swift; sourceTree = "<group>"; };
+		9D7C5F7D197497C1003E9D8C /* QRCodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeState.swift; sourceTree = "<group>"; };
 		9DD293681970671400874FE8 /* takePictureButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takePictureButton@2x.png"; sourceTree = "<group>"; };
 		9DD75DD01970F481002667FA /* MemPics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemPics-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DD75DD31970F4BF002667FA /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
@@ -104,6 +122,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D58B05E1974484700961C31 /* AVFoundation.framework in Frameworks */,
+				9D58B05C1974484100961C31 /* CoreMedia.framework in Frameworks */,
+				9D58B05A1974483A00961C31 /* CoreVideo.framework in Frameworks */,
+				9D58B0581974483300961C31 /* QuartzCore.framework in Frameworks */,
+				9D58B0561974482C00961C31 /* libiconv.dylib in Frameworks */,
 				C152587204B043929C5BD240 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +144,11 @@
 		367E939E1EB3458EA6C2812E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D58B05D1974484700961C31 /* AVFoundation.framework */,
+				9D58B05B1974484100961C31 /* CoreMedia.framework */,
+				9D58B0591974483A00961C31 /* CoreVideo.framework */,
+				9D58B0571974483300961C31 /* QuartzCore.framework */,
+				9D58B0551974482C00961C31 /* libiconv.dylib */,
 				49AA1B58C32B4CF59BDCA5DB /* libPods.a */,
 			);
 			name = Frameworks;
@@ -137,6 +165,8 @@
 				9DD75DF719717739002667FA /* a6.jpg */,
 				9DD75DF819717739002667FA /* a7.jpg */,
 				9DD75DF919717739002667FA /* a8.jpg */,
+				9D58B00D197443D400961C31 /* qrcode@2x.png */,
+				9D2917F91974C5A70015FE58 /* qrcodeOff@2x.png */,
 				9DD293681970671400874FE8 /* takePictureButton@2x.png */,
 			);
 			name = Images;
@@ -167,10 +197,11 @@
 			children = (
 				9D4EC966196D94CB00BE88C7 /* Images */,
 				9D73C3C2196CA8E3000218C2 /* DeviceInfo.swift */,
+				9D7C5F7B197458C2003E9D8C /* BarCodeModel.swift */,
+				9DDAB561196C99720052F1B0 /* AVFoundationDeviceModel.swift */,
 				9D740092196A95CC00754B54 /* AVSessionSetupImp.swift */,
 				9D740096196A970100754B54 /* AVPanoramicPhotoSessionSetupImp.swift */,
 				9D740094196A961D00754B54 /* AVPhotoSessionSetupImp.swift */,
-				9DDAB561196C99720052F1B0 /* AVFoundationDeviceModel.swift */,
 				9D740098196A971000754B54 /* SuccessActionImp.swift */,
 				9D74009A196A973000754B54 /* PhotoSuccessActionImp.swift */,
 				9D74009C196A973F00754B54 /* PanoramicPhotoSuccessActionImp.swift */,
@@ -179,6 +210,7 @@
 				9D7400A2196A976D00754B54 /* CamState.swift */,
 				9D7400A4196A978600754B54 /* CentralState.swift */,
 				9D7400A6196A979400754B54 /* PeripheralState.swift */,
+				9D7C5F7D197497C1003E9D8C /* QRCodeState.swift */,
 				9D74006E196A951900754B54 /* AppDelegate.swift */,
 				9D740086196A957B00754B54 /* BTLECentralModel.swift */,
 				9D740088196A958400754B54 /* BTLEPeripheralModel.swift */,
@@ -309,7 +341,9 @@
 				9DD75DF51970F983002667FA /* a4.jpg in Resources */,
 				9DD75DF41970F983002667FA /* a3.jpg in Resources */,
 				9DD75DF31970F983002667FA /* a2.jpg in Resources */,
+				9D58B00E197443D400961C31 /* qrcode@2x.png in Resources */,
 				9DD75DF21970F983002667FA /* a1.jpg in Resources */,
+				9D2917FA1974C5A70015FE58 /* qrcodeOff@2x.png in Resources */,
 				9DD75DFB19717739002667FA /* a6.jpg in Resources */,
 				9DD75DFC19717739002667FA /* a7.jpg in Resources */,
 				9DD293691970671400874FE8 /* takePictureButton@2x.png in Resources */,
@@ -373,8 +407,10 @@
 				9D74008F196A95A300754B54 /* UploadModel.swift in Sources */,
 				9D7400A5196A978600754B54 /* CentralState.swift in Sources */,
 				9DD75DDB1970F4BF002667FA /* stitching.cpp in Sources */,
+				9D7C5F7C197458C2003E9D8C /* BarCodeModel.swift in Sources */,
 				9D74009B196A973000754B54 /* PhotoSuccessActionImp.swift in Sources */,
 				9D740093196A95CC00754B54 /* AVSessionSetupImp.swift in Sources */,
+				9D7C5F7E197497C1003E9D8C /* QRCodeState.swift in Sources */,
 				9DD75DDA1970F4BF002667FA /* CVWrapper.mm in Sources */,
 				9D74009F196A975100754B54 /* MainViewController.swift in Sources */,
 				9D74008B196A959200754B54 /* UploadViewController.swift in Sources */,
@@ -496,12 +532,19 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MemPics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MemPics/ZBarSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MemPics/MemPics-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -513,11 +556,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MemPics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MemPics/ZBarSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MemPics/MemPics-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -11,6 +11,10 @@ import UIKit
 class MainView: UIView {
     
     var takePictureButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton;
+    var qrCodeScanButton:UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton;
+    var qrCodeModeOn:Bool = true;
+    var qrCodeModeIndicator:UIImageView = UIImageView();
+    var qrCodeModeIndicatorIsFlashing:Bool = false;
     var focusDotLabel:UILabel = UILabel();
     var countDownLabel:UILabel = UILabel();
     var pidDisplayLabel:UILabel = UILabel();
@@ -64,6 +68,8 @@ extension MainView {
         self.camSwitch.removeFromSuperview();
         self.panoramaSwitch.removeFromSuperview();
         self.bluetoothStatusLabel.removeFromSuperview();
+        self.qrCodeScanButton.removeFromSuperview();
+        self.qrCodeModeIndicator.removeFromSuperview();
     }
     
     func countDownLabelRedraw(labelText:NSString) {
@@ -234,6 +240,65 @@ extension MainView {
     func imageDrawPreview(imageToDraw:UIImage, index:Int) {
         self.imagePreviewArray![index].image = self.imageWithImage(imageToDraw, newSize: CGSizeMake(64,64));
     }
+    
+    
+    
+    func qrCodeScanButtonSetup() {
+        if self.qrCodeModeOn == true {
+            self.qrCodeScanButton.setImage(self.imageWithImage(UIImage(named: "qrcode@2x.png"), newSize: CGSizeMake(30, 30)), forState: UIControlState.Normal);
+        }
+        else {
+            self.qrCodeScanButton.setImage(self.imageWithImage(UIImage(named: "qrcodeOff@2x.png"), newSize: CGSizeMake(30, 30)), forState: UIControlState.Normal);
+        }
+        self.qrCodeScanButton.sizeToFit();
+        self.qrCodeScanButton.frame = CGRectMake(
+            5, 30,
+            self.qrCodeScanButton.frame.width,
+            self.qrCodeScanButton.frame.height);
+        self.qrCodeScanButton.alpha = 0.6;
+        self.bringSubviewToFront(self.qrCodeScanButton);
+        
+    }
+    
+    func qrCodeModeIndecatorSetup() {
+        self.qrCodeModeIndicator.image = UIImage(named: "qrcode@2x.png");
+        self.qrCodeModeIndicator.sizeToFit();
+        self.qrCodeModeIndicator.frame = CGRectMake(
+            (self.frame.width - self.qrCodeModeIndicator.frame.width) / 2,
+            (self.frame.height - self.qrCodeModeIndicator.frame.height) / 2,
+            self.qrCodeModeIndicator.frame.width,
+            self.qrCodeModeIndicator.frame.height);
+        self.qrCodeModeIndicator.alpha = 0.5;
+        self.bringSubviewToFront(self.qrCodeModeIndicator);
+        self.addSubview(self.qrCodeModeIndicator);
+    }
+    
+    func qrCodeModeIndecatorFlashing(time:NSInteger) {
+        self.qrCodeModeIndicatorIsFlashing = true;
+        var second:NSInteger = time;
+        println("QRCode Indecator Flashing: \(second)");
+        if (second % 2 == 0) {
+            // EVEN
+            self.qrCodeModeIndicator.hidden = false;
+            
+        }
+        else {
+            // ODD
+            self.qrCodeModeIndicator.hidden = true;
+        }
+        if second == 0 {
+            self.qrCodeModeIndicator.hidden = true;
+            self.qrCodeModeIndicatorIsFlashing = false;
+            return;
+        }
+        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue(), {
+            self.qrCodeModeIndecatorFlashing(second-1);
+            });
+    
+    }
+
+
     
     func imageWithImage(image:UIImage, newSize:CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);

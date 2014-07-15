@@ -18,17 +18,22 @@ class CentralState: CamState {
         mainView.addSubview(mainView.camSwitch);
         mainView.addSubview(mainView.bluetoothStatusLabel);
         mainView.addSubview(mainView.pidDisplayLabel);
+        mainView.addSubview(mainView.qrCodeScanButton);
         
         mainView.focusDotLabelRedraw();
         mainView.camSwitchRedraw();
         mainView.pidDisplayLabelRedraw();
+        mainView.qrCodeScanButtonSetup();
+        mainView.qrCodeModeIndecatorSetup();
+        mainView.qrCodeModeIndicator.hidden = true;
+        println("Subview Setup From CentralState Finished");
     }
     
     func turnOnBluetooth(central:BTLECentralModel, peripheral:BTLEPeripheralModel) {
         central.setupCentralManager();
     }
    
-    func BTLETrigger(peripheral:BTLEPeripheralModel, panoramicPhoto:Bool) {
+    func BTLETrigger(peripheral:BTLEPeripheralModel, triggerType:Int, panoramicPhoto:Bool) {
         // Central Don't Have BTLETrigger
     }
 }

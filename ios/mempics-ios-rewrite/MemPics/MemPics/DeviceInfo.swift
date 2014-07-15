@@ -15,5 +15,4 @@ class DeviceInfo: NSObject {
         var DevicePid:NSString = UIDevice.currentDevice().identifierForVendor.UUIDString;
         return DevicePid;
     }
-    
 }

@@ -13,7 +13,7 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
     
     func startCountDown(mainVC:MainViewController) {
         mainVC.avFoundationModel!.lockExposure();
-        mainVC.countDown(3, photoLeft: 4);
+        mainVC.countDown(3, photoLeft: 1);
     }
 
     

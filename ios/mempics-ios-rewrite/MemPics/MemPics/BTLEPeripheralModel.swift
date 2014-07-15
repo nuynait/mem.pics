@@ -13,8 +13,10 @@ enum BTLEPeripheralState {
     case Connecting
     case Connected
     case SendData
-    case EOMSent
-    case EOMSentPanoramic
+    case WaitingTrigger
+    case SentPhotoTrigger
+    case SentPanoramicTrigger
+
 }
 
 class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
@@ -202,6 +204,7 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
     }
     
     func sendEOMString() {
+        println("Sending EOM");
         // Send EOM
         // Set Sending EOM to true, so if the first time failes
         // we can still resend it
@@ -216,11 +219,11 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
         
         // If EOM is already sent
         if eomSent {
+            println("EOM Sent");
             // Mark EOM has been sent
             self.sendingEOM = false;
             
             
-            // Turn off the advertise
             self.peripheralManager!.stopAdvertising();
             self.advertisingSwitch = false;
             
@@ -228,16 +231,25 @@ class BTLEPeripheralModel: NSObject, CBPeripheralManagerDelegate {
             // self.countDown(5, panoramaPhotoLeft: 0);
             
             // Notify View Controller EOM Has Been Sent
-            if self.stringToSend == "ABC" {
-                println("Sent ABC");
-                self.NotifyMainViewController(BTLEPeripheralState.EOMSentPanoramic);
+            if stringToSend == "Take Photo Trigger" {
+                self.NotifyMainViewController(BTLEPeripheralState.SentPhotoTrigger);
+            }
+            else if stringToSend == "Take Panoramic Trigger" {
+                self.NotifyMainViewController(BTLEPeripheralState.SentPanoramicTrigger);
             }
             else {
-                println("Sent EOM");
-                self.NotifyMainViewController(BTLEPeripheralState.EOMSent);
+                self.NotifyMainViewController(BTLEPeripheralState.WaitingTrigger);
             }
             
         }
+    }
+    
+    
+    func setupStringToSend(content:NSString) {
+        self.stringToSend = content;
+        self.sendDataIndex = 0;
+        self.sendingEOM = false;
+        self.dataToSend = self.stringToSend.dataUsingEncoding(NSUTF8StringEncoding);
     }
     
     // This function get called when central unsubscribes
