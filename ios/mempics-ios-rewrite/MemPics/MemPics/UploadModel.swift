@@ -82,6 +82,9 @@ extension UploadModel {
     
     func mergeImage() {
         UIImageWriteToSavedPhotosAlbum(self.imageStored[0] as UIImage, nil, nil, nil);
+        self.imageToSave = self.imageStored[0] as? UIImage;
+        self.upLoad();
+        
     }
     
     func testMergeImage() {
@@ -190,11 +193,17 @@ extension UploadModel {
                 println("Status Code = \(httpResponse.statusCode)");
                 if httpResponse.statusCode == 200 {
                     println("Success");
-                    self.NotifyViewController("Success");
+                    
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.NotifyViewController("Success");
+                        })
+                    
                 }
                 else {
                     println("Failed");
-                    self.NotifyViewController("Failed");
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.NotifyViewController("Failed");
+                        })
                 }
             });
         

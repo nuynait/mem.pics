@@ -28,6 +28,10 @@ class AVPanoramicPhotoSessionSetupImp: AVSessionSetupImp {
         mainView.layer.addSublayer(previewLayer);
         
         
+        // Setup Info Label
+        mainView.panoramicSwitchInfoLabelRedraw("Panoramic Mode");
+        
+        
         // var testRect:CGRect = CGRectMake(
         //     160,
         //     15,

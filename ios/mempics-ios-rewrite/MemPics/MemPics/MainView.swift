@@ -15,7 +15,7 @@ class MainView: UIView {
     var qrCodeModeOn:Bool = true;
     var qrCodeModeIndicator:UIImageView = UIImageView();
     var qrCodeModeIndicatorIsFlashing:Bool = false;
-    var focusDotLabel:UILabel = UILabel();
+    var focusDotLabel:UIImageView = UIImageView();
     var countDownLabel:UILabel = UILabel();
     var pidDisplayLabel:UILabel = UILabel();
     var bluetoothStatusLabel:UILabel = UILabel();
@@ -24,7 +24,25 @@ class MainView: UIView {
     var imagePreviewArray:UIImageView[]?;
     var imagePreviewTesting:UIImageView = UIImageView();
     var imagePreviewTesting2:UIImageView = UIImageView();
+    var degree:float_t = 0;
+    
+    
+    var isRotating:Bool = false;
+    
+    // Information Panel
+    var rectangleView:UIView = UIView();
+    var rectangleViewOnTop:UIView = UIView();
+    var camSwitchInfoLabel:UILabel = UILabel();
+    var panoramicSwitchInfoLabel:UILabel = UILabel();
 
+    
+    
+    var camSwitchHowtoLabel:UILabel = UILabel();
+    var camSwitchHowtoDetailLabel:UILabel = UILabel();
+    var panoramicSwitchHowtoLabel:UILabel = UILabel();
+    var panoramicSwitchHowtoDetailLabel:UILabel = UILabel();
+    
+    
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
@@ -70,13 +88,25 @@ extension MainView {
         self.bluetoothStatusLabel.removeFromSuperview();
         self.qrCodeScanButton.removeFromSuperview();
         self.qrCodeModeIndicator.removeFromSuperview();
+        self.camSwitchInfoLabel.removeFromSuperview();
+        self.camSwitchHowtoLabel.removeFromSuperview();
+        self.camSwitchHowtoDetailLabel.removeFromSuperview();
+        self.panoramicSwitchInfoLabel.removeFromSuperview();
+        self.panoramicSwitchHowtoLabel.removeFromSuperview();
+        self.panoramicSwitchHowtoDetailLabel.removeFromSuperview();
+        self.imagePreviewTesting.hidden = true;
     }
     
     func countDownLabelRedraw(labelText:NSString) {
         self.countDownLabel.font = UIFont.systemFontOfSize(44);
         self.countDownLabel.text = labelText;
-        self.countDownLabel.textColor = UIColor.redColor();
+        self.countDownLabel.textColor = UIColor.whiteColor();
+        self.countDownLabel.backgroundColor = UIColor(white: 0, alpha: 0.5);
+        self.countDownLabel.textAlignment = NSTextAlignment.Center;
+        self.countDownLabel.layer.cornerRadius = 10;
+        self.countDownLabel.layer.masksToBounds = true;
         self.countDownLabel.sizeToFit();
+        self.countDownLabel.frame.size = CGSizeMake(60, 60);
         self.countDownLabel.frame = CGRectMake(
             (self.frame.width - self.countDownLabel.frame.width) / 2,
             100,
@@ -87,11 +117,11 @@ extension MainView {
     
     func bluetoothStatusLabelRedraw(labelText:NSString) {
         self.bluetoothStatusLabel.text = labelText;
-        self.bluetoothStatusLabel.textColor = UIColor.redColor();
+        self.bluetoothStatusLabel.textColor = UIColor(red: 1, green: 0.8, blue: 0.4, alpha: 1)
         self.bluetoothStatusLabel.sizeToFit();
         self.bluetoothStatusLabel.frame = CGRectMake(
-            self.frame.width - self.bluetoothStatusLabel.frame.width + 5,
-            10,
+            self.frame.width - self.bluetoothStatusLabel.frame.width - 5,
+            20,
             self.bluetoothStatusLabel.frame.width,
             self.bluetoothStatusLabel.frame.height);
         self.bringSubviewToFront(self.bluetoothStatusLabel);
@@ -99,60 +129,58 @@ extension MainView {
     
     
     func focusDotLabelRedraw() {
-        self.focusDotLabel.font = UIFont.systemFontOfSize(66);
-        self.focusDotLabel.text = "+";
-        self.focusDotLabel.textColor = UIColor.redColor();
+        self.focusDotLabel.image = self.imageWithImage(UIImage(named: "targetFocus@2x.png"), newSize: CGSizeMake(20, 20));
+        // self.focusDotLabel.textColor = UIColor.redColor();
         self.focusDotLabel.sizeToFit();
         self.focusDotLabel.frame = CGRectMake(
             (self.frame.width - self.focusDotLabel.frame.width) / 2,
             (self.frame.height - self.focusDotLabel.frame.height) / 2,
             self.focusDotLabel.frame.width,
             self.focusDotLabel.frame.height);
-        self.focusDotLabel.alpha = 0.6;
-        self.bringSubviewToFront(self.focusDotLabel);
+        self.focusDotLabel.alpha = 1;
     }
     
     func camSwitchRedraw() {
-        self.camSwitch.frame = CGRectMake(10,self.frame.height - 60, 79, 27);
+        self.camSwitch.frame = CGRectMake(10,self.frame.height - 80, 79, 27);
+        self.camSwitch.onTintColor = UIColor(red: 1, green: 0.8, blue: 0.4, alpha: 1);
+        self.camSwitch.tintColor = UIColor(red: 1, green: 0.8, blue: 0.4, alpha: 1);
         self.camSwitch.alpha = 0.6;
-        self.bringSubviewToFront(self.camSwitch);
     }
     
     func pidDisplayLabelRedraw() {
         self.pidDisplayLabel.textColor = UIColor.whiteColor();
-        self.pidDisplayLabel.text = "ID: \(DeviceInfo.getDevicePid())";
+        self.pidDisplayLabel.text = "ID: \(DeviceInfo.getDevicePid().substringFromIndex(DeviceInfo.getDevicePid().length - 5))";
         self.pidDisplayLabel.sizeToFit();
         self.pidDisplayLabel.frame = CGRectMake(
-            5, 5,
+            5, 20,
             self.pidDisplayLabel.frame.width,
             self.pidDisplayLabel.frame.height);
-        self.bringSubviewToFront(self.pidDisplayLabel);
-        self.addSubview(self.pidDisplayLabel);
     }
     
     func takePictureButtonRedraw() {
-        var buttonImage:UIImage = UIImage(named: "takePictureButton@2x.png");
+        var buttonImage:UIImage = self.imageWithImage(UIImage(named: "takePictureButtonStyle4@2x.png"), newSize: CGSizeMake(85, 85));
         self.takePictureButton.setImage(buttonImage, forState: UIControlState.Normal);
         // self.takePictureButton.setTitle("Take Picture", forState:UIControlState.Normal);
+        self.takePictureButton.tintColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1);
         self.takePictureButton.sizeToFit();
         self.takePictureButton.frame = CGRectMake(
             (self.frame.width - self.takePictureButton.frame.width) / 2,
-            self.frame.height - 100,
+            self.frame.height - 120,
             self.takePictureButton.frame.width,
             self.takePictureButton.frame.height);
         self.takePictureButton.alpha = 0.9;
-        self.bringSubviewToFront(self.takePictureButton);
     }
     
     func panoramaSwitchRedraw() {
         self.panoramaSwitch.sizeToFit();
         self.panoramaSwitch.frame = CGRectMake(
             self.frame.width - self.panoramaSwitch.frame.width - 10,
-            self.frame.height - 60,
+            self.frame.height - 80,
             79,
             27);
+        self.panoramaSwitch.onTintColor = UIColor(red: 1, green: 0.8, blue: 0.4, alpha: 1);
+        self.panoramaSwitch.tintColor = UIColor(red: 1, green: 0.8, blue: 0.4, alpha: 1);
         self.panoramaSwitch.alpha = 0.6;
-        self.bringSubviewToFront(self.panoramaSwitch);
     }
     
     func imagePreviewSetupTesting() {
@@ -188,6 +216,7 @@ extension MainView {
     }
     
     func imageDrawPreviewTesting(image:UIImage) {
+        self.imagePreviewTesting.hidden = false;
         self.imagePreviewTesting.image = self.imageWithImage(image, newSize: CGSizeMake(352, 432));
         // self.imagePreviewTesting2.image = self.imageWithImage(image, newSize: CGSizeMake(64, 98));
     }
@@ -252,11 +281,10 @@ extension MainView {
         }
         self.qrCodeScanButton.sizeToFit();
         self.qrCodeScanButton.frame = CGRectMake(
-            5, 30,
+            5, 60,
             self.qrCodeScanButton.frame.width,
             self.qrCodeScanButton.frame.height);
         self.qrCodeScanButton.alpha = 0.6;
-        self.bringSubviewToFront(self.qrCodeScanButton);
         
     }
     
@@ -269,11 +297,10 @@ extension MainView {
             self.qrCodeModeIndicator.frame.width,
             self.qrCodeModeIndicator.frame.height);
         self.qrCodeModeIndicator.alpha = 0.5;
-        self.bringSubviewToFront(self.qrCodeModeIndicator);
         self.addSubview(self.qrCodeModeIndicator);
     }
     
-    func qrCodeModeIndecatorFlashing(time:NSInteger) {
+    func qrCodeModeIndecatorFlashing(time:NSInteger, frequency:Double) {
         self.qrCodeModeIndicatorIsFlashing = true;
         var second:NSInteger = time;
         println("QRCode Indecator Flashing: \(second)");
@@ -289,16 +316,276 @@ extension MainView {
         if second == 0 {
             self.qrCodeModeIndicator.hidden = true;
             self.qrCodeModeIndicatorIsFlashing = false;
+            self.flashScreen();
             return;
         }
-        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC)));
+        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(frequency * Double(NSEC_PER_SEC)));
         dispatch_after(popTime, dispatch_get_main_queue(), {
-            self.qrCodeModeIndecatorFlashing(second-1);
+            self.qrCodeModeIndecatorFlashing(second-1, frequency: frequency);
             });
-    
     }
-
-
+    
+    func camSwitchInfoFlashing(time:NSInteger, frequency:Double) {
+        var second:NSInteger = time;
+        println("QRCode Indecator Flashing: \(second)");
+        if (second % 2 == 0) {
+            // EVEN
+            // self.camSwitchInfoLabel.hidden = false;
+            self.camSwitchHowtoDetailLabel.hidden = false;
+            self.camSwitchHowtoLabel.hidden = false;
+            //self.bringSubviewToFront(self.camSwitchHowtoLabel);
+            //self.bringSubviewToFront(self.camSwitchHowtoDetailLabel);
+            //self.bringSubviewToFront(self.camSwitchInfoLabel);
+        }
+        else {
+            // ODD
+            self.bringSubviewToFront(self.rectangleView);
+            self.bringSubviewToFront(self.camSwitch);
+            self.bringSubviewToFront(self.panoramaSwitch);
+            self.bringSubviewToFront(self.takePictureButton);
+        }
+        
+        if second == 0 {
+            self.camSwitchHowtoLabel.hidden = true;
+            self.camSwitchHowtoDetailLabel.hidden = true;
+            self.camSwitchHowtoLabel.alpha = 1;
+            self.camSwitchHowtoDetailLabel.alpha = 1;
+            
+            self.bringSubviewToFront(self.rectangleView);
+            self.bringSubviewToFront(self.camSwitch);
+            self.bringSubviewToFront(self.panoramaSwitch);
+            self.bringSubviewToFront(self.takePictureButton);
+            return;
+        }
+        else if second < 10 {
+            self.camSwitchHowtoDetailLabel.alpha = self.camSwitchHowtoDetailLabel.alpha - 0.1;
+            self.camSwitchHowtoLabel.alpha = self.camSwitchHowtoLabel.alpha - 0.1;
+        }
+        
+        
+        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(frequency * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue(), {
+            if second > 10 {
+                self.camSwitchInfoFlashing(second-1, frequency: frequency);
+            }
+            else {
+                self.camSwitchInfoFlashing(second-1, frequency: 0.1);
+            }
+            });
+        
+    }
+    
+    func panoramicSwitchInfoFlashing(time:NSInteger, frequency:Double) {
+        var second:NSInteger = time;
+        println("QRCode Indecator Flashing: \(second)");
+        if (second % 2 == 0) {
+            // EVEN
+            // self.camSwitchInfoLabel.hidden = false;
+            self.panoramicSwitchHowtoDetailLabel.hidden = false;
+            self.panoramicSwitchHowtoLabel.hidden = false;
+            //self.bringSubviewToFront(self.camSwitchHowtoLabel);
+            //self.bringSubviewToFront(self.camSwitchHowtoDetailLabel);
+            //self.bringSubviewToFront(self.camSwitchInfoLabel);
+        }
+        else {
+            // ODD
+            self.bringSubviewToFront(self.rectangleView);
+            self.bringSubviewToFront(self.camSwitch);
+            self.bringSubviewToFront(self.panoramaSwitch);
+            self.bringSubviewToFront(self.takePictureButton);
+        }
+        
+        if second == 0 {
+            self.panoramicSwitchHowtoDetailLabel.hidden = true;
+            self.panoramicSwitchHowtoLabel.hidden = true;
+            self.panoramicSwitchHowtoLabel.alpha = 1;
+            self.panoramicSwitchHowtoDetailLabel.alpha = 1;
+            
+            self.bringSubviewToFront(self.rectangleView);
+            self.bringSubviewToFront(self.camSwitch);
+            self.bringSubviewToFront(self.panoramaSwitch);
+            self.bringSubviewToFront(self.takePictureButton);
+            return;
+        }
+        else if second < 10 {
+            self.panoramicSwitchHowtoDetailLabel.alpha = self.panoramicSwitchHowtoDetailLabel.alpha - 0.1;
+            self.panoramicSwitchHowtoLabel.alpha = self.panoramicSwitchHowtoLabel.alpha - 0.1;
+        }
+        
+        
+        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(frequency * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue(), {
+            if second > 10 {
+                self.panoramicSwitchInfoFlashing(second-1, frequency: frequency);
+            }
+            else {
+                self.panoramicSwitchInfoFlashing(second-1, frequency: 0.1);
+            }
+            });
+        
+    }
+    
+    
+    
+    func focusImageRotating(time:NSInteger, frequency:Double) {
+        self.isRotating = true;
+        var second:NSInteger = time;
+        self.degree = self.degree + 0.1;
+        if self.degree >= 6.28 {
+            self.degree = 0;
+        }
+        
+        self.focusDotLabel.transform = CGAffineTransformMakeRotation(self.degree);
+        
+        
+        var popTime:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(frequency * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue(), {
+            self.focusImageRotating(second-1, frequency: 0.1);
+            });
+        
+    }
+    
+    
+    func displayAllInfoLabel() {
+        self.camSwitchInfoLabel.hidden = false;
+        self.panoramicSwitchInfoLabel.hidden = false;
+        self.camSwitchHowtoLabel.hidden = false;
+        self.camSwitchHowtoDetailLabel.hidden = false;
+        self.panoramicSwitchHowtoLabel.hidden = false;
+        self.panoramicSwitchHowtoDetailLabel.hidden = false;
+    }
+    
+    func camSwitchInfoLabelRedraw(text:NSString) {
+        self.camSwitchInfoLabel.font = UIFont.systemFontOfSize(14);
+        self.camSwitchInfoLabel.text = text;
+        self.camSwitchInfoLabel.textColor = UIColor(red: 0.925, green: 0.925, blue: 0.925, alpha: 1);
+        self.camSwitchInfoLabel.sizeToFit();
+        self.camSwitchInfoLabel.hidden = false;
+        self.camSwitchInfoLabel.frame = CGRectMake(
+            self.camSwitch.frame.minX + 5,
+            self.camSwitch.frame.minY - self.camSwitchInfoLabel.frame.height - 5,
+            self.camSwitchInfoLabel.frame.width,
+            self.camSwitchInfoLabel.frame.height);
+    }
+    
+    func panoramicSwitchInfoLabelRedraw(text:NSString) {
+        self.panoramicSwitchInfoLabel.font = UIFont.systemFontOfSize(14);
+        self.panoramicSwitchInfoLabel.text = text;
+        self.panoramicSwitchInfoLabel.textColor = UIColor(red: 0.925, green: 0.925, blue: 0.925, alpha: 1);
+        self.panoramicSwitchInfoLabel.sizeToFit();
+        self.panoramicSwitchInfoLabel.hidden = false;
+        self.panoramicSwitchInfoLabel.frame = CGRectMake(
+            self.panoramaSwitch.frame.maxX - self.panoramicSwitchInfoLabel.frame.width - 5,
+            self.panoramaSwitch.frame.minY - self.panoramicSwitchInfoLabel.frame.height - 5,
+            self.panoramicSwitchInfoLabel.frame.width,
+            self.panoramicSwitchInfoLabel.frame.height);
+    }
+    
+    func camSwitchHowtoLabelRedraw() {
+        self.camSwitchHowtoLabel.font = UIFont.systemFontOfSize(12);
+        self.camSwitchHowtoLabel.text = "L - Left Eye"
+        self.camSwitchHowtoLabel.textColor = UIColor.whiteColor();
+        self.camSwitchHowtoLabel.sizeToFit();
+        // self.camSwitchHowtoLabel.backgroundColor = UIColor.blueColor();
+        self.camSwitchHowtoLabel.hidden = true;
+        self.camSwitchHowtoLabel.alpha = 1;
+        self.camSwitchHowtoLabel.frame = CGRectMake(
+            self.camSwitch.frame.minX + 5,
+            self.camSwitch.frame.maxY + 10,
+            self.camSwitchHowtoLabel.frame.width,
+            self.camSwitchHowtoLabel.frame.height);
+        
+        
+        // How to Detail Label
+        self.camSwitchHowtoDetailLabel.font = UIFont.systemFontOfSize(12);
+        self.camSwitchHowtoDetailLabel.text = "R - Right Eye."
+        self.camSwitchHowtoDetailLabel.textColor = UIColor.whiteColor();
+        self.camSwitchHowtoDetailLabel.sizeToFit();
+        // self.camSwitchHowtoDetailLabel.backgroundColor = UIColor.blueColor();
+        self.camSwitchHowtoDetailLabel.hidden = true;
+        self.camSwitchHowtoDetailLabel.alpha = 1;
+        self.camSwitchHowtoDetailLabel.frame = CGRectMake(
+            self.camSwitch.frame.minX + 5,
+            self.camSwitchHowtoLabel.frame.maxY + 3,
+            self.camSwitchHowtoDetailLabel.frame.width,
+            self.camSwitchHowtoDetailLabel.frame.height);
+    }
+    
+    func panoramicSwitchHowtoLabelRedraw() {
+        self.panoramicSwitchHowtoLabel.font = UIFont.systemFontOfSize(12);
+        self.panoramicSwitchHowtoLabel.text = "S - Photo (Single)";
+        self.panoramicSwitchHowtoLabel.textColor = UIColor.whiteColor();
+        self.panoramicSwitchHowtoLabel.sizeToFit();
+        self.panoramicSwitchHowtoLabel.hidden = true;
+        self.panoramicSwitchHowtoLabel.alpha = 1;
+        self.panoramicSwitchHowtoLabel.frame = CGRectMake(
+            self.panoramaSwitch.frame.maxX - self.panoramicSwitchHowtoLabel.frame.width - 5,
+            self.panoramaSwitch.frame.maxY + 10 ,
+            self.panoramicSwitchHowtoLabel.frame.width,
+            self.panoramicSwitchHowtoLabel.frame.height);
+        
+        
+        self.panoramicSwitchHowtoDetailLabel.font = UIFont.systemFontOfSize(12);
+        self.panoramicSwitchHowtoDetailLabel.text = "M - Panoramic (Multiple)";
+        self.panoramicSwitchHowtoDetailLabel.textColor = UIColor.whiteColor();
+        self.panoramicSwitchHowtoDetailLabel.sizeToFit();
+        self.panoramicSwitchHowtoDetailLabel.hidden = true;
+        self.panoramicSwitchHowtoDetailLabel.alpha = 1;
+        self.panoramicSwitchHowtoDetailLabel.frame = CGRectMake(
+            self.panoramaSwitch.frame.maxX - self.panoramicSwitchHowtoDetailLabel.frame.width - 5,
+            self.panoramicSwitchHowtoLabel.frame.maxY + 3,
+            self.panoramicSwitchHowtoDetailLabel.frame.width,
+            self.panoramicSwitchHowtoDetailLabel.frame.height);
+        
+    }
+    
+    func setupRectangleView() {
+        self.rectangleView.frame.size = CGSizeMake(
+            self.frame.width, 120);
+        self.rectangleView.frame = CGRectMake(
+            0,
+            self.frame.height - self.rectangleView.frame.height,
+            self.rectangleView.frame.width,
+            self.rectangleView.frame.height);
+        // self.rectangleView.backgroundColor = UIColor(red: 0.933, green: 0.212, blue: 0, alpha: 0.3)
+        self.rectangleView.backgroundColor = UIColor.blackColor();
+        self.rectangleView.alpha = 0.4;
+        // self.rectangleView.layer.cornerRadius = 20;
+        self.rectangleView.layer.masksToBounds = true;
+    }
+    
+    func setupRectangleViewOnTop() {
+        self.rectangleViewOnTop.frame.size = CGSizeMake(
+            self.frame.width, 50);
+        self.rectangleViewOnTop.frame = CGRectMake(
+            0,
+            0,
+            self.rectangleViewOnTop.frame.width,
+            self.rectangleViewOnTop.frame.height);
+        // self.rectangleViewOnTop.backgroundColor = UIColor(red: 0.933, green: 0.212, blue: 0, alpha: 0.3)
+        self.rectangleViewOnTop.backgroundColor = UIColor.blackColor();
+        self.rectangleViewOnTop.alpha = 0.4;
+        // self.rectangleViewOnTop.layer.cornerRadius = 20;
+        self.rectangleViewOnTop.layer.masksToBounds = true;
+    }
+    
+    func bringEverythingOnTop() {
+        self.bringSubviewToFront(self.pidDisplayLabel);
+        self.bringSubviewToFront(self.bluetoothStatusLabel);
+        self.bringSubviewToFront(self.qrCodeScanButton);
+        self.bringSubviewToFront(self.qrCodeModeIndicator);
+        self.bringSubviewToFront(self.countDownLabel);
+        self.bringSubviewToFront(self.camSwitch);
+        self.bringSubviewToFront(self.panoramaSwitch);
+        self.bringSubviewToFront(self.camSwitchInfoLabel);
+        self.bringSubviewToFront(self.camSwitchHowtoLabel);
+        self.bringSubviewToFront(self.camSwitchHowtoDetailLabel);
+        self.bringSubviewToFront(self.panoramicSwitchInfoLabel);
+        self.bringSubviewToFront(self.panoramicSwitchHowtoLabel);
+        self.bringSubviewToFront(self.panoramicSwitchHowtoDetailLabel);
+        self.bringSubviewToFront(self.imagePreviewTesting);
+        
+    }
     
     func imageWithImage(image:UIImage, newSize:CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);

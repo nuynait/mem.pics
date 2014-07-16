@@ -27,11 +27,11 @@ class AVFoundationDeviceModel: NSObject {
         // self.session.sessionPreset = AVCaptureSessionPreset640x480;
         
         
-        var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
-        previewLayer.backgroundColor = UIColor.blackColor().CGColor;
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        previewLayer.frame = UIScreen.mainScreen().bounds;
-        self.photoPreview = previewLayer;
+        //var previewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(self.session) as AVCaptureVideoPreviewLayer;
+        //previewLayer.backgroundColor = UIColor.blackColor().CGColor;
+        //previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        //previewLayer.frame = UIScreen.mainScreen().bounds;
+        //self.photoPreview = previewLayer;
         
         // According to Apple Documentation, The following actions takes times and will
         // cause ui to freeze, should put them into a dispatch_queue and run on the
@@ -85,6 +85,21 @@ class AVFoundationDeviceModel: NSObject {
         captureDevice.exposureMode = AVCaptureExposureMode.Locked;
         captureDevice.focusMode = AVCaptureFocusMode.Locked;
         captureDevice.whiteBalanceMode = AVCaptureWhiteBalanceMode.Locked;
+        captureDevice.unlockForConfiguration();
+    }
+    
+    func autoExposure() {
+        println("Release Exposure");
+        
+        var devices:NSArray = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo);
+        var captureDevice:AVCaptureDevice = devices.firstObject as AVCaptureDevice;
+        
+        println("Device Captured");
+        
+        captureDevice.lockForConfiguration(nil);
+        captureDevice.exposureMode = AVCaptureExposureMode.ContinuousAutoExposure;
+        captureDevice.focusMode = AVCaptureFocusMode.ContinuousAutoFocus;
+        captureDevice.whiteBalanceMode = AVCaptureWhiteBalanceMode.ContinuousAutoWhiteBalance;
         captureDevice.unlockForConfiguration();
     }
 }

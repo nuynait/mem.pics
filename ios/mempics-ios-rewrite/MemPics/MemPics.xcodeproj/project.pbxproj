@@ -14,6 +14,9 @@
 		9D58B05A1974483A00961C31 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B0591974483A00961C31 /* CoreVideo.framework */; };
 		9D58B05C1974484100961C31 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B05B1974484100961C31 /* CoreMedia.framework */; };
 		9D58B05E1974484700961C31 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D58B05D1974484700961C31 /* AVFoundation.framework */; };
+		9D72F8E71976279300B3F79D /* takePictureButtonStyle4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D72F8E61976279300B3F79D /* takePictureButtonStyle4@2x.png */; };
+		9D72F8E919763A2000B3F79D /* targetFocus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D72F8E819763A2000B3F79D /* targetFocus@2x.png */; };
+		9D72F8EB1976478E00B3F79D /* targetFocusWide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D72F8EA1976478E00B3F79D /* targetFocusWide@2x.png */; };
 		9D73C3C3196CA8E3000218C2 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73C3C2196CA8E3000218C2 /* DeviceInfo.swift */; };
 		9D74006F196A951900754B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D74006E196A951900754B54 /* AppDelegate.swift */; };
 		9D740071196A951900754B54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D740070196A951900754B54 /* Images.xcassets */; };
@@ -72,6 +75,9 @@
 		9D58B0591974483A00961C31 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9D58B05B1974484100961C31 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9D58B05D1974484700961C31 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9D72F8E61976279300B3F79D /* takePictureButtonStyle4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takePictureButtonStyle4@2x.png"; sourceTree = "<group>"; };
+		9D72F8E819763A2000B3F79D /* targetFocus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "targetFocus@2x.png"; sourceTree = "<group>"; };
+		9D72F8EA1976478E00B3F79D /* targetFocusWide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "targetFocusWide@2x.png"; sourceTree = "<group>"; };
 		9D73C3C2196CA8E3000218C2 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		9D740069196A951900754B54 /* MemPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D74006D196A951900754B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,8 +172,11 @@
 				9DD75DF819717739002667FA /* a7.jpg */,
 				9DD75DF919717739002667FA /* a8.jpg */,
 				9D58B00D197443D400961C31 /* qrcode@2x.png */,
+				9D72F8E819763A2000B3F79D /* targetFocus@2x.png */,
 				9D2917F91974C5A70015FE58 /* qrcodeOff@2x.png */,
 				9DD293681970671400874FE8 /* takePictureButton@2x.png */,
+				9D72F8E61976279300B3F79D /* takePictureButtonStyle4@2x.png */,
+				9D72F8EA1976478E00B3F79D /* targetFocusWide@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -337,14 +346,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D72F8E919763A2000B3F79D /* targetFocus@2x.png in Resources */,
 				9DD75DFD19717739002667FA /* a8.jpg in Resources */,
 				9DD75DF51970F983002667FA /* a4.jpg in Resources */,
 				9DD75DF41970F983002667FA /* a3.jpg in Resources */,
 				9DD75DF31970F983002667FA /* a2.jpg in Resources */,
 				9D58B00E197443D400961C31 /* qrcode@2x.png in Resources */,
+				9D72F8EB1976478E00B3F79D /* targetFocusWide@2x.png in Resources */,
 				9DD75DF21970F983002667FA /* a1.jpg in Resources */,
 				9D2917FA1974C5A70015FE58 /* qrcodeOff@2x.png in Resources */,
 				9DD75DFB19717739002667FA /* a6.jpg in Resources */,
+				9D72F8E71976279300B3F79D /* takePictureButtonStyle4@2x.png in Resources */,
 				9DD75DFC19717739002667FA /* a7.jpg in Resources */,
 				9DD293691970671400874FE8 /* takePictureButton@2x.png in Resources */,
 				9DD75DFA19717739002667FA /* a5.jpg in Resources */,
@@ -536,10 +548,7 @@
 				INFOPLIST_FILE = MemPics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/MemPics/ZBarSDK",
-				);
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MemPics/MemPics-Bridging-Header.h";
@@ -560,10 +569,7 @@
 				INFOPLIST_FILE = MemPics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/MemPics/ZBarSDK",
-				);
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MemPics/MemPics-Bridging-Header.h";

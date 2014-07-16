@@ -13,6 +13,7 @@ class UploadViewController: UIViewController {
     var uploadModel:UploadModel?;
     var uploadView:UploadView = UploadView(frame: UIScreen.mainScreen().bounds);
     var modeFlag:Bool?;
+    var mainVC:MainViewController?;
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -28,10 +29,6 @@ class UploadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.uploadView.loadView();
-        self.uploadView.viewDidLoad();
-        self.runModel();
-        
         // Do any additional setup after loading the view.
     }
     
@@ -40,6 +37,8 @@ class UploadViewController: UIViewController {
     }
     
     func runModel() {
+        self.uploadView.loadView();
+        self.uploadView.viewDidLoad();
         self.uploadView.retryButton.removeFromSuperview();
         self.uploadView.dismissVCButton.removeFromSuperview();
         self.uploadView.spinner.startAnimating();
@@ -76,30 +75,36 @@ class UploadViewController: UIViewController {
     }
     
     func dismissButtonPressed(sender:UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil);
+        self.dismissViewControllerAnimated(true, completion: {
+            self.mainVC!.returnFromUpload();
+            });
     }
     
     func getNotifedFromUpLoadModel(stringReceived:NSString) {
-        self.uploadView.statusLabelRedraw(stringReceived);
-        if stringReceived.isEqualToString("Success") {
-            self.dismissViewControllerAnimated(true, completion: nil);
-        }
-        
-        if stringReceived.isEqualToString("Failed") {
-            self.uploadView.addSubview(self.uploadView.retryButton);
-            self.uploadView.addSubview(self.uploadView.dismissVCButton);
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+            self.uploadView.statusLabelRedraw(stringReceived);
+            if stringReceived.isEqualToString("Success") {
+                self.dismissViewControllerAnimated(true, completion: {
+                    self.mainVC!.returnFromUpload();
+                    });
+            }
+            
+            if stringReceived.isEqualToString("Failed") {
+                self.uploadView.addSubview(self.uploadView.retryButton);
+                self.uploadView.addSubview(self.uploadView.dismissVCButton);
+            }
+            })
         
     }
-
+    
     /*
     // #pragma mark - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

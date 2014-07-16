@@ -29,6 +29,7 @@ class BarCodeModel: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     
     // Variables For AVFoundations
     var isReading:Bool?;
+    var resultString:NSString?;
     
     
     
@@ -141,7 +142,6 @@ class BarCodeModel: NSObject, AVCaptureMetadataOutputObjectsDelegate {
         
         
         println("Start Reading");
-        self.isReading = true;
         
     }
     
@@ -149,7 +149,6 @@ class BarCodeModel: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     func stopReading() {
         // self.videoPreviewLayer!.removeFromSuperlayer();
         // self.captureSession!.stopRunning();
-        self.isReading = false;
         // self.mainVC!.setState(false);
         // self.mainVC!.avSessionSetupImp!.setupAVSession(self.mainVC!.avFoundationModel!, mainView: self.mainVC!.mainView!)
         //self.mainVC!.currentState!.subViewSetup(self.mainVC!.mainView!);
@@ -178,6 +177,7 @@ extension BarCodeModel {
             if (metadataObj.type == AVMetadataObjectTypeQRCode) {
                 if  mainVC!.mainView!.qrCodeModeOn == true {
                     println("Find QRCode, text is: \(metadataObj.stringValue)");
+                    self.resultString = metadataObj.stringValue;
                     // self.mainVC!.notifiedFromQRCodeModel();
                     
                     
@@ -186,11 +186,16 @@ extension BarCodeModel {
                     //    self.mainVC!.notifiedFromQRCodeModel();
                     //    })
                     
-                    dispatch_async(dispatch_get_main_queue(), {
-                        if self.mainVC!.mainView!.qrCodeModeIndicatorIsFlashing == false {
-                            self.mainVC!.mainView!.qrCodeModeIndecatorFlashing(2);
-                        }
-                        })
+                    // dispatch_async(dispatch_get_main_queue(), {
+                    //     if self.mainVC!.mainView!.qrCodeModeIndicatorIsFlashing == false {
+                    //         self.mainVC!.mainView!.qrCodeModeIndecatorFlashing(2, frequency: 0.4);
+                    //     }
+                    //     })
+                    
+                    if self.isReading == false {
+                        self.upLoad();
+                        self.isReading = true;
+                    }
                     
                     
                     println("FINISHED");
@@ -202,6 +207,64 @@ extension BarCodeModel {
             
         }
         
+    }
+    
+    
+    // Upload BarCode to Server
+    func upLoad() {
+        println("Prepare Upload QRCode");
+        
+        // Rotate Image:
+        // var finalImage:UIImage = UIImage(CGImage: self.imageToSave!.CGImage, scale: self.imageToSave!.scale, orientation: UIImageOrientation.Right);
+        // UIImageWriteToSavedPhotosAlbum(finalImage, nil, nil, nil);
+        
+        
+        // Here, Upload Image to Server Using Http Post
+        var urlString:NSString = "http://107.170.171.175:3000/login";
+        
+        var request:NSMutableURLRequest = NSMutableURLRequest();
+        request.HTTPMethod = "Post";
+        request.URL = NSURL.URLWithString(urlString);
+        var boundary:NSString = NSString.stringWithString("----WebKitFormBoundaryqFAZHDjmNaoRiQYZ");
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type");
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control");
+        
+        var body:NSMutableData = NSMutableData();
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"pid\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(DeviceInfo.getDevicePid().substringFromIndex(DeviceInfo.getDevicePid().length - 5))\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("Content-Disposition: form-data; name=\"sid\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("\(self.resultString)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        body.appendData(NSString.stringWithString("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding));
+        var postLength:NSString = "\(body.length)";
+        request.setValue(postLength, forHTTPHeaderField: "Content-Length");
+        
+        
+        request.HTTPBody = body;
+        
+        println("Uploading QRCode ...... ");
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:
+            { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                println("Set isReading QRCode to FALSE accept upload QRCode");
+                self.isReading = false;
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    if self.mainVC!.mainView!.qrCodeModeIndicatorIsFlashing == false {
+                        self.mainVC!.mainView!.qrCodeModeIndecatorFlashing(6, frequency: 0.3);
+                    }
+                    })
+                
+                
+                println("UPLOAD QRcode Finished");
+                var httpResponse:NSHTTPURLResponse = response as NSHTTPURLResponse;
+                println("response: \(response)");
+                println("Status Code = \(httpResponse.statusCode)");
+            });
+        
+        
+        println("Finished Upload QRCode Waiting For Response");
     }
     
 }

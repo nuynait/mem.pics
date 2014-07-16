@@ -20,12 +20,39 @@ class CentralState: CamState {
         mainView.addSubview(mainView.pidDisplayLabel);
         mainView.addSubview(mainView.qrCodeScanButton);
         
-        mainView.focusDotLabelRedraw();
+        
+        
+        // All the info subview
+        mainView.addSubview(mainView.camSwitchInfoLabel);
+        mainView.addSubview(mainView.camSwitchHowtoLabel);
+        mainView.addSubview(mainView.camSwitchHowtoDetailLabel);
+        mainView.addSubview(mainView.rectangleView);
+        mainView.addSubview(mainView.rectangleViewOnTop);
+
+
+        
+        
         mainView.camSwitchRedraw();
         mainView.pidDisplayLabelRedraw();
         mainView.qrCodeScanButtonSetup();
         mainView.qrCodeModeIndecatorSetup();
         mainView.qrCodeModeIndicator.hidden = true;
+        if mainView.isRotating == false {
+            mainView.focusDotLabelRedraw();
+            mainView.focusImageRotating(999, frequency: 0.1);
+        }
+        
+        mainView.camSwitchInfoLabelRedraw("L");
+        mainView.camSwitchHowtoLabelRedraw();
+        mainView.setupRectangleView();
+        mainView.setupRectangleViewOnTop();
+        // mainView.displayAllInfoLabel();
+        
+        mainView.bringEverythingOnTop();
+        mainView.bringSubviewToFront(mainView.rectangleView);
+        mainView.bringSubviewToFront(mainView.rectangleViewOnTop);
+        mainView.bringSubviewToFront(mainView.camSwitch);
+        
         println("Subview Setup From CentralState Finished");
     }
     

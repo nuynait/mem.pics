@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
     
     // Variable For CountDown Use
     var second:NSInteger?;
-    var photoTaken:NSInteger = 4;
+    var photoTaken:NSInteger = 6;
     var photoLeft:NSInteger?;
 
     
@@ -65,6 +65,7 @@ class MainViewController: UIViewController {
         
         // init ViewControllers
         self.upLoadViewController = UploadViewController(nibName: nil, bundle: nil);
+        self.upLoadViewController!.mainVC = self;
     }
 
     override func loadView() {
@@ -83,9 +84,11 @@ class MainViewController: UIViewController {
         self.mainView!.imagePreviewSetupTesting();
         //self.mainView!.imagePreviewSetup();
         
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade);
         
         self.addSubViewTargets();
         self.currentState!.turnOnBluetooth(self.bluetoothCentralModel!, peripheral: self.bluetoothPeripheralModel!);
+        
         
         
 
@@ -136,7 +139,9 @@ class MainViewController: UIViewController {
     
     func switchToUploadViewController() {
         println("Before Present uploadViewController, Check Stored Image Size: \(self.upLoadViewController!.uploadModel!.imageStored.count)");
-        self.presentViewController(self.upLoadViewController!, animated: true, completion: nil);
+        self.presentViewController(self.upLoadViewController!, animated: true, completion: {
+            self.upLoadViewController!.runModel();
+            });
     }
     
 
@@ -170,6 +175,10 @@ extension MainViewController {
         self.mainView!.qrCodeScanButton.addTarget(self, action: "qrCodeScanButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside);
     }
     
+    func camSwitchHover(sender:UISwitch) {
+        println("CamSwitchHover");
+    }
+    
     // targets action Functions
     // Bluetooth triggerType is 0
     func takePictureButtonPressed(sender:UIButton) {
@@ -177,7 +186,7 @@ extension MainViewController {
         self.upLoadViewController!.uploadModel!.mainPid = DeviceInfo.getDevicePid();
         self.upLoadViewController!.uploadModel!.eye = "r";
         self.upLoadViewController!.uploadModel!.clearArray();
-        self.mainView!.takePictureButton.enabled = false;
+        // self.mainView!.takePictureButton.enabled = false;
         
         self.currentState!.BTLETrigger(self.bluetoothPeripheralModel!, triggerType: 0, panoramicPhoto: self.mainView!.panoramaSwitch.on);
     }
@@ -185,6 +194,7 @@ extension MainViewController {
     
     func camSwitchSwitcherFliped(sender:UISwitch) {
         println("camSwitch Switcher Flipped: currentState: \(sender.on)");
+        self.mainView!.camSwitchInfoFlashing(22, frequency: 0.2);
         self.setState(sender.on);
         self.currentState!.subViewSetup(self.mainView!);
         self.currentState!.turnOnBluetooth(bluetoothCentralModel!, peripheral: bluetoothPeripheralModel!);
@@ -195,15 +205,18 @@ extension MainViewController {
     // The central setup the implementation method to the correct method
     // Bluetooth triggerType is 1
     func panoramaSwitchFliped(sender:UISwitch) {
+        self.mainView!.panoramicSwitchInfoFlashing(22, frequency: 0.2);
         if sender.on {
             self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
             self.successActionImp = PanoramicPhotoSuccessActionImp();
+            self.mainView!.panoramicSwitchInfoLabelRedraw("M");
         }
         else {
             self.avSessionSetupImp = AVPhotoSessionSetupImp();
             self.successActionImp = PhotoSuccessActionImp();
             self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
             self.currentState!.subViewSetup(self.mainView!);
+            self.mainView!.panoramicSwitchInfoLabelRedraw("S");
         }
         self.currentState!.BTLETrigger(self.bluetoothPeripheralModel!, triggerType: 1, panoramicPhoto: self.mainView!.panoramaSwitch.on);
     }
@@ -259,6 +272,7 @@ extension MainViewController {
             println("Case: BTLECentralState.PanoramicModeSetup");
             self.avSessionSetupImp = AVPanoramicPhotoSessionSetupImp();
             self.successActionImp = PanoramicPhotoSuccessActionImp();
+            self.mainView!.bluetoothStatusLabelRedraw("Panoramic Mode");
             println("Setup Panoramic Mode finished");
             
         case BTLECentralState.PhotoModeSetup:
@@ -268,6 +282,7 @@ extension MainViewController {
             println("Setup Photo Mode Finished");
             self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
             self.currentState!.subViewSetup(self.mainView!);
+            self.mainView!.bluetoothStatusLabelRedraw("Photo Mode");
             println("SETUP AVSESSION PREVIEW");
             
         case BTLECentralState.TakePhotoTriggerReceived:
@@ -286,19 +301,25 @@ extension MainViewController {
             self.upLoadViewController!.uploadModel!.mainPid = self.deviceInfo!.mainPid;
             self.upLoadViewController!.uploadModel!.eye = "l";
             self.upLoadViewController!.uploadModel!.clearArray();
+            self.avFoundationModel!.lockExposure();
             
             println("SETUP AVSESSION PREVIEW");
             self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+            self.mainView!.bringSubviewToFront(mainView!.imagePreviewTesting);
+            self.mainView!.bringSubviewToFront(mainView!.focusDotLabel);
             // self.successActionImp!.startCountDown(self);
+            self.mainView!.bluetoothStatusLabel.hidden = true;
             
         case BTLECentralState.CountDownReceived:
             println("Case: BTLECentral.CountDownReceived");
+            self.mainView!.countDownLabel.hidden = false;
             self.mainView!.countDownLabelRedraw(stringReceived);
             
         case BTLECentralState.CountDownCompleteReceived:
             println("Case: BTLECentral.CountDownCompleteReceived");
             
             self.mainView!.countDownLabel.text = "";
+            self.mainView!.countDownLabel.hidden = true;
             self.mainView!.flashScreen();
             
             if (self.photoLeft == 1) {
@@ -341,11 +362,11 @@ extension MainViewController {
             
         case BTLEPeripheralState.SendData:
             println("Case: BTLEPeripheralState.SendData");
-            self.mainView!.bluetoothStatusLabelRedraw("Sending Data")
+            // self.mainView!.bluetoothStatusLabelRedraw("Sending Data")
             
         case BTLEPeripheralState.WaitingTrigger:
             println("Case: BTLEPeripheralState.WaitingTrigger");
-            self.mainView!.bluetoothStatusLabelRedraw("Waiting User Action");
+            self.mainView!.bluetoothStatusLabelRedraw("Connected");
             
         case BTLEPeripheralState.SentPhotoTrigger:
             println("Case: BTLEPeripheralState.SentPhotoTrigger");
@@ -365,25 +386,45 @@ extension MainViewController {
             self.upLoadViewController!.uploadModel!.mainPid = DeviceInfo.getDevicePid();
             self.upLoadViewController!.uploadModel!.eye = "r";
             self.upLoadViewController!.uploadModel!.clearArray();
+            self.avFoundationModel!.lockExposure();
             
             println("SETUP AVSESSION PREVIEW");
             self.avSessionSetupImp!.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+            self.mainView!.bringSubviewToFront(mainView!.imagePreviewTesting);
+            self.mainView!.bringSubviewToFront(mainView!.focusDotLabel);
             self.successActionImp!.startCountDown(self);
+            self.mainView!.bluetoothStatusLabel.hidden = true;
             
         case BTLEPeripheralState.SentCountDown:
             println("Case BTLEPeripheralState.SentCountDown, Second: \(self.second)");
+            self.mainView!.countDownLabel.hidden = false;
             self.mainView!.countDownLabelRedraw("\(self.second)");
             
         case BTLEPeripheralState.SentCountDownComplete:
             println("Case BTLEPeripheralState.COMPLETE");
             
             self.mainView!.countDownLabel.text = "";
+            self.mainView!.countDownLabel.hidden = true;
             self.mainView!.flashScreen();
             self.successActionImp!.countDownComplete(self.photoLeft!, mainVC: self);
 
         default:
             println("ERROR, Not an Avaliable bluetooth state");
         }
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+    
+    func returnFromUpload() {
+        var sessionIMP:AVSessionSetupImp = AVPhotoSessionSetupImp();
+        self.photoLeft = self.photoTaken;
+        self.mainView!.bluetoothStatusLabel.hidden = false;
+        self.avFoundationModel!.autoExposure();
+        sessionIMP.setupAVSession(self.avFoundationModel!, mainView: self.mainView!);
+        self.currentState!.subViewSetup(self.mainView!);
+        
     }
     
 }

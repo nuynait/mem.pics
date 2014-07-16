@@ -13,7 +13,7 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
     
     func startCountDown(mainVC:MainViewController) {
         mainVC.avFoundationModel!.lockExposure();
-        mainVC.countDown(3, photoLeft: 4);
+        mainVC.countDown(3, photoLeft: 6);
     }
 
     
@@ -61,6 +61,7 @@ class PanoramicPhotoSuccessActionImp: SuccessActionImp {
                     // Reenable Button
                     if PhotoLeft == 1 {
                         mainVC.upLoadViewController!.modeFlag = false;
+                        // mainVC.upLoadViewController!.uploadModel!.imageToSave = mainVC.upLoadViewController!.uploadModel!.imageStored[0] as? UIImage;
                         mainVC.switchToUploadViewController();
                     }
                     else if PhotoLeft == -1 {

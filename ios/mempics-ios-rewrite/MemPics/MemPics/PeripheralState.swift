@@ -20,15 +20,38 @@ class PeripheralState: CamState {
         mainView.addSubview(mainView.camSwitch);
         mainView.addSubview(mainView.panoramaSwitch);
         mainView.addSubview(mainView.bluetoothStatusLabel);
+        mainView.addSubview(mainView.pidDisplayLabel);
         mainView.addSubview(mainView.qrCodeScanButton);
+        mainView.addSubview(mainView.camSwitchInfoLabel);
+        mainView.addSubview(mainView.camSwitchHowtoLabel);
+        mainView.addSubview(mainView.camSwitchHowtoDetailLabel);
+        mainView.addSubview(mainView.panoramicSwitchInfoLabel);
+        mainView.addSubview(mainView.panoramicSwitchHowtoLabel);
+        mainView.addSubview(mainView.panoramicSwitchHowtoDetailLabel);
+        
         
         mainView.takePictureButtonRedraw();
-        mainView.focusDotLabelRedraw();
         mainView.camSwitchRedraw();
         mainView.panoramaSwitchRedraw();
         mainView.qrCodeModeIndecatorSetup();
         mainView.pidDisplayLabelRedraw();
         mainView.qrCodeScanButtonSetup();
+        
+        mainView.camSwitchInfoLabelRedraw("R");
+        mainView.camSwitchHowtoLabelRedraw();
+        mainView.panoramicSwitchInfoLabelRedraw("S");
+        mainView.panoramicSwitchHowtoLabelRedraw();
+        // mainView.displayAllInfoLabel();
+        
+        
+        
+        
+        mainView.bringEverythingOnTop();
+        mainView.bringSubviewToFront(mainView.rectangleViewOnTop);
+        mainView.bringSubviewToFront(mainView.rectangleView);
+        mainView.bringSubviewToFront(mainView.camSwitch);
+        mainView.bringSubviewToFront(mainView.panoramaSwitch);
+        mainView.bringSubviewToFront(mainView.takePictureButton);
     }
     
     

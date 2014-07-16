@@ -37,7 +37,7 @@ class PhotoSuccessActionImp: SuccessActionImp {
                     mainVC.upLoadViewController!.uploadModel!.imageToSave = image;
                     mainVC.upLoadViewController!.modeFlag = true;
                     // self.uploadViewController!.imageToSave = UIImage(named: "a1.JPG");
-                    // mainVC.switchToUploadViewController();
+                    mainVC.switchToUploadViewController();
                     
                     // Reenable Button
                     mainVC.mainView!.takePictureButton.enabled = true;
